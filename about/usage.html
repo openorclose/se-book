@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.9.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - About: Usage</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -25,10 +25,10 @@
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
-          <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+          <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
         </li>
       </navbar>
     </header>
@@ -52,8 +52,8 @@
             <h3 id="information-layers">Information Layers<a class="fa fa-anchor" href="#information-layers"></a></h3>
             <p>This book tries to <em>layer</em> information so that readers can decide to omit less important layers if they wish to.</p>
             <p><strong>More important information are in bold</strong> or <mark>highlighted</mark> while <span class="dimmed">less important information are dimmed</span> or in collapsed panels such as the below.</p>
-            <tip-box>
-              <panel header="Some less important info in a minimized panel" minimized class="algolia-no-index">
+            <box>
+              <panel header="Some less important info in a minimized panel" minimized="" class="algolia-no-index">
                 <p>Less important info</p>
                 <p></p>
               </panel>
@@ -68,22 +68,19 @@
                 <p></p>
               </panel>
               <p></p>
-            </tip-box>
+            </box>
             <p><strong>Tabs indicate alternative formats of the same content</strong> (e.g. video vs text). You can choose the one you like and ignore the other tabs.</p>
-            <tip-box>
+            <box>
               <tabs>
-                  <tab header="<md>:far-file-alt:</md>">
-                   
-                  Some textual description of X
-                  <p></p>
+                <tab header="<md>:far-file-alt:</md>">
+                  <p>Some textual description of X</p>
                 </tab>
-                  <tab header="<md>:glyphicon-facetime-video:</md>" class="algolia-no-index">
+                <tab header="<md>:glyphicon-facetime-video:</md>" class="algolia-no-index">
                   <p>Video describing X</p>
-                  <p></p>
                 </tab>
               </tabs>
-            </tip-box>
-            <p><strong>Dotted underlines indicate <trigger for="pop:tooltip-example">tool tips</trigger></strong> (activated by hovering over it) and <strong>dashed underlines indicate <trigger for="modal:modal-example" trigger="click">modal windows</trigger></strong> (activated by clicking) containing additional information.</p>
+            </box>
+            <p><strong>Dotted underlines indicate <trigger for="pop:tooltip-example">tool tips</trigger></strong> (activated by hovering over it) and <strong>dashed underlines indicate <trigger for="modal:modal-example" trigger="click">modal windows</trigger></strong>              (activated by clicking) containing additional information.</p>
             <popover id="pop:tooltip-example" title="Tooltip Example" placement="top">
               <div slot="content" class="algolia-no-index">
                 Additional information
@@ -125,31 +122,32 @@
             </ul>
             <h4 id="boxed-text-styles">Boxed-Text Styles<a class="fa fa-anchor" href="#boxed-text-styles"></a></h4>
             <div class="indented">
-              <tip-box type="info">
+              <box type="info">
                 additional info
-              </tip-box>
-              <tip-box type="warning">
+              </box>
+              <box type="warning">
                 warning
-              </tip-box>
-              <tip-box type="success">
+              </box>
+              <box type="success">
                 positive message
-              </tip-box>
-              <tip-box type="important">
+              </box>
+              <box type="important">
                 important message
-              </tip-box>
-              <tip-box type="wrong">
+              </box>
+              <box type="wrong">
                 an error to avoid
-              </tip-box>
-              <tip-box type="tip">
+              </box>
+              <box type="tip">
                 tip
-              </tip-box>
-              <tip-box type="definition">
+              </box>
+              <box type="definition">
                 definition
-              </tip-box>
+              </box>
             </div>
             <h4 id="meaning-of-icons">Meaning of Icons<a class="fa fa-anchor" href="#meaning-of-icons"></a></h4>
             <div class="indented">
-              <p><span class="badge badge-pill badge-secondary">tangential</span> : tangential info, can be ignored if not interested<br>
+              <p><span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span>
+                </span> : tangential info, can be ignored if not interested<br>
                 <span><span aria-hidden="true" class="glyphicon glyphicon-new-window"></span></span> : direct link to the LO. <kbd>Ctrl</kbd>+<code>Click</code> to open the LO in new window/tab.<br>
                 <span><span aria-hidden="true" class="fas fa-trophy"></span></span> : learning outcomes<br>
                 <span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : prerequisite learning outcome<br>
@@ -164,13 +162,13 @@
                 <span><span aria-hidden="true" class="far fa-images"></span></span> : slides<br>
                 <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> : output produced by running code<br>
                 <span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> question without answer<br>
-                <span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> question with answer<br>
-              </p>
+                <span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> question with answer<br></p>
             </div>
           </div>
           <div id="searching">
             <h3 id="searching">Searching<a class="fa fa-anchor" href="#searching"></a></h3>
-            <p>The book currently does not have a <em>search</em> feature. The workaround is to load <a href="/se-book/common/print.html">the printable version of the book</a> (which loads the entire book into one page, minus the exercises) and use the Browser's search function.</p>
+            <p>The book currently does not have a <em>search</em> feature. The workaround is to load <a href="/se-book/common/print.html">the printable version of the book</a> (which loads the entire book into one page, minus the exercises) and use the Browser's
+              search function.</p>
           </div>
           <div id="saving">
             <h3 id="saving-as-pdf-files">Saving as PDF Files<a class="fa fa-anchor" href="#saving-as-pdf-files"></a></h3>
@@ -196,7 +194,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
     </footer>
   </div>
 </body>

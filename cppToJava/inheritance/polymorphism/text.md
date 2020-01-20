@@ -93,7 +93,7 @@ public class Dog {
 </panel>
 </box>
 
-A better way is to **take advantage of polymorphism to write code that targets a superclass but works with any subclass objects.**
+A better way is to **take advantage of polymorphism to write code that targets a superclass so that it works with any subclass objects.**
 
 <box>
 
@@ -163,7 +163,7 @@ public class Dog extends Animal {
 
 %%Explanation: Because Java supports polymorphism, you can store both `Cat` and `Dog` objects in an array of `Animal` objects. Similarly, you can call the `speak` method on any `Animal` object (as done in the loop) and yet get different behavior from `Cat` objects and `Dog` objects.%%
 
-:bulb: Suggestion: try to add an `Animal` object (e.g., `new Animal("Unnamed")`) to the `animals` array and see what happens.
+{{ icon_tip }} Suggestion: try to add an `Animal` object (e.g., `new Animal("Unnamed")`) to the `animals` array and see what happens.
 </box>
 
 **Polymorphic code is better** in several ways:

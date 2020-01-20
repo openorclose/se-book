@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.9.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Modeling: Introduction: UML Models</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -25,10 +25,10 @@
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
-          <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+          <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
         </li>
       </navbar>
     </header>
@@ -37,25 +37,39 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify UML models</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify UML models</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>Design → Modelling → Introduction →
-                    </span></strong></span></p>
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="uml-models"><span>UML Models</span><a class="fa fa-anchor" href="#uml-models"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>The following diagram uses the class diagram notation to show the different types of UML diagrams.</p>
-                    <tip-box>
+                    <p>The following diagram uses the class diagram notation to show the different types of
+                      <trigger trigger="click" for="modal:umlModels-uml">UML</trigger> diagrams.</p>
+                    <modal large="" title="UML (Unified Modeling Language)" id="modal:umlModels-uml" class="algolia-no-index">
+                      <div>
+                        <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James
+                          Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term
+                          ‘Unified’ in UML). UML is currently the <em>de facto</em> modeling notation used in the software industry.</p>
+                      </div>
+                    </modal>
+                    <box>
                       <p><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/UML_diagrams_overview.svg" width="800"><br>
                         <sub>source:<a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language">https://en.wikipedia.org/</a></sub></p>
-                    </tip-box>
+                    </box>
                   </div>
                   <div></div>
                 </div>
@@ -67,7 +81,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
     </footer>
   </div>
 </body>

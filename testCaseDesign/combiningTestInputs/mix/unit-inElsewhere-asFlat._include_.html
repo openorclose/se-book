@@ -1,18 +1,22 @@
 <div>
-  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testCaseDesign\combiningTestInputs\mix\text.md"></div>
+  <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\testCaseDesign\combiningTestInputs\mix\text.md"></div>
 </div>
 <p></p>
-<p><span class="dimmed"><strong><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testCaseDesign\combiningTestInputs\path.md">Quality Assurance → Test Case Design → Combining Test Inputs →
-        </span></span></strong></span></p>
+<p><span class="dimmed"><strong><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\testCaseDesign\combiningTestInputs\path.md">Quality Assurance → Test Case Design → Combining Test Inputs →
+</span></span>
+  </strong>
+  </span>
+</p>
 <div id="title-and-body">
   <div>
-    <h4 id="mix"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testCaseDesign\combiningTestInputs\mix\text.md">Mix</span></span></h4>
+    <h4 id="mix"><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\testCaseDesign\combiningTestInputs\mix\text.md">Mix</span></span>
+    </h4>
   </div>
   <div id="main">
     <div>
-      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testCaseDesign\combiningTestInputs\mix\text.md">
+      <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\testCaseDesign\combiningTestInputs\mix\text.md">
         <p>Consider the calculateGrade scenario given below:</p>
-        <tip-box>
+        <box>
           <ul>
             <li>SUT : <code>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></li>
             <li>Values to test: invalid values are <ins>underlined</ins>
@@ -24,9 +28,9 @@
               </ul>
             </li>
           </ul>
-        </tip-box>
+        </box>
         <p>To get the first cut of test cases, let’s apply the <em>at least once</em> strategy.</p>
-        <tip-box>
+        <box>
           <p><strong>Test cases for calculateGrade V1</strong></p>
           <div class="table-responsive">
             <table class="markbind-table table table-bordered table-striped">
@@ -93,9 +97,10 @@
             </table>
           </div>
           <p>VV/IV = Any Valid or Invalid Value, Err Msg = Error Message</p>
-        </tip-box>
-        <p>Next, let’s apply the <em>each valid input at least once in a positive test case</em> heuristic. Test case 5 has a valid value for <code>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1 and 5.2 to rectify that.</p>
-        <tip-box>
+        </box>
+        <p>Next, let’s apply the <em>each valid input at least once in a positive test case</em> heuristic. Test case 5 has a valid value for <code>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with
+          5.1 and 5.2 to rectify that.</p>
+        <box>
           <p><strong>Test cases for calculateGrade V2</strong></p>
           <div class="table-responsive">
             <table class="markbind-table table table-bordered table-striped">
@@ -170,9 +175,9 @@
             </table>
           </div>
           <p>VV = Any Valid Value VV/IV = Any Valid or Invalid Value</p>
-        </tip-box>
+        </box>
         <p>Next, we apply the <em>no more than one invalid input in a test case</em> heuristic. Test cases 5.2 and 6 don't follow that heuristic. Let's rectify the situation as follows:</p>
-        <tip-box>
+        <box>
           <p><strong>Test cases for calculateGrade V3</strong></p>
           <div class="table-responsive">
             <table class="markbind-table table table-bordered table-striped">
@@ -262,9 +267,10 @@
               </tbody>
             </table>
           </div>
-        </tip-box>
-        <p>Next, let us assume that there is a dependency between the inputs <code>examScore</code> and <code>isAbsent</code> such that an absent student can only have <code>examScore=0</code>. To cater for the hidden invalid case arising from this, we can add a new test case where <code>isAbsent=true</code> and <code>examScore!=0</code>. In addition, test cases 3-6.2 should have <code>isAbsent=false</code> so that the input remains valid.</p>
-        <tip-box>
+        </box>
+        <p>Next, let us assume that there is a dependency between the inputs <code>examScore</code> and <code>isAbsent</code> such that an absent student can only have <code>examScore=0</code>. To cater for the hidden invalid case arising from this, we can
+          add a new test case where <code>isAbsent=true</code> and <code>examScore!=0</code>. In addition, test cases 3-6.2 should have <code>isAbsent=false</code> so that the input remains valid.</p>
+        <box>
           <p><strong>Test cases for calculateGrade V4</strong></p>
           <div class="table-responsive">
             <table class="markbind-table table table-bordered table-striped">
@@ -362,18 +368,18 @@
               </tbody>
             </table>
           </div>
-        </tip-box>
+        </box>
       </div>
     </div>
     <div>
-      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testCaseDesign\combiningTestInputs\mix\text.md">
+      <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\testCaseDesign\combiningTestInputs\mix\text.md">
         <div>
-          <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testCaseDesign\combiningTestInputs\mix\exercisesPanel.md">
-            <panel header="<md>:fas-dumbbell:</md> Exercises" expandable>
+          <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\testCaseDesign\combiningTestInputs\mix\exercisesPanel.md">
+            <panel header="<md>:fas-dumbbell:</md> Exercises" expanded="">
               <div>
-                <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testCaseDesign\combiningTestInputs\mix\exercises.md">
+                <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\testCaseDesign\combiningTestInputs\mix\exercises.md">
                   <div>
-                    <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testCaseDesign\combiningTestInputs\mix\q-tick-correctStatement.md">
+                    <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\testCaseDesign\combiningTestInputs\mix\q-tick-correctStatement.md">
                       <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: statements about test input combinations">
                         <question>
                           <p>Which of these contradict the heuristics recommended when creating test cases with multiple inputs?</p>
@@ -385,17 +391,19 @@
                           </ul>
                           <div slot="answer">
                             <p>(a) inputs.</p>
-                            <p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid input.</p>
+                            <p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first
+                              invalid input.</p>
                           </div>
                         </question>
                       </panel>
                     </div>
                   </div>
                   <div>
-                    <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testCaseDesign\combiningTestInputs\mix\q-testCasesForConsumeMethod.md">
-                      <panel header="<md>:glyphicon-question-sign:</md> test cases for `consume` method">
+                    <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\testCaseDesign\combiningTestInputs\mix\q-testCasesForConsumeMethod.md">
+                      <panel header="<md>:glyphicon-question-sign:</md> Combine test inputs for the `consume` method">
                         <question>
-                          <p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <ins>underlines</ins> indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.</p>
+                          <p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <ins>underlines</ins> indicate invalid values. Point out where the
+                            heuristics are contradicted and how to improve the test cases.</p>
                           <box>
                             <p>SUT: <code>consume(food, drink)</code></p>
                             <div class="table-responsive">

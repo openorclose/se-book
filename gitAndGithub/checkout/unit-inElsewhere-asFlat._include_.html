@@ -1,67 +1,54 @@
 <div>
-  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\checkout\text.md">
+  <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\checkout\text.md">
     <p>
       <panel src="/se-book/revisionControl/usingHistory/unit-inElsewhere-asFlat._include_.html" header="<md>:glyphicon-education:</md> %%Project Management → Revision Control → Using History%%" popup-url="/se-book/revisionControl/usingHistory"></panel>
     </p>
   </div>
 </div>
 <p></p>
-<p><span class="dimmed"><strong><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\path.md">Tools → Git and GitHub →
-        </span></span></strong></span></p>
+<p><span class="dimmed"><strong><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\path.md">Tools → Git and GitHub →
+</span></span>
+  </strong>
+  </span>
+</p>
 <div id="title-and-body">
   <div>
-    <h4 id="checkout"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\checkout\text.md">Checkout</span></span></h4>
+    <h4 id="checkout"><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\checkout\text.md">Checkout</span></span>
+    </h4>
   </div>
   <div id="main">
     <div>
-      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\checkout\text.md">
+      <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\checkout\text.md">
         <p>Git can show you what changed in each commit.</p>
         <tabs>
           <tab header="SourceTree">
             <div>
-              <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\checkout\sourcetree_1.md">
+              <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\checkout\sourcetree_1.md">
                 <p>To see which files changed in a commit, click on the commit. To see what changed in a specific file in that commit, click on the file name.</p>
                 <img src="/se-book/gitAndGithub/checkout/images/sourcetree_1.png" height="220">
                 <p></p>
               </div>
             </div>
-            <hr>
           </tab>
           <tab header="CLI">
             <div>
-              <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\checkout\cli_1.md">
-                <pre><code class="hljs sh">git show &lt; part-of-commit-hash &gt;
-</code></pre>
+              <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\checkout\cli_1.md">
+                <pre><code class="line-numbers hljs sh"><span>git show &lt; part-of-commit-hash &gt;</span></code></pre>
                 <p>Example:</p>
-                <pre><code class="hljs">git show 251b4cf
+                <pre><code>git show 251b4cf
 </code></pre>
-                <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
-Author: … &lt; … &gt;
-Date:   Sat Jul 8 16:50:27 2017 +0800
-
-    fruits.txt: replace banana with berries
-
-diff --git a/fruits.txt b/fruits.txt
-index 15b57f7..17f4528 100644
-<span class="hljs-comment">--- a/fruits.txt</span>
-<span class="hljs-comment">+++ b/fruits.txt</span>
-<span class="hljs-meta">@@ -1,3 +1,3 @@</span>
- apples
-<span class="hljs-deletion">-bananas</span>
-<span class="hljs-addition">+berries</span>
- cherries
-</code></pre>
+                <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                </p>
+                <pre><code class="line-numbers hljs diff"><span>commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3</span><span>Author: … &lt; … &gt;</span><span>Date:   Sat Jul 8 16:50:27 2017 +0800</span><span></span><span>    fruits.txt: replace banana with berries</span><span></span><span>diff --git a/fruits.txt b/fruits.txt</span><span>index 15b57f7..17f4528 100644</span><span><span class="hljs-comment">--- a/fruits.txt</span></span><span><span class="hljs-comment">+++ b/fruits.txt</span></span><span><span class="hljs-meta">@@ -1,3 +1,3 @@</span></span><span> apples</span><span><span class="hljs-deletion">-bananas</span></span><span><span class="hljs-addition">+berries</span></span><span> cherries</span></code></pre>
               </div>
             </div>
-            <hr>
           </tab>
         </tabs>
         <p>Git can also show you the difference between two points in the history of the repo.</p>
         <tabs>
           <tab header="SourceTree">
             <div>
-              <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\checkout\sourcetree_2.md">
+              <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\checkout\sourcetree_2.md">
                 <p>Select the two points you want to compare using <kbd>Ctrl</kbd>+<code>Click</code>.</p>
                 <img src="/se-book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
                 <p></p>
@@ -70,18 +57,17 @@ index 15b57f7..17f4528 100644
                 <p></p>
               </div>
             </div>
-            <hr>
           </tab>
           <tab header="CLI">
             <div>
-              <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\checkout\cli_2.md">
+              <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\checkout\cli_2.md">
                 <p>The <code>diff</code> command can be used to view the differences between two points of the history.</p>
                 <ul>
                   <li><code>git diff</code> : shows the changes (uncommitted) since the last commit</li>
                   <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
                   <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
                 </ul>
-                <panel header="<md>:fas-paperclip:</md> Resources" expanded>
+                <panel header="<md>:fas-paperclip:</md> Resources" expanded="">
                   <ul>
                     <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
                     <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
@@ -89,45 +75,44 @@ index 15b57f7..17f4528 100644
                 </panel>
               </div>
             </div>
-            <hr>
           </tab>
         </tabs>
-        <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
-        <modal large title="%%Extract%%" id="modal:checkout-stash">
-            <div>
-            <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\stash\unit-inElsewhere-asFlat.md">
+        <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to
+          <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
+        <modal large="" title="%%Extract%%" id="modal:checkout-stash">
+          <div>
+            <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\stash\unit-inElsewhere-asFlat.md">
               <div>
-                <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\stash\text.md"></div>
+                <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\stash\text.md"></div>
               </div>
               <p></p>
-              <p><span class="dimmed"><strong><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\path.md">Tools → Git and GitHub →
-                      </span></span></strong></span></p>
+              <p><span class="dimmed"><strong><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\path.md">Tools → Git and GitHub →
+</span></span>
+                </strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="stash"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\stash\text.md">Stash</span></span></h4>
+                  <h4 id="stash"><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\stash\text.md">Stash</span></span>
+                  </h4>
                 </div>
                 <div id="main">
                   <div>
-                    <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\stash\text.md">
-                      <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+                    <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\stash\text.md">
+                      <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed
+                        changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
                       <tabs>
-                          <tab header="Source Tree">
+                        <tab header="Source Tree">
                           <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
-                          <p>
-                            <hr>
-                          </p>
                         </tab>
-                          <tab header="CLI">
+                        <tab header="CLI">
                           <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
-                          <p>
-                            <hr>
-                          </p>
                         </tab>
                       </tabs>
                     </div>
                   </div>
                   <div>
-                    <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\stash\text.md"></div>
+                    <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\stash\text.md"></div>
                   </div>
                 </div>
               </div>
@@ -137,7 +122,7 @@ index 15b57f7..17f4528 100644
         <tabs>
           <tab header="SourceTree">
             <div>
-              <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\checkout\sourcetree_3.md">
+              <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\checkout\sourcetree_3.md">
                 <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose <code>Checkout...</code>.</p>
                 <p>Click <code>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p>
                 <img src="/se-book/gitAndGithub/checkout/images/warning.png" height="140">
@@ -145,17 +130,16 @@ index 15b57f7..17f4528 100644
                 <p>The specified version is now loaded to the working folder, as indicated by the <code>HEAD</code> label. <code>HEAD</code> is a reference to the currently checked out commit.</p>
                 <img src="/se-book/gitAndGithub/checkout/images/sourcetree_4.png" height="100">
                 <p></p>
-                <p>If you checkout a commit that come before the commit in which you added the <code>.gitignore</code> file, Git will now show ignored fiels as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
+                <p>If you checkout a commit that come before the commit in which you added the <code>.gitignore</code> file, Git will now show ignored files as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
                 <img src="/se-book/gitAndGithub/checkout/images/sourcetree_5.png" height="260">
                 <p></p>
                 <p>To go back to the latest commit, double-click it.</p>
               </div>
             </div>
-            <hr>
           </tab>
           <tab header="CLI">
             <div>
-              <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\checkout\cli_3.md">
+              <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\checkout\cli_3.md">
                 <p>Use the <code>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
                 <ul>
                   <li><code>git checkout v1.0</code>: loads the state as at commit tagged <code>v1.0</code></li>
@@ -169,13 +153,12 @@ index 15b57f7..17f4528 100644
                 </ul>
               </div>
             </div>
-            <hr>
           </tab>
         </tabs>
       </div>
     </div>
     <div>
-      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\gitAndGithub\checkout\text.md"></div>
+      <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\gitAndGithub\checkout\text.md"></div>
     </div>
   </div>
 </div>
