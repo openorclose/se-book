@@ -306,6 +306,7 @@ pre {
     display: block;
 }
 
+
 .line-numbers > span::before {
     counter-increment: line;
     content: counter(line);

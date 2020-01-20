@@ -80,13 +80,7 @@
                                 <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Circle c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>, <span class="hljs-number">5</span>);</span><span></span><span>        c.setX(<span class="hljs-number">4</span>);</span><span>        c.setY(<span class="hljs-number">5</span>);</span><span>        c.setRadius(<span class="hljs-number">6</span>);</span><span>        System.out.println(<span class="hljs-string">"x      : "</span> + c.getX());</span><span>        System.out.println(<span class="hljs-string">"y      : "</span> + c.getY());</span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());</span><span>        System.out.println(<span class="hljs-string">"area   : "</span> + c.getArea());</span><span></span><span>        c.setRadius(-<span class="hljs-number">5</span>);</span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());</span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">4</span>);</span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());</span><span></span><span>    }</span><span>}</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                                 </p>
-                                <pre><code>x      : 4
-y      : 5
-radius : 6.0
-area   : 113
-radius : 0.0
-radius : 0.0
-</code></pre>
+                                <pre><code><span>x      : 4</span><span>y      : 5</span><span>radius : 6.0</span><span>area   : 113</span><span>radius : 0.0</span><span>radius : 0.0</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p>Partial solution:</p>
                                   <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">double</span> radius)</span></span>{</span><span>    setX(x);</span><span>    setY(y);</span><span>    setRadius(radius);</span><span>}</span><span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{</span><span>    <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);</span><span>}</span></code></pre>
@@ -107,7 +101,7 @@ radius : 0.0
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
     </footer>
   </div>
 </body>

@@ -66,8 +66,7 @@
                       <pre><code class="line-numbers hljs java"><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span><span class="hljs-keyword">int</span> sum = spot.x * spot.x + spot.y * spot.y;</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y + <span class="hljs-string">", "</span> + sum);</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>3, 4, 25
-</code></pre>
+                      <pre><code><span>3, 4, 25</span></code></pre>
                     </box>
                     <p><strong>You can <tooltip content="i.e., change/modify"><em>mutate</em></tooltip> an object by assigning a different values to its attributes.</strong></p>
                     <box>
@@ -75,8 +74,7 @@
                       <pre><code class="line-numbers hljs java"><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span>spot.x = <span class="hljs-number">5</span>;</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>5, 4
-</code></pre>
+                      <pre><code><span>5, 4</span></code></pre>
                     </box>
                     <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span>
                       </span>
@@ -86,9 +84,7 @@
                       <pre><code class="line-numbers hljs java"><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);</span><span>spot.translate(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>3, 4
-8, 9
-</code></pre>
+                      <pre><code><span>3, 4</span><span>8, 9</span></code></pre>
                     </box>
                   </div>
                   <div>
@@ -102,10 +98,7 @@
                                 <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.awt.Rectangle;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Rectangle r = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>);</span><span>        System.out.println(r);</span><span></span><span>        <span class="hljs-keyword">int</span> area;</span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line below to calculate the area using width and height properties of r</span></span><span>        <span class="hljs-comment">// and assign it to the variable area</span></span><span></span><span>        System.out.println(<span class="hljs-string">"Area: "</span> + area);</span><span></span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line here to set the size of r to 8x10 (width x height)</span></span><span>        <span class="hljs-comment">//Recommended: use the setSize(int height, int width) method of the Rectangle object</span></span><span></span><span>        System.out.println(r);</span><span>    }</span><span></span><span>}</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                                 </p>
-                                <pre><code>java.awt.Rectangle[x=0,y=0,width=4,height=6]
-Area: 24
-java.awt.Rectangle[x=0,y=0,width=8,height=10]
-</code></pre>
+                                <pre><code><span>java.awt.Rectangle[x=0,y=0,width=4,height=6]</span><span>Area: 24</span><span>java.awt.Rectangle[x=0,y=0,width=8,height=10]</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <ul>
                                     <li>Area can be calculated as <code>r.width * r.height</code></li>
@@ -128,7 +121,7 @@ java.awt.Rectangle[x=0,y=0,width=8,height=10]
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
     </footer>
   </div>
 </body>

@@ -227,10 +227,7 @@
                 <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the SUT is a browser supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully
                     if pushed beyond its limits.</p>
-                  <pre><code>Test case: load a web page that is too big
-* Input: load a web page containing more than 5000 characters. 
-* Expected behavior: abort the loading of the page and show a meaningful error message. 
-</code></pre>
+                  <pre><code><span>Test case: load a web page that is too big</span><span>* Input: load a web page containing more than 5000 characters. </span><span>* Expected behavior: abort the loading of the page and show a meaningful error message. </span></code></pre>
                   <p>This test case would fail if the browser attempted to load the large file anyway and crashed.</p>
                 </box>
                 <p><strong>System testing includes testing against non-functional requirements too.</strong> Here are some examples.</p>
@@ -507,20 +504,13 @@
                   <li>
                     <p>Store the test input in the text file <code>input.txt</code>.</p>
                     <panel header="%%<md>:fas-cube:</md> Example `input.txt`%%" type="seamless" class="algolia-no-index">
-                      <pre><code>add Valid Name p/12345 valid@email.butNoPrefix
-add Valid Name 12345 e/valid@email.butPhonePrefixMissing
-</code></pre>
+                      <pre><code><span>add Valid Name p/12345 valid@email.butNoPrefix</span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing</span></code></pre>
                     </panel>
                   </li>
                   <li>
                     <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
                     <panel header="%%<md>:fas-cube:</md> Example `expected.txt`%%" type="seamless" class="algolia-no-index">
-                      <pre><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
-Invalid command format: add 
-
-Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
-Invalid command format: add 
-</code></pre>
+                      <pre><code><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]</span><span>Invalid command format: add </span><span></span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]</span><span>Invalid command format: add </span></code></pre>
                     </panel>
                   </li>
                   <li>
@@ -556,8 +546,7 @@ Invalid command format: add
                   </li>
                   <li>
                     <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as <em>WinMerge</em>.</p>
-                    <pre><code>FC output.txt expected.txt
-</code></pre>
+                    <pre><code><span>FC output.txt expected.txt</span></code></pre>
                   </li>
                 </ol>
                 <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
@@ -939,7 +928,7 @@ Invalid command format: add
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
     </footer>
   </div>
 </body>

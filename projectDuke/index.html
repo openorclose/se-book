@@ -56,58 +56,7 @@
                   </div>
                   <p><strong>The project aims to build a product named <em>Duke</em>, a Personal Assistant Chatbot that helps a person to keep track of various things.</strong> <span class="dimmed">The name <em>Duke</em> was chosen as a placeholder name, in honor of <a href="https://www.oracle.com/java/duke.html">Duke, the Java Mascot</a>.</span>                    <strong>You may give it any other name and personality you wish.</strong></p>
                   <p>Here is a sample interaction with Duke:</p>
-                  <pre><code>    ____________________________________________________________
-      ____        _        
-     |  _ \ _   _| | _____ 
-     | | | | | | | |/ / _ \
-     | |_| | |_| |   &lt;  __/
-     |____/ \__,_|_|\_\___|
-
-     Hello! I'm Duke
-     What can I do for you?
-    ____________________________________________________________
-
-list
-    ____________________________________________________________
-     Here are the tasks in your list:
-     1.[T][✓] read book
-     2.[D][✗] return book (by: June 6th)
-     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
-     4.[T][✓] join sports club
-    ____________________________________________________________
-
-todo borrow book
-    ____________________________________________________________
-     Got it. I've added this task: 
-       [T][✗] borrow book
-     Now you have 5 tasks in the list.
-    ____________________________________________________________
-
-
-deadline return book /by Sunday
-    ____________________________________________________________
-     Got it. I've added this task: 
-       [D][✗] return book (by: Sunday)
-     Now you have 6 tasks in the list.
-    ____________________________________________________________
-
-done 2
-    ____________________________________________________________
-     Nice! I've marked this task as done: 
-       [D][✓] return book (by: June 6th)
-    ____________________________________________________________
-
-blah
-    ____________________________________________________________
-     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(
-    ____________________________________________________________
-
-bye
-    ____________________________________________________________
-     Bye. Hope to see you again soon!
-    ____________________________________________________________
-
-</code></pre>
+                  <pre><code><span>    ____________________________________________________________</span><span>      ____        _        </span><span>     |  _ \ _   _| | _____ </span><span>     | | | | | | | |/ / _ \</span><span>     | |_| | |_| |   <  __/</span><span>     |____/ \__,_|_|\_\___|</span><span></span><span>     Hello! I'm Duke</span><span>     What can I do for you?</span><span>    ____________________________________________________________</span><span></span><span>list</span><span>    ____________________________________________________________</span><span>     Here are the tasks in your list:</span><span>     1.[T][✓] read book</span><span>     2.[D][✗] return book (by: June 6th)</span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)</span><span>     4.[T][✓] join sports club</span><span>    ____________________________________________________________</span><span></span><span>todo borrow book</span><span>    ____________________________________________________________</span><span>     Got it. I've added this task: </span><span>       [T][✗] borrow book</span><span>     Now you have 5 tasks in the list.</span><span>    ____________________________________________________________</span><span></span><span></span><span>deadline return book /by Sunday</span><span>    ____________________________________________________________</span><span>     Got it. I've added this task: </span><span>       [D][✗] return book (by: Sunday)</span><span>     Now you have 6 tasks in the list.</span><span>    ____________________________________________________________</span><span></span><span>done 2</span><span>    ____________________________________________________________</span><span>     Nice! I've marked this task as done: </span><span>       [D][✓] return book (by: June 6th)</span><span>    ____________________________________________________________</span><span></span><span>blah</span><span>    ____________________________________________________________</span><span>     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(</span><span>    ____________________________________________________________</span><span></span><span>bye</span><span>    ____________________________________________________________</span><span>     Bye. Hope to see you again soon!</span><span>    ____________________________________________________________</span><span></span></code></pre>
                   <div id="increments_summary">
                     <p>The project consists of the following <em>increments</em>:</p>
                     <ul>
@@ -134,13 +83,7 @@ bye
                   <p>Implement an initial <em>skeletal</em> version of the Duke that simply greets the user and exits.
                     <br> Example:
                   </p>
-                  <pre><code>____________________________________________________________
- Hello! I'm Duke
- What can I do for you?
-____________________________________________________________
- Bye. Hope to see you again soon!
-____________________________________________________________
-</code></pre>
+                  <pre><code><span>____________________________________________________________</span><span> Hello! I'm Duke</span><span> What can I do for you?</span><span>____________________________________________________________</span><span> Bye. Hope to see you again soon!</span><span>____________________________________________________________</span></code></pre>
                   <ul>
                     <li>The indentation and horizontal lines are optional.</li>
                   </ul>
@@ -154,27 +97,7 @@ ____________________________________________________________
                   <p>Implement a <em>skeletal</em> version of Duke that starts by greeting the user, simply echos commands entered by the user, and exits when the user types <code>bye</code>.
                     <br> Example:
                   </p>
-                  <pre><code>    ____________________________________________________________
-     Hello! I'm Duke
-     What can I do for you?
-    ____________________________________________________________
-
-list
-    ____________________________________________________________
-     list
-    ____________________________________________________________
-
-blah
-    ____________________________________________________________
-     blah
-    ____________________________________________________________
-
-bye
-    ____________________________________________________________
-     Bye. Hope to see you again soon!
-    ____________________________________________________________
-
-</code></pre>
+                  <pre><code><span>    ____________________________________________________________</span><span>     Hello! I'm Duke</span><span>     What can I do for you?</span><span>    ____________________________________________________________</span><span></span><span>list</span><span>    ____________________________________________________________</span><span>     list</span><span>    ____________________________________________________________</span><span></span><span>blah</span><span>    ____________________________________________________________</span><span>     blah</span><span>    ____________________________________________________________</span><span></span><span>bye</span><span>    ____________________________________________________________</span><span>     Bye. Hope to see you again soon!</span><span>    ____________________________________________________________</span><span></span></code></pre>
                   <ul>
                     <li>The indentation and horizontal lines are optional.</li>
                   </ul>
@@ -191,32 +114,7 @@ bye
                   <h3 id="level-2-add-list">Level 2. Add, List<a class="fa fa-anchor" href="#level-2-add-list"></a></h3>
                   <p>Add the ability to store whatever text entered by the user and display them back to the user when requested.</p>
                   <p>Example:</p>
-                  <pre><code>    ____________________________________________________________
-     Hello! I'm Duke
-     What can I do for you?
-    ____________________________________________________________
-
-read book
-    ____________________________________________________________
-     added: read book
-    ____________________________________________________________
-
-return book
-    ____________________________________________________________
-     added: return book
-    ____________________________________________________________
-
-list
-    ____________________________________________________________
-     1. read book
-     2. return book
-    ____________________________________________________________
-bye
-    ____________________________________________________________
-     Bye. Hope to see you again soon!
-    ____________________________________________________________
-
-</code></pre>
+                  <pre><code><span>    ____________________________________________________________</span><span>     Hello! I'm Duke</span><span>     What can I do for you?</span><span>    ____________________________________________________________</span><span></span><span>read book</span><span>    ____________________________________________________________</span><span>     added: read book</span><span>    ____________________________________________________________</span><span></span><span>return book</span><span>    ____________________________________________________________</span><span>     added: return book</span><span>    ____________________________________________________________</span><span></span><span>list</span><span>    ____________________________________________________________</span><span>     1. read book</span><span>     2. return book</span><span>    ____________________________________________________________</span><span>bye</span><span>    ____________________________________________________________</span><span>     Bye. Hope to see you again soon!</span><span>    ____________________________________________________________</span><span></span></code></pre>
                   <ul>
                     <li>There is no need to save the data to the hard disk.</li>
                     <li>Assume there will be no more than 100 tasks. If you wish, you may use a fixed size array (e.g., <code>String[100]</code>) to store the items.</li>
@@ -229,20 +127,7 @@ bye
                   </p>
                   <h3 id="level-3-mark-as-done">Level 3. Mark as Done<a class="fa fa-anchor" href="#level-3-mark-as-done"></a></h3>
                   <p>Add the ability to mark tasks as <em>done</em>.<br><br></p>
-                  <pre><code>list
-    ____________________________________________________________
-     Here are the tasks in your list:
-     1.[✓] read book
-     2.[✗] return book
-     3.[✗] buy bread
-    ____________________________________________________________
-
-done 2
-    ____________________________________________________________
-     Nice! I've marked this task as done: 
-       [✓] return book
-    ____________________________________________________________
-</code></pre>
+                  <pre><code><span>list</span><span>    ____________________________________________________________</span><span>     Here are the tasks in your list:</span><span>     1.[✓] read book</span><span>     2.[✗] return book</span><span>     3.[✗] buy bread</span><span>    ____________________________________________________________</span><span></span><span>done 2</span><span>    ____________________________________________________________</span><span>     Nice! I've marked this task as done: </span><span>       [✓] return book</span><span>    ____________________________________________________________</span></code></pre>
                   <div>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
                     <div class="indented">
@@ -279,47 +164,10 @@ done 2
                     <li><strong>Events</strong>: tasks that start at a specific time and ends at a specific time <span class="dimmed">e.g., <em>team project meeting on 2/10/2019 2-4pm</em></span></li>
                   </ol>
                   <p>Example:</p>
-                  <pre><code>todo borrow book
-    ____________________________________________________________
-     Got it. I've added this task: 
-       [T][✗] borrow book
-     Now you have 5 tasks in the list.
-    ____________________________________________________________
-
-list
-    ____________________________________________________________
-     Here are the tasks in your list:
-     1.[T][✓] read book
-     2.[D][✗] return book (by: June 6th)
-     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
-     4.[T][✓] join sports club
-     5.[T][✗] borrow book
-    ____________________________________________________________
-
-deadline return book /by Sunday
-    ____________________________________________________________
-     Got it. I've added this task: 
-       [D][✗] return book (by: Sunday)
-     Now you have 6 tasks in the list.
-    ____________________________________________________________
-
-event project meeting /at Mon 2-4pm
-    ____________________________________________________________
-     Got it. I've added this task: 
-       [E][✗] project meeting (at: Mon 2-4pm)
-     Now you have 7 tasks in the list.
-    ____________________________________________________________
-</code></pre>
+                  <pre><code><span>todo borrow book</span><span>    ____________________________________________________________</span><span>     Got it. I've added this task: </span><span>       [T][✗] borrow book</span><span>     Now you have 5 tasks in the list.</span><span>    ____________________________________________________________</span><span></span><span>list</span><span>    ____________________________________________________________</span><span>     Here are the tasks in your list:</span><span>     1.[T][✓] read book</span><span>     2.[D][✗] return book (by: June 6th)</span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)</span><span>     4.[T][✓] join sports club</span><span>     5.[T][✗] borrow book</span><span>    ____________________________________________________________</span><span></span><span>deadline return book /by Sunday</span><span>    ____________________________________________________________</span><span>     Got it. I've added this task: </span><span>       [D][✗] return book (by: Sunday)</span><span>     Now you have 6 tasks in the list.</span><span>    ____________________________________________________________</span><span></span><span>event project meeting /at Mon 2-4pm</span><span>    ____________________________________________________________</span><span>     Got it. I've added this task: </span><span>       [E][✗] project meeting (at: Mon 2-4pm)</span><span>     Now you have 7 tasks in the list.</span><span>    ____________________________________________________________</span></code></pre>
                   <p>At this point, dates/times can be treated as strings; there is no need to convert them to actual dates/times.</p>
                   <p>Example:</p>
-                  <pre><code>
-deadline do homework /by no idea :-p
-    ____________________________________________________________
-     Got it. I've added this task: 
-       [D][✗] do homework (by: no idea :-p)
-     Now you have 6 tasks in the list.
-    ____________________________________________________________
-</code></pre>
+                  <pre><code><span></span><span>deadline do homework /by no idea :-p</span><span>    ____________________________________________________________</span><span>     Got it. I've added this task: </span><span>       [D][✗] do homework (by: no idea :-p)</span><span>     Now you have 6 tasks in the list.</span><span>    ____________________________________________________________</span></code></pre>
                   <div>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
                     <div class="indented">
@@ -351,16 +199,7 @@ deadline do homework /by no idea :-p
                     <br>
                     <br></p>
                   <p>Example:</p>
-                  <pre><code>todo
-    ____________________________________________________________
-     ☹ OOPS!!! The description of a todo cannot be empty.
-    ____________________________________________________________
-
-blah
-    ____________________________________________________________
-     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(
-    ____________________________________________________________
-</code></pre>
+                  <pre><code><span>todo</span><span>    ____________________________________________________________</span><span>     ☹ OOPS!!! The description of a todo cannot be empty.</span><span>    ____________________________________________________________</span><span></span><span>blah</span><span>    ____________________________________________________________</span><span>     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(</span><span>    ____________________________________________________________</span></code></pre>
                   <div>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
                     <div class="indented">
@@ -391,23 +230,7 @@ blah
                     <br>
                     <br></p>
                   <p>Example:</p>
-                  <pre><code>list
-    ____________________________________________________________
-     Here are the tasks in your list:
-     1.[T][✓] read book
-     2.[D][✓] return book (by: June 6th)
-     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
-     4.[T][✓] join sports club
-     5.[T][✗] borrow book
-    ____________________________________________________________
-
-delete 3
-    ____________________________________________________________
-     Noted. I've removed this task: 
-       [E][✗] project meeting (at: Aug 6th 2-4pm)
-     Now you have 4 tasks in the list.
-    ____________________________________________________________
-</code></pre>
+                  <pre><code><span>list</span><span>    ____________________________________________________________</span><span>     Here are the tasks in your list:</span><span>     1.[T][✓] read book</span><span>     2.[D][✓] return book (by: June 6th)</span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)</span><span>     4.[T][✓] join sports club</span><span>     5.[T][✗] borrow book</span><span>    ____________________________________________________________</span><span></span><span>delete 3</span><span>    ____________________________________________________________</span><span>     Noted. I've removed this task: </span><span>       [E][✗] project meeting (at: Aug 6th 2-4pm)</span><span>     Now you have 4 tasks in the list.</span><span>    ____________________________________________________________</span></code></pre>
                   <div>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
                     <div class="indented">
@@ -432,11 +255,7 @@ delete 3
                   <h3 id="level-7-save">Level 7. Save<a class="fa fa-anchor" href="#level-7-save"></a></h3>
                   <p>Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk when Duke starts up. You may hard-code the file name and location <span class="dimmed">e.g., <code>[project_root]/data/duke.txt</code></span></p>
                   <p>The format of the file is up to you. Example:</p>
-                  <pre><code>T | 1 | read book
-D | 0 | return book | June 6th
-E | 0 | project meeting | Aug 6th 2-4pm
-T | 1 | join sports club
-</code></pre>
+                  <pre><code><span>T | 1 | read book</span><span>D | 0 | return book | June 6th</span><span>E | 0 | project meeting | Aug 6th 2-4pm</span><span>T | 1 | join sports club</span></code></pre>
                   <p><strong><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you use file paths in your code,</strong></p>
                   <ul>
                     <li>remember to use relative paths rather than absolute paths such as <code>C:\data</code>. If not, your app can cause unpredictable results when used in another computer.</li>
@@ -474,13 +293,7 @@ T | 1 | join sports club
                     <br>
                     <br></p>
                   <p>Example:</p>
-                  <pre><code>find book
-    ____________________________________________________________
-     Here are the matching tasks in your list:
-     1.[T][✓] read book
-     2.[D][✓] return book (by: June 6th)
-    ____________________________________________________________
-</code></pre>
+                  <pre><code><span>find book</span><span>    ____________________________________________________________</span><span>     Here are the matching tasks in your list:</span><span>     1.[T][✓] read book</span><span>     2.[D][✓] return book (by: June 6th)</span><span>    ____________________________________________________________</span></code></pre>
                 </div>
                 <hr>
                 <div id="Level-10">
@@ -1204,7 +1017,7 @@ T | 1 | join sports club
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
     </footer>
   </div>
 </body>

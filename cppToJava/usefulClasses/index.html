@@ -108,9 +108,7 @@
                       <pre><code class="line-numbers hljs java"><span>String name = <span class="hljs-string">"Alan Turing"</span>;</span><span>String upperName = name.toUpperCase();</span><span>System.out.println(name);</span><span>System.out.println(upperName);</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>Alan Turing
-ALAN TURING
-</code></pre>
+                      <pre><code><span>Alan Turing</span><span>ALAN TURING</span></code></pre>
                     </box>
                     <p>Note that <strong>a string method cannot change the string object on which the method is invoked, because strings are <tooltip content="once created, cannot be modified"><em>immutable</em></tooltip></strong>. For example, when you
                       invoke
@@ -126,8 +124,7 @@ ALAN TURING
                       <pre><code class="line-numbers hljs java"><span>String text = <span class="hljs-string">"Computer Science is fun!"</span>;</span><span>text = text.replace(<span class="hljs-string">"Computer Science"</span>, <span class="hljs-string">"CS"</span>);</span><span>System.out.println(text);</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>CS is fun!
-</code></pre>
+                      <pre><code><span>CS is fun!</span></code></pre>
                     </box>
                   </div>
                   <h5 id="accessing-substrings">Accessing substrings<a class="fa fa-anchor" href="#accessing-substrings"></a></h5>
@@ -240,9 +237,7 @@ ALAN TURING
                       <pre><code class="line-numbers hljs java"><span>System.out.println(<span class="hljs-string">"First line\nSecond \"line\""</span>);</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>First line
-Second &quot;line&quot;
-</code></pre>
+                      <pre><code><span>First line</span><span>Second "line"</span></code></pre>
                     </box>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> As the behavior of the <code>\n</code>
                       <tooltip content="e.g., behavior differs between Windows and OS-X">depends on the platform</tooltip>, the recommended way to print a line break is using the <code>System.lineSeparator()</code> as it works the same in all platforms.</p>
@@ -251,9 +246,7 @@ Second &quot;line&quot;
                       <pre><code class="line-numbers hljs java"><span>System.out.println(<span class="hljs-string">"First line"</span> + System.lineSeparator() + <span class="hljs-string">"Second line"</span>);</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>First line
-Second line
-</code></pre>
+                      <pre><code><span>First line</span><span>Second line</span></code></pre>
                     </box>
                   </div>
                   <h5 id="string-formatting">String formatting<a class="fa fa-anchor" href="#string-formatting"></a></h5>
@@ -294,10 +287,7 @@ Second line
                               <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPrice</span><span class="hljs-params">(String item)</span> </span>{</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printPrice(<span class="hljs-string">"sandwich  --$4/50"</span>);</span><span>        printPrice(<span class="hljs-string">"  soda --$10/00"</span>);</span><span>        printPrice(<span class="hljs-string">"  fries --$0/50"</span>);</span><span>    }</span><span>}</span></code></pre>
                               <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                               </p>
-                              <pre><code>SANDWICH: 4.50
-SODA: 10.00
-FRIES: 0.50
-</code></pre>
+                              <pre><code><span>SANDWICH: 4.50</span><span>SODA: 10.00</span><span>FRIES: 0.50</span></code></pre>
                               <div slot="hint" class="algolia-no-index">
                                 <p>Partial solution:</p>
                                 <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPrice</span><span class="hljs-params">(String item)</span> </span>{</span><span>    <span class="hljs-keyword">int</span> dividerPosition = item.indexOf(<span class="hljs-string">"--"</span>);</span><span>    String itemName = item.substring(<span class="hljs-number">0</span>, dividerPosition);</span><span>    <span class="hljs-comment">//...</span></span><span>    System.out.println(itemName.trim().toUpperCase() + ...);</span><span></span><span>}</span></code></pre>
@@ -383,9 +373,7 @@ FRIES: 0.50
                   <pre><code class="line-numbers hljs java"><span>Double d = <span class="hljs-keyword">new</span> Double(<span class="hljs-number">2.5</span>);</span><span><span class="hljs-keyword">int</span> i = d.intValue();</span><span>System.out.println(d);</span><span>System.out.println(i);</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>2.5
-2
-</code></pre>
+                  <pre><code><span>2.5</span><span>2</span></code></pre>
                 </box>
                 <p>Each wrapper class defines constants <code>MIN_VALUE</code> and <code>MAX_VALUE</code>.</p>
                 <box>
@@ -415,9 +403,7 @@ FRIES: 0.50
                             <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTotalScore</span><span class="hljs-params">(String[] values)</span></span>{</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printTotalScore(<span class="hljs-keyword">new</span> String[]{});</span><span>        printTotalScore(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"0"</span>, <span class="hljs-string">"124"</span>, <span class="hljs-string">"-15"</span>});</span><span>    }</span><span>}</span></code></pre>
                             <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                             </p>
-                            <pre><code>0
-109
-</code></pre>
+                            <pre><code><span>0</span><span>109</span></code></pre>
                             <div slot="hint" class="algolia-no-index">
                               <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <a href="https://www.tutorialspoint.com/java/number_parseint.htm"><code>Integer.parseInt()</code></a>                                method to convert a <code>String</code> to the equivalent <code>int</code> value.</p>
                               <p>Partial solution:</p>
@@ -455,9 +441,7 @@ FRIES: 0.50
                 <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};</span><span></span><span><span class="hljs-keyword">int</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>); <span class="hljs-comment">// copy first three elements</span></span><span>System.out.println(Arrays.toString(b));</span><span></span><span><span class="hljs-keyword">int</span>[] c = Arrays.copyOf(a, a.length); <span class="hljs-comment">// copy all elements</span></span><span>System.out.println(Arrays.toString(c));</span></code></pre>
                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                 </p>
-                <pre><code>[1, 2, 3]
-[1, 2, 3, 4]
-</code></pre>
+                <pre><code><span>[1, 2, 3]</span><span>[1, 2, 3, 4]</span></code></pre>
               </box>
             </div>
             <div>
@@ -485,12 +469,7 @@ FRIES: 0.50
                           <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.util.Arrays;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String[] filterEmails(String[] items){</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printItems</span><span class="hljs-params">(String[] items)</span></span>{</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{}));</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"abc"</span>}));</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"adam@example.com"</span>, <span class="hljs-string">"aab"</span>, <span class="hljs-string">"john@example.com"</span>, <span class="hljs-string">"some@"</span>}));</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"xyz"</span>, <span class="hljs-string">"@bee.com"</span>, <span class="hljs-string">"aab"</span>}));</span><span>    }</span><span>}</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                           </p>
-                          <pre><code>[]
-[]
-[adam@example.com, john@example.com, some@]
-[@bee.com]
-
-</code></pre>
+                          <pre><code><span>[]</span><span>[]</span><span>[adam@example.com, john@example.com, some@]</span><span>[@bee.com]</span><span></span></code></pre>
                           <div slot="hint" class="algolia-no-index">
                             <ul>
                               <li><strong><code>filterEmailsfilterEmails(String[] items): String[]</code></strong>
@@ -559,22 +538,13 @@ FRIES: 0.50
                         </ul>
                         <p>Here is one example output: <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                         </p>
-                        <pre><code>Your expenses while overseas?beer $4.50 books $3.00 $5.00 for food, that's all
-Expenses in overseas currency:[$4.50, $3.00, $5.00]
-Total in local currency: $21.25
-</code></pre>
+                        <pre><code><span>Your expenses while overseas?beer $4.50 books $3.00 $5.00 for food, that's all</span><span>Expenses in overseas currency:[$4.50, $3.00, $5.00]</span><span>Total in local currency: $21.25</span></code></pre>
                         <p>Here is another: <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                         </p>
-                        <pre><code>Your expenses while overseas?nothing. I lived off my friends all the time.
-Expenses in overseas currency:[]
-Total in local currency: $0.00
-</code></pre>
+                        <pre><code><span>Your expenses while overseas?nothing. I lived off my friends all the time.</span><span>Expenses in overseas currency:[]</span><span>Total in local currency: $0.00</span></code></pre>
                         <p>One more: <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                         </p>
-                        <pre><code>Your expenses while overseas? Just $10
-Expenses in overseas currency:[$10]
-Total in local currency: $17.00
-</code></pre>
+                        <pre><code><span>Your expenses while overseas? Just $10</span><span>Expenses in overseas currency:[$10]</span><span>Total in local currency: $17.00</span></code></pre>
                         <p>Here's the skeleton code to use as the starting point:</p>
                         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">// You can add more methods here</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        String line;</span><span>        Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);</span><span></span><span>        System.out.print(<span class="hljs-string">"Your expenses while overseas?"</span>);</span><span>       <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>    }</span><span>}</span></code></pre>
                         <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <code>split</code> method of the <code>String</code> class to convert a sentence into an array of words.
@@ -606,7 +576,7 @@ Total in local currency: $17.00
   </div>
   <footer>
     <div class="text-center">
-      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
   </footer>
   </div>
 </body>

@@ -25,20 +25,13 @@
           <li>
             <p>Store the test input in the text file <code>input.txt</code>.</p>
             <panel header="%%<md>:fas-cube:</md> Example `input.txt`%%" type="seamless">
-              <pre><code>add Valid Name p/12345 valid@email.butNoPrefix
-add Valid Name 12345 e/valid@email.butPhonePrefixMissing
-</code></pre>
+              <pre><code><span>add Valid Name p/12345 valid@email.butNoPrefix</span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing</span></code></pre>
             </panel>
           </li>
           <li>
             <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
             <panel header="%%<md>:fas-cube:</md> Example `expected.txt`%%" type="seamless">
-              <pre><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
-Invalid command format: add 
-
-Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
-Invalid command format: add 
-</code></pre>
+              <pre><code><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]</span><span>Invalid command format: add </span><span></span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]</span><span>Invalid command format: add </span></code></pre>
             </panel>
           </li>
           <li>
@@ -75,8 +68,7 @@ Invalid command format: add
           </li>
           <li>
             <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as <em>WinMerge</em>.</p>
-            <pre><code>FC output.txt expected.txt
-</code></pre>
+            <pre><code><span>FC output.txt expected.txt</span></code></pre>
           </li>
         </ol>
         <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>

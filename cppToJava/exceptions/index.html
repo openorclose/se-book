@@ -237,9 +237,7 @@
                               <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArea</span><span class="hljs-params">(String descriptor)</span></span>{</span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> modify the code below</span></span><span>        System.out.println(descriptor + <span class="hljs-string">"="</span> + calculateArea(descriptor));</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(String descriptor)</span> </span>{</span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> modify the code below</span></span><span>        String[] dimensions = descriptor.split(<span class="hljs-string">"x"</span>);</span><span>        <span class="hljs-keyword">return</span> Integer.parseInt(dimensions[<span class="hljs-number">0</span>]) * Integer.parseInt(dimensions[<span class="hljs-number">1</span>]);</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printArea(<span class="hljs-string">"3x4"</span>);</span><span>        printArea(<span class="hljs-string">"5x5"</span>);</span><span>    }</span><span>}</span></code></pre>
                               <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                               </p>
-                              <pre><code>3x4=12
-5x5=25
-</code></pre>
+                              <pre><code><span>3x4=12</span><span>5x5=25</span></code></pre>
                               <ol>
                                 <li>
                                   <p>Update the code of <code>printArea</code> to print an error message if <code>WIDTH</code> and/or <code>HEIGHT</code> are not numbers <span class="dimmed">e.g., <code>&quot;Ax4&quot;</code></span><br>
@@ -263,12 +261,7 @@
                               <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">//...</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printArea(<span class="hljs-string">"3x4"</span>);</span><span>        printArea(<span class="hljs-string">"3xy"</span>);</span><span>        printArea(<span class="hljs-string">"3x"</span>);</span><span>        printArea(<span class="hljs-string">"3"</span>);</span><span>        printArea(<span class="hljs-string">"3x4x5"</span>);</span><span>    }</span><span>}</span></code></pre>
                               <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                               </p>
-                              <pre><code>3x4=12
-WIDTH or HEIGHT is not a number: 3xy
-WIDTH or HEIGHT is missing: 3x
-WIDTH or HEIGHT is missing: 3
-Too many dimensions: 3x4x5
-</code></pre>
+                              <pre><code><span>3x4=12</span><span>WIDTH or HEIGHT is not a number: 3xy</span><span>WIDTH or HEIGHT is missing: 3x</span><span>WIDTH or HEIGHT is missing: 3</span><span>Too many dimensions: 3x4x5</span></code></pre>
                               <panel type="seamless" header="Partial solution" class="algolia-no-index">
                                 <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArea</span><span class="hljs-params">(String descriptor)</span></span>{</span><span>        <span class="hljs-keyword">try</span> {</span><span>            System.out.println(descriptor + <span class="hljs-string">"="</span> + calculateArea(descriptor));</span><span>        } <span class="hljs-keyword">catch</span> (NumberFormatException e) {</span><span>            System.out.println(<span class="hljs-string">"WIDTH or HEIGHT is not a number: "</span> + descriptor);</span><span>        } <span class="hljs-comment">// add more catch blocks here</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(String descriptor)</span> <span class="hljs-keyword">throws</span> IllegalShapeException </span>{</span><span>        String[] dimensions = descriptor.split(<span class="hljs-string">"x"</span>);</span><span></span><span>        <span class="hljs-comment">//throw IllegalShapeException here if dimensions.length &gt; 2</span></span><span></span><span>        <span class="hljs-keyword">return</span> Integer.parseInt(dimensions[<span class="hljs-number">0</span>]) * Integer.parseInt(dimensions[<span class="hljs-number">1</span>]);</span><span>    }</span><span></span><span></span><span>}</span></code></pre>
                               </panel>
@@ -290,7 +283,7 @@ Too many dimensions: 3x4x5
   </div>
   <footer>
     <div class="text-center">
-      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
   </footer>
   </div>
 </body>

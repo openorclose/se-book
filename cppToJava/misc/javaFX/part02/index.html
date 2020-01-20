@@ -125,12 +125,7 @@
         </ol>
         <h2 id="opening-up-the-personoverviewcontroller-to-javafx">Opening up the <code>PersonOverviewController</code> to JavaFx<a class="fa fa-anchor" href="#opening-up-the-personoverviewcontroller-to-javafx"></a></h2>
         <p>If you try and run the application now, you will encounter the following error:</p>
-        <pre><code>javafx.fxml.LoadException: ...
-
-...
-
-Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueElement (in module javafx.fxml) cannot access class seedu.address.view.PersonOverviewController (in module AddressApp) because module AddressApp does not export seedu.address.view to module javafx.fxml
-</code></pre>
+        <pre><code><span>javafx.fxml.LoadException: ...</span><span></span><span>...</span><span></span><span>Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueElement (in module javafx.fxml) cannot access class seedu.address.view.PersonOverviewController (in module AddressApp) because module AddressApp does not export seedu.address.view to module javafx.fxml</span></code></pre>
         <p>This is because JavaFx is unable to access our <code>PersonOverviewController</code> class.</p>
         <p>To fix this, add this line of code to <code>src/module-info.java</code>:</p>
         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">module</span> AddressApp {</span><span>    ... </span><span></span><span>    opens seedu.address.view;</span><span>}</span></code></pre>
@@ -147,7 +142,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
     </footer>
   </div>
 </body>

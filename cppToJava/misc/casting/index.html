@@ -64,10 +64,7 @@
                       <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">double</span> d = <span class="hljs-number">5.3</span>;</span><span>System.out.println(<span class="hljs-string">"Before casting to an int: "</span> + d);</span><span><span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>)d; <span class="hljs-comment">// cast d to an int</span></span><span>System.out.println(<span class="hljs-string">"After casting to an int: "</span> + i);</span><span>d = (<span class="hljs-keyword">double</span>)i; <span class="hljs-comment">// cast i back to a double</span></span><span>System.out.println(<span class="hljs-string">"After casting back a double: "</span> + d);</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>Before casting to an int: 5.3
-After casting to an int: 5
-After casting back a double: 5.0
-</code></pre>
+                      <pre><code><span>Before casting to an int: 5.3</span><span>After casting to an int: 5</span><span>After casting back a double: 5.0</span></code></pre>
                     </box>
                     <p><strong><mark><em>Downcasting</em></mark> is when you cast an object reference from a superclass to a subclass.</strong></p>
                     <box>
@@ -88,10 +85,7 @@ After casting back a double: 5.0
                       <pre><code class="line-numbers hljs java"><span>Animal a = <span class="hljs-keyword">new</span> DomesticCat(); <span class="hljs-comment">//implicit upcast</span></span><span>a.speak();</span><span>Cat c = (Cat)a; <span class="hljs-comment">//downcast</span></span><span>c.speak();</span><span>DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">//downcast</span></span><span>dc.speak();</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>I'm a DomesticCat
-I'm a DomesticCat
-I'm a DomesticCat
-</code></pre>
+                      <pre><code><span>I'm a DomesticCat</span><span>I'm a DomesticCat</span><span>I'm a DomesticCat</span></code></pre>
                     </box>
                     <p><strong>Casting to an incompatible type can result in a <code>ClassCastException</code> at runtime.</strong></p>
                     <box>
@@ -99,9 +93,7 @@ I'm a DomesticCat
                       <pre><code class="line-numbers hljs java"><span>Object o = <span class="hljs-keyword">new</span> Animal();</span><span>Integer x = (Integer)o;</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>Exception in thread &quot;main&quot; java.lang.ClassCastException: misc.casting.Animal cannot be cast to java.lang.Integer
-	at misc.casting.CastingExamples.main(CastingExamples.java:14)
-</code></pre>
+                      <pre><code><span>Exception in thread "main" java.lang.ClassCastException: misc.casting.Animal cannot be cast to java.lang.Integer</span><span>	at misc.casting.CastingExamples.main(CastingExamples.java:14)</span></code></pre>
                     </box>
                     <p>You can use the <code>instanceof</code> operator to check if a cast is safe to perform.</p>
                     <box>
@@ -119,7 +111,7 @@ I'm a DomesticCat
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
     </footer>
   </div>
 </body>

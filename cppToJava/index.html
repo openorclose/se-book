@@ -456,9 +456,7 @@
       <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;</span><span><span class="hljs-keyword">int</span> mintue = <span class="hljs-number">59</span>;</span><span>System.out.print(<span class="hljs-string">"The current time is "</span>);</span><span>System.out.print(hour);</span><span>System.out.print(<span class="hljs-string">":"</span>);</span><span>System.out.print(minute);</span><span>System.out.println(<span class="hljs-string">"."</span>); <span class="hljs-comment">//use println here to complete the line</span></span><span>System.out.println(<span class="hljs-string">"done"</span>);</span><span></span></code></pre>
       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
       </p>
-      <pre><code>The current time is 11:59.
-done
-</code></pre>
+      <pre><code><span>The current time is 11:59.</span><span>done</span></code></pre>
       <p>Use the keyword <code>final</code> to indicate that the variable value, once assigned, should not be allowed to change later i.e., act like a ‘constant’. By convention, names for constants are all uppercase, with the underscore character (<code>_</code>)
         between words.</p>
       <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> CM_PER_INCH = <span class="hljs-number">2.54</span>;</span></code></pre>
@@ -540,8 +538,7 @@ done
       <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;</span><span><span class="hljs-keyword">int</span> minute = <span class="hljs-number">59</span>;</span><span>System.out.print(<span class="hljs-string">"Number of minutes since midnight: "</span>);</span><span>System.out.println(hour * <span class="hljs-number">60</span> + minute);</span></code></pre>
       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
       </p>
-      <pre><code>Number of minutes since midnight: 719
-</code></pre>
+      <pre><code><span>Number of minutes since midnight: 719</span></code></pre>
       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span>
         </span>
         </span> <strong>When an expression has multiple operators, normal <em>operator precedence</em> rules apply</strong>. Furthermore, you can use parentheses to specify a precise precedence.</p>
@@ -745,10 +742,7 @@ done
       <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">int</span>[] scores = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];</span><span>System.out.println(scores.length) <span class="hljs-comment">// prints 4</span></span><span>scores[<span class="hljs-number">5</span>] = <span class="hljs-number">0</span>; <span class="hljs-comment">// causes an exception</span></span></code></pre>
       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
       </p>
-      <pre><code>4
-Exception in thread &quot;main&quot; java.lang.ArrayIndexOutOfBoundsException: 5
-	at Main.main(Main.java:6)
-</code></pre>
+      <pre><code><span>4</span><span>Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5</span><span>	at Main.main(Main.java:6)</span></code></pre>
       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span>
         </span>
         </span> It is also possible to create arrays of more than one dimension:</p>
@@ -791,15 +785,11 @@ Exception in thread &quot;main&quot; java.lang.ArrayIndexOutOfBoundsException: 5
                   <p>
                     <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator adam eve</code> <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>Words given: adam, eve
-They are the same: false
-</code></pre>
+                  <pre><code><span>Words given: adam, eve</span><span>They are the same: false</span></code></pre>
                   <p>
                     <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator eve eve</code> <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>Words given: eve, eve
-They are the same: true
-</code></pre>
+                  <pre><code><span>Words given: eve, eve</span><span>They are the same: true</span></code></pre>
                   <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Use the following technique to compare two <code>Strings</code>(i.e., don't use <code>==</code>). <span class="dimmed">Reason: to be covered in a later topic</span>.</p>
                   <pre><code class="line-numbers hljs java"><span>String x = <span class="hljs-string">"foo"</span>;</span><span><span class="hljs-keyword">boolean</span> isSame = x.equals(<span class="hljs-string">"bar"</span>) <span class="hljs-comment">// false</span></span><span>isSame = x.equals(<span class="hljs-string">"foo"</span>) <span class="hljs-comment">// true</span></span></code></pre>
                   <div slot="hint" class="algolia-no-index">
@@ -999,9 +989,7 @@ They are the same: true
         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrintTwice</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTwice</span><span class="hljs-params">(String s)</span> </span>{</span><span>        System.out.println(s);</span><span>        System.out.println(s);</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        String sentence = “Polly likes crackers”</span><span>        printTwice(sentence);</span><span></span><span>    }</span><span>}</span><span></span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>Polly likes crackers
-Polly likes crackers
-</code></pre>
+        <pre><code><span>Polly likes crackers</span><span>Polly likes crackers</span></code></pre>
         <p>By convention, method names should be named in the
           <trigger trigger="click" for="modal:javaMethods_camelCase"><em>camelCase</em></trigger> format.</p>
         <modal large="" title="Defintion: camelCase" id="modal:javaMethods_camelCase" class="algolia-no-index">
@@ -1109,9 +1097,7 @@ Polly likes crackers
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">// ADD YOUR CODE HERE</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));</span><span>        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>A+: 5.0
-B : 3.5
-</code></pre>
+                  <pre><code><span>A+: 5.0</span><span>B : 3.5</span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <p>Partial solution:</p>
                     <pre><code class="line-numbers hljs java"><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{</span><span>        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;</span><span>        <span class="hljs-keyword">switch</span> (grade) {</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:</span><span>            cap = <span class="hljs-number">5.0</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:</span><span>            cap = <span class="hljs-number">4.5</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:</span><span>            cap = <span class="hljs-number">4.0</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:</span><span>            cap = <span class="hljs-number">3.5</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:</span><span>            cap = <span class="hljs-number">3.0</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">default</span>:</span><span>        }</span><span>        <span class="hljs-keyword">return</span> cap;</span><span>    }</span></code></pre>
@@ -1153,10 +1139,7 @@ B : 3.5
         <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span>
           </span>
           </span> <code>for</code> loops have the form:</p>
-        <pre><code>for (initializer; condition; update) {
-    statement(s);
-}
-</code></pre>
+        <pre><code><span>for (initializer; condition; update) {</span><span>    statement(s);</span><span>}</span></code></pre>
         <p>Here is an example:</p>
         <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTable</span><span class="hljs-params">(<span class="hljs-keyword">int</span> rows)</span> </span>{</span><span>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= rows; i = i + <span class="hljs-number">1</span>) {</span><span>        printRow(i, rows);</span><span>    }</span><span>}</span></code></pre>
       </div>
@@ -1177,8 +1160,7 @@ B : 3.5
         <pre><code class="line-numbers hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };</span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {</span><span>            <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {</span><span>                <span class="hljs-keyword">break</span>;</span><span>            }</span><span>            System.out.print(numbers[i]);</span><span>        }</span><span>    }</span><span>}</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>123
-</code></pre>
+        <pre><code><span>123</span></code></pre>
         <p><small>[<a href="https://repl.it/@seedu/Demo-Break">Try the above code on Repl.it</a>]</small></p>
         <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span>
           </span>
@@ -1188,8 +1170,7 @@ B : 3.5
         <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>    <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };</span><span>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {</span><span>        <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {</span><span>            <span class="hljs-keyword">continue</span>;</span><span>        }</span><span>        System.out.print(numbers[i]);</span><span>    }</span><span>}</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>12345
-</code></pre>
+        <pre><code><span>12345</span></code></pre>
         <p><small>[<a href="https://repl.it/@seedu/Demo-Continue">Try the above code on Repl.it</a>]</small></p>
       </div>
       <h5 id="enhanced-for-loops">Enhanced <code>for</code> loops<a class="fa fa-anchor" href="#enhanced-for-loops"></a></h5>
@@ -1257,10 +1238,7 @@ B : 3.5
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">// ADD YOUR CODE HERE</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{</span><span>        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;</span><span>        <span class="hljs-keyword">switch</span> (grade) {</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:</span><span>            cap = <span class="hljs-number">5.0</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:</span><span>            cap = <span class="hljs-number">4.5</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:</span><span>            cap = <span class="hljs-number">4.0</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:</span><span>            cap = <span class="hljs-number">3.5</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:</span><span>            cap = <span class="hljs-number">3.0</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"C"</span>:</span><span>            cap = <span class="hljs-number">2.5</span>;</span><span>            <span class="hljs-keyword">break</span>;</span><span>        <span class="hljs-keyword">default</span>:</span><span>        }</span><span>        <span class="hljs-keyword">return</span> cap;</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        String[] grades = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"A+"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A-"</span>};</span><span>        <span class="hljs-keyword">double</span>[] caps = getMultipleGradeCaps(grades);</span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {</span><span>            System.out.println(grades[i] + <span class="hljs-string">":"</span> + caps[i]);</span><span>        }</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>A+:5.0
-A:5.0
-A-:4.5
-</code></pre>
+                  <pre><code><span>A+:5.0</span><span>A:5.0</span><span>A-:4.5</span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <p>Partial solution:</p>
                     <pre><code class="line-numbers hljs java"><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span>[] getMultipleGradeCaps(String[] grades) {</span><span>        <span class="hljs-keyword">double</span>[] caps = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[grades.length];</span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {</span><span>           <span class="hljs-comment">// ...</span></span><span>        }</span><span>        <span class="hljs-keyword">return</span> caps;</span><span>    }</span></code></pre>
@@ -1358,8 +1336,7 @@ A-:4.5
                     <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Rectangle r;</span><span></span><span>        <span class="hljs-comment">// TODO create a Rectangle object that has the properties x=0, y=0, width=5, height=10</span></span><span>        <span class="hljs-comment">// assign it to r</span></span><span></span><span>        System.out.println(r);</span><span>    }</span><span>}</span></code></pre>
                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                     </p>
-                    <pre><code>java.awt.Rectangle[x=0,y=0,width=5,height=10]
-</code></pre>
+                    <pre><code><span>java.awt.Rectangle[x=0,y=0,width=5,height=10]</span></code></pre>
                     <div slot="hint" class="algolia-no-index">
                       <ul>
                         <li>Import the <code>java.awt.Rectangle</code> class</li>
@@ -1400,8 +1377,7 @@ A-:4.5
         <pre><code class="line-numbers hljs java"><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span><span class="hljs-keyword">int</span> sum = spot.x * spot.x + spot.y * spot.y;</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y + <span class="hljs-string">", "</span> + sum);</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>3, 4, 25
-</code></pre>
+        <pre><code><span>3, 4, 25</span></code></pre>
       </box>
       <p><strong>You can <tooltip content="i.e., change/modify"><em>mutate</em></tooltip> an object by assigning a different values to its attributes.</strong></p>
       <box>
@@ -1409,8 +1385,7 @@ A-:4.5
         <pre><code class="line-numbers hljs java"><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span>spot.x = <span class="hljs-number">5</span>;</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>5, 4
-</code></pre>
+        <pre><code><span>5, 4</span></code></pre>
       </box>
       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span>
         </span>
@@ -1420,9 +1395,7 @@ A-:4.5
         <pre><code class="line-numbers hljs java"><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);</span><span>spot.translate(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>3, 4
-8, 9
-</code></pre>
+        <pre><code><span>3, 4</span><span>8, 9</span></code></pre>
       </box>
     </div>
     <div>
@@ -1436,10 +1409,7 @@ A-:4.5
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.awt.Rectangle;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Rectangle r = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>);</span><span>        System.out.println(r);</span><span></span><span>        <span class="hljs-keyword">int</span> area;</span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line below to calculate the area using width and height properties of r</span></span><span>        <span class="hljs-comment">// and assign it to the variable area</span></span><span></span><span>        System.out.println(<span class="hljs-string">"Area: "</span> + area);</span><span></span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line here to set the size of r to 8x10 (width x height)</span></span><span>        <span class="hljs-comment">//Recommended: use the setSize(int height, int width) method of the Rectangle object</span></span><span></span><span>        System.out.println(r);</span><span>    }</span><span></span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>java.awt.Rectangle[x=0,y=0,width=4,height=6]
-Area: 24
-java.awt.Rectangle[x=0,y=0,width=8,height=10]
-</code></pre>
+                  <pre><code><span>java.awt.Rectangle[x=0,y=0,width=4,height=6]</span><span>Area: 24</span><span>java.awt.Rectangle[x=0,y=0,width=8,height=10]</span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <ul>
                       <li>Area can be calculated as <code>r.width * r.height</code></li>
@@ -1477,8 +1447,7 @@ java.awt.Rectangle[x=0,y=0,width=8,height=10]
         <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPoint</span><span class="hljs-params">(Point p)</span> </span>{</span><span>    System.out.println(<span class="hljs-string">"("</span> + p.x + <span class="hljs-string">", "</span> + p.y + <span class="hljs-string">")"</span>);</span><span>}</span><span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>    Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span>    printPoint(spot);</span><span>}</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>3, 4
-</code></pre>
+        <pre><code><span>3, 4</span></code></pre>
       </box>
       <p><strong>You can return an object from a method too.</strong></p>
       <box>
@@ -1504,8 +1473,7 @@ java.awt.Rectangle[x=0,y=0,width=8,height=10]
           <pre><code class="line-numbers hljs java"><span>Point result = createCopy(<span class="hljs-keyword">null</span>);</span><span>System.out.println(result);</span></code></pre>
           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
           </p>
-          <pre><code>null
-</code></pre>
+          <pre><code><span>null</span></code></pre>
         </box>
       </div>
       <p><strong>It is possible to have multiple variables that refer to the same object.</strong></p>
@@ -1514,11 +1482,7 @@ java.awt.Rectangle[x=0,y=0,width=8,height=10]
         <pre><code class="line-numbers hljs java"><span>Point p1 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);</span><span>Point p2 = p1;</span><span>System.out.println(<span class="hljs-string">"p1: "</span> + p1.x + <span class="hljs-string">", "</span> + p1.y);</span><span>System.out.println(<span class="hljs-string">"p2: "</span> + p2.x + <span class="hljs-string">", "</span> + p2.y);</span><span>p1.x = <span class="hljs-number">1</span>;</span><span>p2.y = <span class="hljs-number">2</span>;</span><span>System.out.println(<span class="hljs-string">"p1: "</span> + p1.x + <span class="hljs-string">", "</span> + p1.y);</span><span>System.out.println(<span class="hljs-string">"p2: "</span> + p2.x + <span class="hljs-string">", "</span> + p2.y);</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>p1: 0, 0
-p2: 0, 0
-p1: 1, 2
-p2: 1, 2
-</code></pre>
+        <pre><code><span>p1: 0, 0</span><span>p2: 0, 0</span><span>p1: 1, 2</span><span>p2: 1, 2</span></code></pre>
       </box>
       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span>
         </span>
@@ -1526,9 +1490,7 @@ p2: 1, 2
       <box>
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how <code>p3</code> retains changes done to it by the method <code>swapCoordinates</code> even after the method has completed executing.</p>
         <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swapCoordinates</span><span class="hljs-params">(Point p)</span></span>{</span><span>    <span class="hljs-keyword">int</span> temp = p.x;</span><span>    p.x = p.y;</span><span>    p.y = temp;</span><span>}</span><span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>    Point p3 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>);</span><span>    System.out.println(<span class="hljs-string">"p3: "</span> + p3.x + <span class="hljs-string">", "</span> + p3.y);</span><span>    swapCoordinates(p3);</span><span>    System.out.println(<span class="hljs-string">"p3: "</span> + p3.x + <span class="hljs-string">", "</span> + p3.y);</span><span>}</span></code></pre>
-        <pre><code>p3: 2, 3
-p3: 3, 2
-</code></pre>
+        <pre><code><span>p3: 2, 3</span><span>p3: 3, 2</span></code></pre>
       </box>
     </div>
     <div>
@@ -1548,12 +1510,7 @@ p3: 3, 2
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.awt.Point;</span><span><span class="hljs-keyword">import</span> java.awt.Rectangle;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">//TODO add your method here</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Point p1 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);</span><span>        Rectangle r1 = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>);</span><span>        System.out.println(<span class="hljs-string">"arguments: "</span> + p1 + <span class="hljs-string">", "</span> + r1);</span><span></span><span>        Point p2 = move(p1, r1);</span><span>        System.out.println(<span class="hljs-string">"argument point after method call: "</span> + p1);</span><span>        System.out.println(<span class="hljs-string">"argument rectangle after method call: "</span> + r1);</span><span>        System.out.println(<span class="hljs-string">"returned point: "</span> + p2);</span><span></span><span>        System.out.println(move(<span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>));</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>arguments: java.awt.Point[x=0,y=0], java.awt.Rectangle[x=2,y=3,width=5,height=6]
-argument point after method call: java.awt.Point[x=0,y=0]
-argument rectangle after method call: java.awt.Rectangle[x=0,y=0,width=5,height=6]
-returned point: java.awt.Point[x=2,y=3]
-null
-</code></pre>
+                  <pre><code><span>arguments: java.awt.Point[x=0,y=0], java.awt.Rectangle[x=2,y=3,width=5,height=6]</span><span>argument point after method call: java.awt.Point[x=0,y=0]</span><span>argument rectangle after method call: java.awt.Rectangle[x=0,y=0,width=5,height=6]</span><span>returned point: java.awt.Point[x=2,y=3]</span><span>null</span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <p>Partial solution:</p>
                     <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">move</span><span class="hljs-params">(Point p, Rectangle r)</span></span>{</span><span>    <span class="hljs-keyword">if</span> (p == <span class="hljs-keyword">null</span> || r == <span class="hljs-keyword">null</span>){</span><span>        <span class="hljs-comment">// ...</span></span><span>    }</span><span>    Point newPoint = <span class="hljs-keyword">new</span> Point(r.x, r.y);</span><span>    r.x = p.x;</span><span>    <span class="hljs-comment">// ...</span></span><span>    <span class="hljs-keyword">return</span> newPoint;</span><span>}</span></code></pre>
@@ -1724,9 +1681,7 @@ null
                     <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Circle c = <span class="hljs-keyword">new</span> Circle();</span><span></span><span>        System.out.println(c.getArea());</span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);</span><span>        System.out.println(c.getArea());</span><span></span><span>    }</span><span>}</span></code></pre>
                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                     </p>
-                    <pre><code>0
-78
-</code></pre>
+                    <pre><code><span>0</span><span>78</span></code></pre>
                     <div slot="hint" class="algolia-no-index">
                       <ul>
                         <li>Put the <code>Circle</code> class in a file called <code>Circle.java</code></li>
@@ -1782,13 +1737,7 @@ null
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Circle c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>, <span class="hljs-number">5</span>);</span><span></span><span>        c.setX(<span class="hljs-number">4</span>);</span><span>        c.setY(<span class="hljs-number">5</span>);</span><span>        c.setRadius(<span class="hljs-number">6</span>);</span><span>        System.out.println(<span class="hljs-string">"x      : "</span> + c.getX());</span><span>        System.out.println(<span class="hljs-string">"y      : "</span> + c.getY());</span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());</span><span>        System.out.println(<span class="hljs-string">"area   : "</span> + c.getArea());</span><span></span><span>        c.setRadius(-<span class="hljs-number">5</span>);</span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());</span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">4</span>);</span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());</span><span></span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>x      : 4
-y      : 5
-radius : 6.0
-area   : 113
-radius : 0.0
-radius : 0.0
-</code></pre>
+                  <pre><code><span>x      : 4</span><span>y      : 5</span><span>radius : 6.0</span><span>area   : 113</span><span>radius : 0.0</span><span>radius : 0.0</span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <p>Partial solution:</p>
                     <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">double</span> radius)</span></span>{</span><span>    setX(x);</span><span>    setY(y);</span><span>    setRadius(radius);</span><span>}</span><span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{</span><span>    <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);</span><span>}</span></code></pre>
@@ -1865,11 +1814,7 @@ radius : 0.0
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Circle c = <span class="hljs-keyword">new</span> Circle();</span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());</span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>);</span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());</span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">15</span>);</span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());</span><span>        c.setRadius(<span class="hljs-number">12</span>);</span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>max radius used so far : 0.0
-max radius used so far : 10.0
-max radius used so far : 10.0
-max radius used so far : 12.0
-</code></pre>
+                  <pre><code><span>max radius used so far : 0.0</span><span>max radius used so far : 10.0</span><span>max radius used so far : 10.0</span><span>max radius used so far : 12.0</span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <p>You can use a <code>static</code> variable <code>maxRadius</code> to track the maximum value used for the <code>radius</code> attribute so far.</p>
                     <p>Partial solution:</p>
@@ -1956,9 +1901,7 @@ max radius used so far : 12.0
           <pre><code class="line-numbers hljs java"><span>String name = <span class="hljs-string">"Alan Turing"</span>;</span><span>String upperName = name.toUpperCase();</span><span>System.out.println(name);</span><span>System.out.println(upperName);</span></code></pre>
           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
           </p>
-          <pre><code>Alan Turing
-ALAN TURING
-</code></pre>
+          <pre><code><span>Alan Turing</span><span>ALAN TURING</span></code></pre>
         </box>
         <p>Note that <strong>a string method cannot change the string object on which the method is invoked, because strings are <tooltip content="once created, cannot be modified"><em>immutable</em></tooltip></strong>. For example, when you invoke <code>toUpperCase</code>          on a string <code>&quot;abc&quot;</code>, you get a new string object <code>&quot;ABC&quot;</code> as the return value rather than the string <code>&quot;abc&quot;</code> being changed to <code>&quot;ABC&quot;</code>. As a result, for such string
           methods that <em>seemingly</em> modify the string but <em>actually</em> return a new string instead e.g., <code>toLowerCase</code>, <mark>invoking the method has no effect if you don’t assign the return value to a variable</mark>.</p>
@@ -1972,8 +1915,7 @@ ALAN TURING
           <pre><code class="line-numbers hljs java"><span>String text = <span class="hljs-string">"Computer Science is fun!"</span>;</span><span>text = text.replace(<span class="hljs-string">"Computer Science"</span>, <span class="hljs-string">"CS"</span>);</span><span>System.out.println(text);</span></code></pre>
           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
           </p>
-          <pre><code>CS is fun!
-</code></pre>
+          <pre><code><span>CS is fun!</span></code></pre>
         </box>
       </div>
       <h5 id="accessing-substrings">Accessing substrings<a class="fa fa-anchor" href="#accessing-substrings"></a></h5>
@@ -2087,9 +2029,7 @@ ALAN TURING
           <pre><code class="line-numbers hljs java"><span>System.out.println(<span class="hljs-string">"First line\nSecond \"line\""</span>);</span></code></pre>
           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
           </p>
-          <pre><code>First line
-Second &quot;line&quot;
-</code></pre>
+          <pre><code><span>First line</span><span>Second "line"</span></code></pre>
         </box>
         <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> As the behavior of the <code>\n</code>
           <tooltip content="e.g., behavior differs between Windows and OS-X">depends on the platform</tooltip>, the recommended way to print a line break is using the <code>System.lineSeparator()</code> as it works the same in all platforms.</p>
@@ -2098,9 +2038,7 @@ Second &quot;line&quot;
           <pre><code class="line-numbers hljs java"><span>System.out.println(<span class="hljs-string">"First line"</span> + System.lineSeparator() + <span class="hljs-string">"Second line"</span>);</span></code></pre>
           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
           </p>
-          <pre><code>First line
-Second line
-</code></pre>
+          <pre><code><span>First line</span><span>Second line</span></code></pre>
         </box>
       </div>
       <h5 id="string-formatting">String formatting<a class="fa fa-anchor" href="#string-formatting"></a></h5>
@@ -2141,10 +2079,7 @@ Second line
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPrice</span><span class="hljs-params">(String item)</span> </span>{</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printPrice(<span class="hljs-string">"sandwich  --$4/50"</span>);</span><span>        printPrice(<span class="hljs-string">"  soda --$10/00"</span>);</span><span>        printPrice(<span class="hljs-string">"  fries --$0/50"</span>);</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>SANDWICH: 4.50
-SODA: 10.00
-FRIES: 0.50
-</code></pre>
+                  <pre><code><span>SANDWICH: 4.50</span><span>SODA: 10.00</span><span>FRIES: 0.50</span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <p>Partial solution:</p>
                     <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPrice</span><span class="hljs-params">(String item)</span> </span>{</span><span>    <span class="hljs-keyword">int</span> dividerPosition = item.indexOf(<span class="hljs-string">"--"</span>);</span><span>    String itemName = item.substring(<span class="hljs-number">0</span>, dividerPosition);</span><span>    <span class="hljs-comment">//...</span></span><span>    System.out.println(itemName.trim().toUpperCase() + ...);</span><span></span><span>}</span></code></pre>
@@ -2230,9 +2165,7 @@ FRIES: 0.50
         <pre><code class="line-numbers hljs java"><span>Double d = <span class="hljs-keyword">new</span> Double(<span class="hljs-number">2.5</span>);</span><span><span class="hljs-keyword">int</span> i = d.intValue();</span><span>System.out.println(d);</span><span>System.out.println(i);</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>2.5
-2
-</code></pre>
+        <pre><code><span>2.5</span><span>2</span></code></pre>
       </box>
       <p>Each wrapper class defines constants <code>MIN_VALUE</code> and <code>MAX_VALUE</code>.</p>
       <box>
@@ -2262,9 +2195,7 @@ FRIES: 0.50
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTotalScore</span><span class="hljs-params">(String[] values)</span></span>{</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printTotalScore(<span class="hljs-keyword">new</span> String[]{});</span><span>        printTotalScore(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"0"</span>, <span class="hljs-string">"124"</span>, <span class="hljs-string">"-15"</span>});</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>0
-109
-</code></pre>
+                  <pre><code><span>0</span><span>109</span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <a href="https://www.tutorialspoint.com/java/number_parseint.htm"><code>Integer.parseInt()</code></a> method
                       to convert a <code>String</code> to the equivalent <code>int</code> value.</p>
@@ -2303,9 +2234,7 @@ FRIES: 0.50
         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};</span><span></span><span><span class="hljs-keyword">int</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>); <span class="hljs-comment">// copy first three elements</span></span><span>System.out.println(Arrays.toString(b));</span><span></span><span><span class="hljs-keyword">int</span>[] c = Arrays.copyOf(a, a.length); <span class="hljs-comment">// copy all elements</span></span><span>System.out.println(Arrays.toString(c));</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>[1, 2, 3]
-[1, 2, 3, 4]
-</code></pre>
+        <pre><code><span>[1, 2, 3]</span><span>[1, 2, 3, 4]</span></code></pre>
       </box>
     </div>
     <div>
@@ -2333,12 +2262,7 @@ FRIES: 0.50
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.util.Arrays;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String[] filterEmails(String[] items){</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printItems</span><span class="hljs-params">(String[] items)</span></span>{</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{}));</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"abc"</span>}));</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"adam@example.com"</span>, <span class="hljs-string">"aab"</span>, <span class="hljs-string">"john@example.com"</span>, <span class="hljs-string">"some@"</span>}));</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"xyz"</span>, <span class="hljs-string">"@bee.com"</span>, <span class="hljs-string">"aab"</span>}));</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>[]
-[]
-[adam@example.com, john@example.com, some@]
-[@bee.com]
-
-</code></pre>
+                  <pre><code><span>[]</span><span>[]</span><span>[adam@example.com, john@example.com, some@]</span><span>[@bee.com]</span><span></span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <ul>
                       <li><strong><code>filterEmailsfilterEmails(String[] items): String[]</code></strong>
@@ -2407,22 +2331,13 @@ FRIES: 0.50
                   </ul>
                   <p>Here is one example output: <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>Your expenses while overseas?beer $4.50 books $3.00 $5.00 for food, that's all
-Expenses in overseas currency:[$4.50, $3.00, $5.00]
-Total in local currency: $21.25
-</code></pre>
+                  <pre><code><span>Your expenses while overseas?beer $4.50 books $3.00 $5.00 for food, that's all</span><span>Expenses in overseas currency:[$4.50, $3.00, $5.00]</span><span>Total in local currency: $21.25</span></code></pre>
                   <p>Here is another: <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>Your expenses while overseas?nothing. I lived off my friends all the time.
-Expenses in overseas currency:[]
-Total in local currency: $0.00
-</code></pre>
+                  <pre><code><span>Your expenses while overseas?nothing. I lived off my friends all the time.</span><span>Expenses in overseas currency:[]</span><span>Total in local currency: $0.00</span></code></pre>
                   <p>One more: <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>Your expenses while overseas? Just $10
-Expenses in overseas currency:[$10]
-Total in local currency: $17.00
-</code></pre>
+                  <pre><code><span>Your expenses while overseas? Just $10</span><span>Expenses in overseas currency:[$10]</span><span>Total in local currency: $17.00</span></code></pre>
                   <p>Here's the skeleton code to use as the starting point:</p>
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">// You can add more methods here</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        String line;</span><span>        Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);</span><span></span><span>        System.out.print(<span class="hljs-string">"Your expenses while overseas?"</span>);</span><span>       <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>    }</span><span>}</span></code></pre>
                   <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <code>split</code> method of the <code>String</code> class to convert a sentence into an array of words. e.g.,<br></p>
@@ -2502,9 +2417,7 @@ Total in local currency: $17.00
             <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Subclass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Superclass</span> </span>{</span><span></span><span>    <span class="hljs-comment">// overrides printMethod in Superclass</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printMethod</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">super</span>.printMethod();</span><span>        System.out.println(<span class="hljs-string">"Printed in Subclass"</span>);</span><span>    }</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Subclass s = <span class="hljs-keyword">new</span> Subclass();</span><span>        s.printMethod();</span><span>    }</span><span>}</span></code></pre>
             <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
             </p>
-            <pre><code>Printed in Superclass.
-Printed in Subclass
-</code></pre>
+            <pre><code><span>Printed in Superclass.</span><span>Printed in Subclass</span></code></pre>
             <p>Within <code>Subclass</code>, the simple name <code>printMethod()</code> refers to the one declared in <code>Subclass</code>, which overrides the one in <code>Superclass</code>. So, to refer to <code>printMethod()</code> inherited from <code>Superclass</code>,
               <code>Subclass</code> must use a qualified name, using <code>super</code> as shown.</p>
           </box>
@@ -2573,15 +2486,7 @@ Printed in Subclass
                     <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        <span class="hljs-comment">// create a todo task and print details</span></span><span>        Todo t = <span class="hljs-keyword">new</span> Todo(<span class="hljs-string">"Read a good book"</span>);</span><span>        System.out.println(t.getDescription());</span><span>        System.out.println(t.isDone());</span><span></span><span>        <span class="hljs-comment">// change todo fields and print again</span></span><span>        t.setDone(<span class="hljs-keyword">true</span>);</span><span>        System.out.println(t.isDone());</span><span></span><span>        <span class="hljs-comment">// create a deadline task and print details</span></span><span>        Deadline d = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"Read textbook"</span>, <span class="hljs-string">"Nov 16"</span>);</span><span>        System.out.println(d.getDescription());</span><span>        System.out.println(d.isDone());</span><span>        System.out.println(d.getBy());</span><span></span><span>        <span class="hljs-comment">// change deadline details and print again</span></span><span>        d.setDone(<span class="hljs-keyword">true</span>);</span><span>        d.setBy(<span class="hljs-string">"Postponed to Nov 18th"</span>);</span><span>        System.out.println(d.isDone());</span><span>        System.out.println(d.getBy());</span><span>    }</span><span>}</span></code></pre>
                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                     </p>
-                    <pre><code>Read a good book
-false
-true
-Read textbook
-false
-Nov 16
-true
-Postponed to Nov 18th
-</code></pre>
+                    <pre><code><span>Read a good book</span><span>false</span><span>true</span><span>Read textbook</span><span>false</span><span>Nov 16</span><span>true</span><span>Postponed to Nov 18th</span></code></pre>
                     <div slot="hint" class="algolia-no-index">
                       <p><code>Todo</code> class is given below. You can follow a similar approach for the <code>Deadline</code> class.</p>
                       <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{</span><span>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Todo</span><span class="hljs-params">(String description)</span> </span>{</span><span>        <span class="hljs-keyword">super</span>(description);</span><span>        isDone = <span class="hljs-keyword">false</span>;</span><span>    }</span><span>}</span></code></pre>
@@ -2655,9 +2560,7 @@ Postponed to Nov 18th
           <pre><code class="line-numbers hljs java"><span>Time t1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);</span><span>Time t2 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);</span><span>System.out.println(t1 == t2);</span><span>System.out.println(t1.equals(t2));</span></code></pre>
           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
           </p>
-          <pre><code>false
-true
-</code></pre>
+          <pre><code><span>false</span><span>true</span></code></pre>
           <p>
             <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Note that a proper <code>equals</code> method implementation is more complex than the example above. See the article <a href="https://www.sitepoint.com/implement-javas-equals-method-correctly/"><em>How to Implement Java’s equals Method Correctly</em> by Nicolai Parlog</a>            for a detailed explanation before you implement your own <code>equals</code> method.
           </p>
@@ -2679,17 +2582,7 @@ true
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        <span class="hljs-comment">// create a todo task and print it</span></span><span>        Todo t = <span class="hljs-keyword">new</span> Todo(<span class="hljs-string">"Read a good book"</span>);</span><span>        System.out.println(t);</span><span></span><span>        <span class="hljs-comment">// change todo fields and print again</span></span><span>        t.setDone(<span class="hljs-keyword">true</span>);</span><span>        System.out.println(t);</span><span></span><span>        <span class="hljs-comment">// create a deadline task and print it</span></span><span>        Deadline d = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"Read textbook"</span>, <span class="hljs-string">"Nov 16"</span>);</span><span>        System.out.println(d);</span><span></span><span>        <span class="hljs-comment">// change deadline details and print again</span></span><span>        d.setDone(<span class="hljs-keyword">true</span>);</span><span>        d.setBy(<span class="hljs-string">"Postponed to Nov 18th"</span>);</span><span>        System.out.println(d);</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>description: Read a good book
-is done? No
-description: Read a good book
-is done? Yes
-description: Read textbook
-is done? No
-do by: Nov 16
-description: Read textbook
-is done? Yes
-do by: Postponed to Nov 18th
-</code></pre>
+                  <pre><code><span>description: Read a good book</span><span>is done? No</span><span>description: Read a good book</span><span>is done? Yes</span><span>description: Read textbook</span><span>is done? No</span><span>do by: Nov 16</span><span>description: Read textbook</span><span>is done? Yes</span><span>do by: Postponed to Nov 18th</span></code></pre>
                   <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <code>super.toString</code> from the subclass to invoke the behavior of the method you are overriding. This
                     is useful here because the overriding method is simply <em>adding onto</em> the behavior of the overridden method.</p>
                   <div slot="hint" class="algolia-no-index">
@@ -2728,9 +2621,7 @@ do by: Postponed to Nov 18th
         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        <span class="hljs-keyword">for</span> (Cat c: cats){</span><span>            System.out.println(c.speak());</span><span>        }</span><span>    }</span><span>}</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>Mittens: Meow
-Snowball: Meow
-</code></pre>
+        <pre><code><span>Mittens: Meow</span><span>Snowball: Meow</span></code></pre>
         <panel type="seamless" header="%%The `Cat` class%%" class="algolia-no-index">
           <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{</span><span>        <span class="hljs-keyword">super</span>(name);</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;</span><span>    }</span><span>}</span></code></pre>
         </panel>
@@ -2741,10 +2632,7 @@ Snowball: Meow
         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Dog[] dogs = <span class="hljs-keyword">new</span> Dog[]{</span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        <span class="hljs-keyword">for</span> (Cat c: cats){</span><span>            System.out.println(c.speak());</span><span>        }</span><span>        <span class="hljs-keyword">for</span>(Dog d: dogs){</span><span>            System.out.println(d.speak());</span><span>        }</span><span>    }</span><span>}</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>Mittens: Meow
-Snowball: Meow
-Spot: Woof
-</code></pre>
+        <pre><code><span>Mittens: Meow</span><span>Snowball: Meow</span><span>Spot: Woof</span></code></pre>
         <panel type="seamless" header="%%The `Dog` class%%" class="algolia-no-index">
           <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{</span><span>        <span class="hljs-keyword">super</span>(name);</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;</span><span>    }</span><span>}</span></code></pre>
         </panel>
@@ -2756,10 +2644,7 @@ Spot: Woof
         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter2</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Animal[] animals = <span class="hljs-keyword">new</span> Animal[]{</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>),</span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        <span class="hljs-keyword">for</span> (Animal a: animals){</span><span>            System.out.println(a.speak());</span><span>        }</span><span>    }</span><span>}</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>Mittens: Meow
-Snowball: Meow
-Spot: Woof
-</code></pre>
+        <pre><code><span>Mittens: Meow</span><span>Snowball: Meow</span><span>Spot: Woof</span></code></pre>
         <panel type="seamless" header="%%The `Animal`, `Cat`, and `Dog` classes%%" class="algolia-no-index">
           <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{</span><span></span><span>    <span class="hljs-keyword">protected</span> String name;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String name)</span></span>{</span><span>        <span class="hljs-keyword">this</span>.name = name;</span><span>    }</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{</span><span>        <span class="hljs-keyword">return</span> name;</span><span>    }</span><span>}</span></code></pre>
           <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{</span><span>        <span class="hljs-keyword">super</span>(name);</span><span>    }</span><span></span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;</span><span>    }</span><span>}</span></code></pre>
@@ -2788,14 +2673,7 @@ Spot: Woof
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-comment">//TODO add your methods here</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">5</span>));</span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>));</span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">10</span>));</span><span>        printAreas();</span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>));</span><span>        printAreas();</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>78
-12
-314
-78
-12
-314
-16
-</code></pre>
+                  <pre><code><span>78</span><span>12</span><span>314</span><span>78</span><span>12</span><span>314</span><span>16</span></code></pre>
                   <p><code>Circle</code> class and <code>Rectangle</code> class is given below but you'll need to add a parent class <code>Shape</code>:</p>
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{</span><span></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> radius)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.radius = radius;</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(Math.PI * radius * radius);</span><span>    }</span><span>}</span></code></pre>
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{</span><span>        <span class="hljs-keyword">this</span>.height = height;</span><span>        <span class="hljs-keyword">this</span>.width = width;</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> height * width;</span><span>    }</span><span>}</span></code></pre>
@@ -2882,11 +2760,7 @@ Spot: Woof
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Shape[] shapes = <span class="hljs-keyword">new</span> Shape[<span class="hljs-number">100</span>];</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> shapeCount = <span class="hljs-number">0</span>;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addShape</span><span class="hljs-params">(Shape s)</span></span>{</span><span>        shapes[shapeCount] = s;</span><span>        shapeCount++;</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printAreas</span><span class="hljs-params">()</span></span>{</span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; shapeCount; i++){</span><span>            shapes[i].print();</span><span>        }</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">5</span>));</span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>));</span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">10</span>));</span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>));</span><span>        printAreas();</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>Circle of area 78
-Rectangle of area 12
-Circle of area 314
-Rectangle of area 16
-</code></pre>
+                  <pre><code><span>Circle of area 78</span><span>Rectangle of area 12</span><span>Circle of area 314</span><span>Rectangle of area 16</span></code></pre>
                   <p><code>Circle</code> class and <code>Rectangle</code> class is given below:</p>
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> </span>{</span><span></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> radius)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.radius = radius;</span><span>    }</span><span></span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(Math.PI * radius * radius);</span><span>    }</span><span></span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{</span><span>        System.out.println(<span class="hljs-string">"Circle of area "</span> + area());</span><span>    }</span><span>}</span></code></pre>
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{</span><span>        <span class="hljs-keyword">this</span>.height = height;</span><span>        <span class="hljs-keyword">this</span>.width = width;</span><span>    }</span><span></span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> height * width;</span><span>    }</span><span></span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{</span><span>        System.out.println(<span class="hljs-string">"Rectangle of area "</span> + area());</span><span>    }</span><span>}</span></code></pre>
@@ -3018,10 +2892,7 @@ Rectangle of area 16
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printObjects</span><span class="hljs-params">(Printable[] items)</span> </span>{</span><span>        <span class="hljs-keyword">for</span> (Printable p : items) {</span><span>            p.print();</span><span>        }</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Printable[] printableItems = <span class="hljs-keyword">new</span> Printable[]{</span><span>                <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">5</span>),</span><span>                <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>),</span><span>                <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"James Cook"</span>)};</span><span></span><span>        printObjects(printableItems);</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>Circle of area 78
-Rectangle of area 12
-Person of name James Cook
-</code></pre>
+                  <pre><code><span>Circle of area 78</span><span>Rectangle of area 12</span><span>Person of name James Cook</span></code></pre>
                   <p>Classes <code>Shape</code>, <code>Circle</code>, and <code>Rectangle</code> are given below:</p>
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Shape</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span></span>;</span><span>}</span></code></pre>
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Printable</span> </span>{</span><span></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> radius)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.radius = radius;</span><span>    }</span><span></span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(Math.PI * radius * radius);</span><span>    }</span><span></span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{</span><span>        System.out.println(<span class="hljs-string">"Circle of area "</span> + area());</span><span>    }</span><span>}</span></code></pre>
@@ -3242,9 +3113,7 @@ Person of name James Cook
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArea</span><span class="hljs-params">(String descriptor)</span></span>{</span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> modify the code below</span></span><span>        System.out.println(descriptor + <span class="hljs-string">"="</span> + calculateArea(descriptor));</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(String descriptor)</span> </span>{</span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> modify the code below</span></span><span>        String[] dimensions = descriptor.split(<span class="hljs-string">"x"</span>);</span><span>        <span class="hljs-keyword">return</span> Integer.parseInt(dimensions[<span class="hljs-number">0</span>]) * Integer.parseInt(dimensions[<span class="hljs-number">1</span>]);</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printArea(<span class="hljs-string">"3x4"</span>);</span><span>        printArea(<span class="hljs-string">"5x5"</span>);</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>3x4=12
-5x5=25
-</code></pre>
+                  <pre><code><span>3x4=12</span><span>5x5=25</span></code></pre>
                   <ol>
                     <li>
                       <p>Update the code of <code>printArea</code> to print an error message if <code>WIDTH</code> and/or <code>HEIGHT</code> are not numbers <span class="dimmed">e.g., <code>&quot;Ax4&quot;</code></span><br>
@@ -3267,12 +3136,7 @@ Person of name James Cook
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">//...</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printArea(<span class="hljs-string">"3x4"</span>);</span><span>        printArea(<span class="hljs-string">"3xy"</span>);</span><span>        printArea(<span class="hljs-string">"3x"</span>);</span><span>        printArea(<span class="hljs-string">"3"</span>);</span><span>        printArea(<span class="hljs-string">"3x4x5"</span>);</span><span>    }</span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>3x4=12
-WIDTH or HEIGHT is not a number: 3xy
-WIDTH or HEIGHT is missing: 3x
-WIDTH or HEIGHT is missing: 3
-Too many dimensions: 3x4x5
-</code></pre>
+                  <pre><code><span>3x4=12</span><span>WIDTH or HEIGHT is not a number: 3xy</span><span>WIDTH or HEIGHT is missing: 3x</span><span>WIDTH or HEIGHT is missing: 3</span><span>Too many dimensions: 3x4x5</span></code></pre>
                   <panel type="seamless" header="Partial solution" class="algolia-no-index">
                     <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArea</span><span class="hljs-params">(String descriptor)</span></span>{</span><span>        <span class="hljs-keyword">try</span> {</span><span>            System.out.println(descriptor + <span class="hljs-string">"="</span> + calculateArea(descriptor));</span><span>        } <span class="hljs-keyword">catch</span> (NumberFormatException e) {</span><span>            System.out.println(<span class="hljs-string">"WIDTH or HEIGHT is not a number: "</span> + descriptor);</span><span>        } <span class="hljs-comment">// add more catch blocks here</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(String descriptor)</span> <span class="hljs-keyword">throws</span> IllegalShapeException </span>{</span><span>        String[] dimensions = descriptor.split(<span class="hljs-string">"x"</span>);</span><span></span><span>        <span class="hljs-comment">//throw IllegalShapeException here if dimensions.length &gt; 2</span></span><span></span><span>        <span class="hljs-keyword">return</span> Integer.parseInt(dimensions[<span class="hljs-number">0</span>]) * Integer.parseInt(dimensions[<span class="hljs-number">1</span>]);</span><span>    }</span><span></span><span></span><span>}</span></code></pre>
                   </panel>
@@ -3515,19 +3379,7 @@ Too many dimensions: 3x4x5
       <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.util.ArrayList;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayListDemo</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{</span><span>        ArrayList&lt;String&gt; items = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();</span><span></span><span>        System.out.println(<span class="hljs-string">"Before adding any items:"</span> + items);</span><span></span><span>        items.add(<span class="hljs-string">"Apple"</span>);</span><span>        items.add(<span class="hljs-string">"Box"</span>);</span><span>        items.add(<span class="hljs-string">"Cup"</span>);</span><span>        items.add(<span class="hljs-string">"Dart"</span>);</span><span>        print(<span class="hljs-string">"After adding four items: "</span> + items);</span><span></span><span>        items.remove(<span class="hljs-string">"Box"</span>); <span class="hljs-comment">// remove item "Box"</span></span><span>        print(<span class="hljs-string">"After removing Box: "</span> + items);</span><span></span><span>        items.add(<span class="hljs-number">1</span>, <span class="hljs-string">"Banana"</span>); <span class="hljs-comment">// add "Banana" at index 1</span></span><span>        print(<span class="hljs-string">"After adding Banana: "</span> + items);</span><span></span><span>        items.add(<span class="hljs-string">"Egg"</span>); <span class="hljs-comment">// add "Egg", will be added to the end</span></span><span>        items.add(<span class="hljs-string">"Cup"</span>); <span class="hljs-comment">// add another "Cup"</span></span><span>        print(<span class="hljs-string">"After adding Egg: "</span> + items);</span><span></span><span>        print(<span class="hljs-string">"Number of items: "</span> + items.size());</span><span></span><span>        print(<span class="hljs-string">"Index of Cup: "</span> + items.indexOf(<span class="hljs-string">"Cup"</span>));</span><span>        print(<span class="hljs-string">"Index of Zebra: "</span> + items.indexOf(<span class="hljs-string">"Zebra"</span>));</span><span></span><span>        print(<span class="hljs-string">"Item at index 3 is: "</span> + items.get(<span class="hljs-number">2</span>));</span><span></span><span>        print(<span class="hljs-string">"Do we have a Box?: "</span> + items.contains(<span class="hljs-string">"Box"</span>));</span><span>        print(<span class="hljs-string">"Do we have an Apple?: "</span> + items.contains(<span class="hljs-string">"Apple"</span>));</span><span></span><span>        items.clear();</span><span>        print(<span class="hljs-string">"After clearing: "</span> + items);</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String text)</span> </span>{</span><span>        System.out.println(text);</span><span>    }</span><span>}</span></code></pre>
       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
       </p>
-      <pre><code>Before adding any items:[]
-After adding four items: [Apple, Box, Cup, Dart]
-After removing Box: [Apple, Cup, Dart]
-After adding Banana: [Apple, Banana, Cup, Dart]
-After adding Egg: [Apple, Banana, Cup, Dart, Egg, Cup]
-Number of items: 6
-Index of Cup: 2
-Index of Zebra: -1
-Item at index 3 is: Cup
-Do we have a Box?: false
-Do we have an Apple?: true
-After clearing: []
-</code></pre>
+      <pre><code><span>Before adding any items:[]</span><span>After adding four items: [Apple, Box, Cup, Dart]</span><span>After removing Box: [Apple, Cup, Dart]</span><span>After adding Banana: [Apple, Banana, Cup, Dart]</span><span>After adding Egg: [Apple, Banana, Cup, Dart, Egg, Cup]</span><span>Number of items: 6</span><span>Index of Cup: 2</span><span>Index of Zebra: -1</span><span>Item at index 3 is: Cup</span><span>Do we have a Box?: false</span><span>Do we have an Apple?: true</span><span>After clearing: []</span></code></pre>
       <p><small>[<a href="https://repl.it/@seedu/Demo-ArrayList">Try the above code on Repl.it</a>]</small></p>
     </div>
     <div>
@@ -3552,16 +3404,7 @@ After clearing: []
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        System.out.println(<span class="hljs-string">"Adding numbers to the list"</span>);</span><span>        addNumber(<span class="hljs-number">3</span>);</span><span>        addNumber(<span class="hljs-number">8</span>);</span><span>        addNumber(<span class="hljs-number">24</span>);</span><span>        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());</span><span>        System.out.println(<span class="hljs-string">"8 in the list : "</span> + isFound(<span class="hljs-number">8</span>) );</span><span>        System.out.println(<span class="hljs-string">"5 in the list : "</span> + isFound(<span class="hljs-number">5</span>) );</span><span>        removeNumber(<span class="hljs-number">8</span>);</span><span>        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());</span><span>    }</span><span></span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>Adding numbers to the list
-[3]
-[3, 8]
-[3, 8, 24]
-The total is: 35
-8 in the list : true
-5 in the list : false
-[3, 24]
-The total is: 27
-</code></pre>
+                  <pre><code><span>Adding numbers to the list</span><span>[3]</span><span>[3, 8]</span><span>[3, 8, 24]</span><span>The total is: 35</span><span>8 in the list : true</span><span>5 in the list : false</span><span>[3, 24]</span><span>The total is: 27</span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <p>Partial solution:</p>
                     <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.util.ArrayList;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; numbers = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{</span><span>        numbers.add(Integer.valueOf(i));</span><span>        System.out.println(numbers);</span><span>    }</span><span></span><span>    <span class="hljs-comment">// ...</span></span><span></span><span>}</span></code></pre>
@@ -3596,18 +3439,7 @@ The total is: 27
       <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.awt.Point;</span><span><span class="hljs-keyword">import</span> java.util.HashMap;</span><span><span class="hljs-keyword">import</span> java.util.Map;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashMapDemo</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        HashMap&lt;String, Point&gt; points = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><span></span><span>        <span class="hljs-comment">// put the key-value pairs in the HashMap</span></span><span>        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));</span><span>        points.put(<span class="hljs-string">"x2"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>));</span><span>        points.put(<span class="hljs-string">"x3"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>));</span><span>        points.put(<span class="hljs-string">"x4"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>));</span><span></span><span>        <span class="hljs-comment">// retrieve a value for a key using the get method</span></span><span>        print(<span class="hljs-string">"Coordinates of x1: "</span> + pointAsString(points.get(<span class="hljs-string">"x1"</span>)));</span><span></span><span>        <span class="hljs-comment">// check if a key or a value exists</span></span><span>        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"x1"</span>));</span><span>        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"y1"</span>));</span><span>        print(<span class="hljs-string">"Value (0,0) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)));</span><span>        print(<span class="hljs-string">"Value (1,2) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)));</span><span></span><span>        <span class="hljs-comment">// update the value of a key to a new value</span></span><span>        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>));</span><span></span><span>        <span class="hljs-comment">// iterate over the entries</span></span><span>        <span class="hljs-keyword">for</span> (Map.Entry&lt;String, Point&gt; entry : points.entrySet()) {</span><span>            print(entry.getKey() + <span class="hljs-string">" = "</span> + pointAsString(entry.getValue()));</span><span>        }</span><span></span><span>        print(<span class="hljs-string">"Number of keys: "</span> + points.size());</span><span>        points.clear();</span><span>        print(<span class="hljs-string">"Number of keys after clearing: "</span> + points.size());</span><span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">pointAsString</span><span class="hljs-params">(Point p)</span> </span>{</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"["</span> + p.x + <span class="hljs-string">","</span> + p.y + <span class="hljs-string">"]"</span>;</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String s)</span> </span>{</span><span>        System.out.println(s);</span><span>    }</span><span>}</span></code></pre>
       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
       </p>
-      <pre><code>Coordinates of x1: [0,0]
-Key x1 exists? true
-Key x1 exists? false
-Value (0,0) exists? true
-Value (1,2) exists? false
-x1 = [-1,-1]
-x2 = [0,5]
-x3 = [5,5]
-x4 = [5,0]
-Number of keys: 4
-Number of keys after clearing: 0
-</code></pre>
+      <pre><code><span>Coordinates of x1: [0,0]</span><span>Key x1 exists? true</span><span>Key x1 exists? false</span><span>Value (0,0) exists? true</span><span>Value (1,2) exists? false</span><span>x1 = [-1,-1]</span><span>x2 = [0,5]</span><span>x3 = [5,5]</span><span>x4 = [5,0]</span><span>Number of keys: 4</span><span>Number of keys after clearing: 0</span></code></pre>
       <p><small>[<a href="https://repl.it/@seedu/Demo-HashMap">Try the above code on Repl.it</a>]</small></p>
     </div>
     <div>
@@ -3622,10 +3454,7 @@ Number of keys after clearing: 0
                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><span></span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        addToRoster(<span class="hljs-string">"Monday"</span>); <span class="hljs-comment">// i.e., one person signed up for Monday</span></span><span>        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., one person signed up for Wednesday</span></span><span>        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., another person signed up for Wednesday</span></span><span>        addToRoster(<span class="hljs-string">"Friday"</span>);</span><span>        addToRoster(<span class="hljs-string">"Monday"</span>);</span><span>        printRoster();</span><span>    }</span><span></span><span>}</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                   </p>
-                  <pre><code>Monday =&gt; 2
-Friday =&gt; 1
-Wednesday =&gt; 2
-</code></pre>
+                  <pre><code><span>Monday => 2</span><span>Friday => 1</span><span>Wednesday => 2</span></code></pre>
                   <div slot="hint" class="algolia-no-index">
                     <p>Partial solution:</p>
                     <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.util.HashMap;</span><span><span class="hljs-keyword">import</span> java.util.Map;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addToRoster</span><span class="hljs-params">(String day)</span> </span>{</span><span>        <span class="hljs-keyword">if</span> (roster.containsKey(day)){</span><span>            Integer newValue = Integer.valueOf(roster.get(day).intValue() + <span class="hljs-number">1</span>);</span><span>            roster.put(day, newValue);</span><span>        } <span class="hljs-keyword">else</span> {</span><span>            roster.put(day, Integer.valueOf(<span class="hljs-number">1</span>));</span><span>        }</span><span>    }</span><span></span><span>    <span class="hljs-comment">// ...</span></span><span>}</span></code></pre>
@@ -3694,11 +3523,7 @@ Wednesday =&gt; 2
                     <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">// Add your method here</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);</span><span>        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);</span><span>        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);</span><span>        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);</span><span>    }</span><span>}</span></code></pre>
                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                     </p>
-                    <pre><code>Red indicates high priority
-Orange indicates medium priority
-Blue indicates medium priority
-Green indicates low priority
-</code></pre>
+                    <pre><code><span>Red indicates high priority</span><span>Orange indicates medium priority</span><span>Blue indicates medium priority</span><span>Green indicates low priority</span></code></pre>
                     <div slot="hint" class="algolia-no-index">
                       <p>Use a <code>switch</code> statement to select between possible values for <code>Priority</code>.</p>
                       <pre><code class="line-numbers hljs java"><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{</span><span>        <span class="hljs-keyword">switch</span> (p) {</span><span>            <span class="hljs-keyword">case</span> LOW:</span><span>                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);</span><span>                <span class="hljs-keyword">break</span>;</span><span>            <span class="hljs-comment">// ...</span></span><span>        }</span><span>    }</span></code></pre>
@@ -3975,10 +3800,7 @@ Green indicates low priority
         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">double</span> d = <span class="hljs-number">5.3</span>;</span><span>System.out.println(<span class="hljs-string">"Before casting to an int: "</span> + d);</span><span><span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>)d; <span class="hljs-comment">// cast d to an int</span></span><span>System.out.println(<span class="hljs-string">"After casting to an int: "</span> + i);</span><span>d = (<span class="hljs-keyword">double</span>)i; <span class="hljs-comment">// cast i back to a double</span></span><span>System.out.println(<span class="hljs-string">"After casting back a double: "</span> + d);</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>Before casting to an int: 5.3
-After casting to an int: 5
-After casting back a double: 5.0
-</code></pre>
+        <pre><code><span>Before casting to an int: 5.3</span><span>After casting to an int: 5</span><span>After casting back a double: 5.0</span></code></pre>
       </box>
       <p><strong><mark><em>Downcasting</em></mark> is when you cast an object reference from a superclass to a subclass.</strong></p>
       <box>
@@ -3999,10 +3821,7 @@ After casting back a double: 5.0
         <pre><code class="line-numbers hljs java"><span>Animal a = <span class="hljs-keyword">new</span> DomesticCat(); <span class="hljs-comment">//implicit upcast</span></span><span>a.speak();</span><span>Cat c = (Cat)a; <span class="hljs-comment">//downcast</span></span><span>c.speak();</span><span>DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">//downcast</span></span><span>dc.speak();</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>I'm a DomesticCat
-I'm a DomesticCat
-I'm a DomesticCat
-</code></pre>
+        <pre><code><span>I'm a DomesticCat</span><span>I'm a DomesticCat</span><span>I'm a DomesticCat</span></code></pre>
       </box>
       <p><strong>Casting to an incompatible type can result in a <code>ClassCastException</code> at runtime.</strong></p>
       <box>
@@ -4010,9 +3829,7 @@ I'm a DomesticCat
         <pre><code class="line-numbers hljs java"><span>Object o = <span class="hljs-keyword">new</span> Animal();</span><span>Integer x = (Integer)o;</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>Exception in thread &quot;main&quot; java.lang.ClassCastException: misc.casting.Animal cannot be cast to java.lang.Integer
-	at misc.casting.CastingExamples.main(CastingExamples.java:14)
-</code></pre>
+        <pre><code><span>Exception in thread "main" java.lang.ClassCastException: misc.casting.Animal cannot be cast to java.lang.Integer</span><span>	at misc.casting.CastingExamples.main(CastingExamples.java:14)</span></code></pre>
       </box>
       <p>You can use the <code>instanceof</code> operator to check if a cast is safe to perform.</p>
       <box>
@@ -4045,10 +3862,7 @@ I'm a DomesticCat
         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.io.File;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileClassDemo</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        File f = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"data/fruits.txt"</span>);</span><span>        System.out.println(<span class="hljs-string">"full path: "</span> + f.getAbsolutePath());</span><span>        System.out.println(<span class="hljs-string">"file exists?: "</span> + f.exists());</span><span>        System.out.println(<span class="hljs-string">"is Directory?: "</span> + f.isDirectory());</span><span>    }</span><span></span><span>}</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
         </p>
-        <pre><code>full path: C:\sample-code\data\fruits.txt
-file exists?: true
-is Directory?: false
-</code></pre>
+        <pre><code><span>full path: C:\sample-code\data\fruits.txt</span><span>file exists?: true</span><span>is Directory?: false</span></code></pre>
       </box>
       <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If you use backslash to specify the file path in a Windows computer, you need to use an additional backslash as an escape character because the backslash by itself has a special
         meaning. e.g., use <span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
@@ -4060,19 +3874,14 @@ is Directory?: false
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code uses a <code>Scanner</code> object to read (and print) contents of a text file line-by-line:</p>
         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.io.File;</span><span><span class="hljs-keyword">import</span> java.io.FileNotFoundException;</span><span><span class="hljs-keyword">import</span> java.util.Scanner;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReadingDemo</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printFileContents</span><span class="hljs-params">(String filePath)</span> <span class="hljs-keyword">throws</span> FileNotFoundException </span>{</span><span>        File f = <span class="hljs-keyword">new</span> File(filePath); <span class="hljs-comment">// create a File for the given file path</span></span><span>        Scanner s = <span class="hljs-keyword">new</span> Scanner(f); <span class="hljs-comment">// create a Scanner using the File as the source</span></span><span>        <span class="hljs-keyword">while</span> (s.hasNext()) {</span><span>            System.out.println(s.nextLine());</span><span>        }</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        <span class="hljs-keyword">try</span> {</span><span>            printFileContents(<span class="hljs-string">"data/fruits.txt"</span>);</span><span>        } <span class="hljs-keyword">catch</span> (FileNotFoundException e) {</span><span>            System.out.println(<span class="hljs-string">"File not found"</span>);</span><span>        }</span><span>    }</span><span></span><span>}</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> i.e., contents of the <code>data/fruits.txt</code></p>
-        <pre><code>5 Apples
-3 Bananas
-6 Cherries
-</code></pre>
+        <pre><code><span>5 Apples</span><span>3 Bananas</span><span>6 Cherries</span></code></pre>
       </box>
       <p><strong>You can use a <a href="https://docs.oracle.com/javase/9/docs/api/java/io/FileWriter.html"><code>java.io.FileWriter</code></a> object to write to a file.</strong></p>
       <box>
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>writeToFile</code> method below uses a <code>FileWrite</code> object to write to a file. The method is being used to write two lines to the file <code>temp/lines.txt</code>.</p>
         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.io.FileWriter;</span><span><span class="hljs-keyword">import</span> java.io.IOException;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileWritingDemo</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeToFile</span><span class="hljs-params">(String filePath, String textToAdd)</span> <span class="hljs-keyword">throws</span> IOException </span>{</span><span>        FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(filePath);</span><span>        fw.write(textToAdd);</span><span>        fw.close();</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        String file2 = <span class="hljs-string">"temp/lines.txt"</span>;</span><span>        <span class="hljs-keyword">try</span> {</span><span>            writeToFile(file2, <span class="hljs-string">"first line"</span> + System.lineSeparator() + <span class="hljs-string">"second line"</span>);</span><span>        } <span class="hljs-keyword">catch</span> (IOException e) {</span><span>            System.out.println(<span class="hljs-string">"Something went wrong: "</span> + e.getMessage());</span><span>        }</span><span>    }</span><span></span><span>}</span></code></pre>
         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> Contents of the <code>temp/lines.txt</code>:</p>
-        <pre><code>first line
-second line
-</code></pre>
+        <pre><code><span>first line</span><span>second line</span></code></pre>
       </box>
       <p>Note that you <mark>need to call the <code>close()</code> method</mark> of the <code>FileWriter</code> object for the writing operation to be completed.</p>
       <p><strong>You can create a <code>FileWriter</code> object that appends to the file</strong> (instead of overwriting the current content) by specifying an additional boolean parameter to the constructor.</p>
@@ -4257,7 +4066,7 @@ second line
   </div>
   <footer>
     <div class="text-center">
-      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
   </footer>
   </div>
 </body>

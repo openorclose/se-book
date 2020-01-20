@@ -64,9 +64,7 @@
                       <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};</span><span></span><span><span class="hljs-keyword">int</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>); <span class="hljs-comment">// copy first three elements</span></span><span>System.out.println(Arrays.toString(b));</span><span></span><span><span class="hljs-keyword">int</span>[] c = Arrays.copyOf(a, a.length); <span class="hljs-comment">// copy all elements</span></span><span>System.out.println(Arrays.toString(c));</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>[1, 2, 3]
-[1, 2, 3, 4]
-</code></pre>
+                      <pre><code><span>[1, 2, 3]</span><span>[1, 2, 3, 4]</span></code></pre>
                     </box>
                   </div>
                   <div>
@@ -94,12 +92,7 @@
                                 <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.util.Arrays;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String[] filterEmails(String[] items){</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printItems</span><span class="hljs-params">(String[] items)</span></span>{</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{}));</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"abc"</span>}));</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"adam@example.com"</span>, <span class="hljs-string">"aab"</span>, <span class="hljs-string">"john@example.com"</span>, <span class="hljs-string">"some@"</span>}));</span><span>        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"xyz"</span>, <span class="hljs-string">"@bee.com"</span>, <span class="hljs-string">"aab"</span>}));</span><span>    }</span><span>}</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                                 </p>
-                                <pre><code>[]
-[]
-[adam@example.com, john@example.com, some@]
-[@bee.com]
-
-</code></pre>
+                                <pre><code><span>[]</span><span>[]</span><span>[adam@example.com, john@example.com, some@]</span><span>[@bee.com]</span><span></span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <ul>
                                     <li><strong><code>filterEmailsfilterEmails(String[] items): String[]</code></strong>
@@ -135,7 +128,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
     </footer>
   </div>
 </body>

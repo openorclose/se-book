@@ -92,9 +92,7 @@
                         <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Subclass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Superclass</span> </span>{</span><span></span><span>    <span class="hljs-comment">// overrides printMethod in Superclass</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printMethod</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">super</span>.printMethod();</span><span>        System.out.println(<span class="hljs-string">"Printed in Subclass"</span>);</span><span>    }</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Subclass s = <span class="hljs-keyword">new</span> Subclass();</span><span>        s.printMethod();</span><span>    }</span><span>}</span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                         </p>
-                        <pre><code>Printed in Superclass.
-Printed in Subclass
-</code></pre>
+                        <pre><code><span>Printed in Superclass.</span><span>Printed in Subclass</span></code></pre>
                         <p>Within <code>Subclass</code>, the simple name <code>printMethod()</code> refers to the one declared in <code>Subclass</code>, which overrides the one in <code>Superclass</code>. So, to refer to <code>printMethod()</code> inherited
                           from
                           <code>Superclass</code>, <code>Subclass</code> must use a qualified name, using <code>super</code> as shown.</p>
@@ -166,15 +164,7 @@ Printed in Subclass
                                 <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        <span class="hljs-comment">// create a todo task and print details</span></span><span>        Todo t = <span class="hljs-keyword">new</span> Todo(<span class="hljs-string">"Read a good book"</span>);</span><span>        System.out.println(t.getDescription());</span><span>        System.out.println(t.isDone());</span><span></span><span>        <span class="hljs-comment">// change todo fields and print again</span></span><span>        t.setDone(<span class="hljs-keyword">true</span>);</span><span>        System.out.println(t.isDone());</span><span></span><span>        <span class="hljs-comment">// create a deadline task and print details</span></span><span>        Deadline d = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"Read textbook"</span>, <span class="hljs-string">"Nov 16"</span>);</span><span>        System.out.println(d.getDescription());</span><span>        System.out.println(d.isDone());</span><span>        System.out.println(d.getBy());</span><span></span><span>        <span class="hljs-comment">// change deadline details and print again</span></span><span>        d.setDone(<span class="hljs-keyword">true</span>);</span><span>        d.setBy(<span class="hljs-string">"Postponed to Nov 18th"</span>);</span><span>        System.out.println(d.isDone());</span><span>        System.out.println(d.getBy());</span><span>    }</span><span>}</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                                 </p>
-                                <pre><code>Read a good book
-false
-true
-Read textbook
-false
-Nov 16
-true
-Postponed to Nov 18th
-</code></pre>
+                                <pre><code><span>Read a good book</span><span>false</span><span>true</span><span>Read textbook</span><span>false</span><span>Nov 16</span><span>true</span><span>Postponed to Nov 18th</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p><code>Todo</code> class is given below. You can follow a similar approach for the <code>Deadline</code> class.</p>
                                   <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{</span><span>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Todo</span><span class="hljs-params">(String description)</span> </span>{</span><span>        <span class="hljs-keyword">super</span>(description);</span><span>        isDone = <span class="hljs-keyword">false</span>;</span><span>    }</span><span>}</span></code></pre>
@@ -195,7 +185,7 @@ Postponed to Nov 18th
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
     </footer>
   </div>
 </body>

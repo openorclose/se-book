@@ -7361,10 +7361,7 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
         <box>
           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the SUT is a browser supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed
             beyond its limits.</p>
-          <pre><code>Test case: load a web page that is too big
-* Input: load a web page containing more than 5000 characters. 
-* Expected behavior: abort the loading of the page and show a meaningful error message. 
-</code></pre>
+          <pre><code><span>Test case: load a web page that is too big</span><span>* Input: load a web page containing more than 5000 characters. </span><span>* Expected behavior: abort the loading of the page and show a meaningful error message. </span></code></pre>
           <p>This test case would fail if the browser attempted to load the large file anyway and crashed.</p>
         </box>
         <p><strong>System testing includes testing against non-functional requirements too.</strong> Here are some examples.</p>
@@ -7641,20 +7638,13 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
           <li>
             <p>Store the test input in the text file <code>input.txt</code>.</p>
             <panel header="%%<md>:fas-cube:</md> Example `input.txt`%%" type="seamless" class="algolia-no-index">
-              <pre><code>add Valid Name p/12345 valid@email.butNoPrefix
-add Valid Name 12345 e/valid@email.butPhonePrefixMissing
-</code></pre>
+              <pre><code><span>add Valid Name p/12345 valid@email.butNoPrefix</span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing</span></code></pre>
             </panel>
           </li>
           <li>
             <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
             <panel header="%%<md>:fas-cube:</md> Example `expected.txt`%%" type="seamless" class="algolia-no-index">
-              <pre><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
-Invalid command format: add 
-
-Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
-Invalid command format: add 
-</code></pre>
+              <pre><code><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]</span><span>Invalid command format: add </span><span></span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]</span><span>Invalid command format: add </span></code></pre>
             </panel>
           </li>
           <li>
@@ -7691,8 +7681,7 @@ Invalid command format: add
           </li>
           <li>
             <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as <em>WinMerge</em>.</p>
-            <pre><code>FC output.txt expected.txt
-</code></pre>
+            <pre><code><span>FC output.txt expected.txt</span></code></pre>
           </li>
         </ol>
         <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
@@ -11386,24 +11375,14 @@ Invalid command format: add
               <p></p>
               <p>Navigate to the <code>things</code> directory.</p>
               <p>Use the command <code>git init</code> which should initialize the repo.</p>
-              <pre><code>$ git init
-Initialized empty Git repository in c:/repos/things/.git/
-</code></pre>
+              <pre><code><span>$ git init</span><span>Initialized empty Git repository in c:/repos/things/.git/</span></code></pre>
               <p>You can use the command <code>ls -a</code> to view all files, which should show the <code>.git</code> directory that was created by the previous command.</p>
-              <pre><code>$ ls -a
-.  ..  .git
-</code></pre>
+              <pre><code><span>$ ls -a</span><span>.  ..  .git</span></code></pre>
               <p>You can also use the <code>git status</code> command to check the status of the newly-created repo. It should respond with something like the bellow</p>
-              <pre><code>git status
-</code></pre>
+              <pre><code><span>git status</span></code></pre>
               <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
               </p>
-              <pre><code># On branch master
-#
-# Initial commit
-#
-nothing to commit (create/copy files and use &quot;git add&quot; to track)
-</code></pre>
+              <pre><code><span># On branch master</span><span>#</span><span># Initial commit</span><span>#</span><span>nothing to commit (create/copy files and use "git add" to track)</span></code></pre>
             </div>
           </tab>
         </tabs>
@@ -11491,12 +11470,7 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
               <pre><code class="line-numbers hljs sh"><span>git <span class="hljs-built_in">log</span></span></code></pre>
               <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
               </p>
-              <pre><code>commit 8fd30a6910efb28bb258cd01be93e481caeab846
-Author: … &lt; … @... &gt;
-Date:   Wed Jul 5 16:06:28 2017 +0800
-
-  Add fruits.txt
-</code></pre>
+              <pre><code><span>commit 8fd30a6910efb28bb258cd01be93e481caeab846</span><span>Author: … < … @... ></span><span>Date:   Wed Jul 5 16:06:28 2017 +0800</span><span></span><span>  Add fruits.txt</span></code></pre>
             </div>
           </tab>
         </tabs>
@@ -11523,15 +11497,13 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
             <div>
               <p>The file should be currently listed under <code>Unstaged files</code>. Right-click it and choose <code>Ignore…</code>. Choose <code>Ignore exact filename(s)</code> and click <code>OK</code>.</p>
               <p>Observe that a file named <code>.gitignore</code> has been created in the working directory root and has the following line in it.</p>
-              <pre><code>temp.txt
-</code></pre>
+              <pre><code><span>temp.txt</span></code></pre>
             </div>
           </tab>
           <tab header="CLI" class="algolia-no-index">
             <div>
               <p>Create a file named <code>.gitignore</code> in the working directory root and add the following line in it.</p>
-              <pre><code>temp.txt
-</code></pre>
+              <pre><code><span>temp.txt</span></code></pre>
             </div>
           </tab>
         </tabs>
@@ -11563,20 +11535,13 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
           <tab header="CLI" class="algolia-no-index">
             <div>
               <p>To add a tag to the current commit as <code>v1.0</code>,</p>
-              <pre><code>git tag –a v1.0
-</code></pre>
+              <pre><code><span>git tag –a v1.0</span></code></pre>
               <p>To view tags</p>
-              <pre><code>git tag
-</code></pre>
+              <pre><code><span>git tag</span></code></pre>
               <p>To learn how to add a tag to a past commit, go to the <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">‘Git Basics – Tagging’ page of the git-scm book</a> and refer the ‘Tagging Later’ section.</p>
               <box type="warning">
                 <p>Remember to push tags to the repo. A normal push does not include tags.</p>
-                <pre><code># push a specific tag
-git push origin v1.0b
-
-# push all tags
-git push origin --tags
-</code></pre>
+                <pre><code><span># push a specific tag</span><span>git push origin v1.0b</span><span></span><span># push all tags</span><span>git push origin --tags</span></code></pre>
               </box>
             </div>
           </tab>
@@ -11603,8 +11568,7 @@ git push origin --tags
             <div>
               <pre><code class="line-numbers hljs sh"><span>git show &lt; part-of-commit-hash &gt;</span></code></pre>
               <p>Example:</p>
-              <pre><code>git show 251b4cf
-</code></pre>
+              <pre><code><span>git show 251b4cf</span></code></pre>
               <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
               </p>
               <pre><code class="line-numbers hljs diff"><span>commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3</span><span>Author: … &lt; … &gt;</span><span>Date:   Sat Jul 8 16:50:27 2017 +0800</span><span></span><span>    fruits.txt: replace banana with berries</span><span></span><span>diff --git a/fruits.txt b/fruits.txt</span><span>index 15b57f7..17f4528 100644</span><span><span class="hljs-comment">--- a/fruits.txt</span></span><span><span class="hljs-comment">+++ b/fruits.txt</span></span><span><span class="hljs-meta">@@ -1,3 +1,3 @@</span></span><span> apples</span><span><span class="hljs-deletion">-bananas</span></span><span><span class="hljs-addition">+berries</span></span><span> cherries</span></code></pre>
@@ -11820,8 +11784,7 @@ git push origin --tags
           <tab header="CLI" class="algolia-no-index">
             <div>
               <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
-              <pre><code>git reset --hard HEAD~2
-</code></pre>
+              <pre><code><span>git reset --hard HEAD~2</span></code></pre>
             </div>
           </tab>
         </tabs>
@@ -11964,12 +11927,10 @@ git push origin --tags
           </tab>
           <tab header="CLI" class="algolia-no-index">
             <div>
-              <pre><code>git status
-</code></pre>
+              <pre><code><span>git status</span></code></pre>
               <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
               </p>
-              <pre><code>on branch master
-</code></pre>
+              <pre><code><span>on branch master</span></code></pre>
             </div>
           </tab>
         </tabs>
@@ -11988,12 +11949,9 @@ git push origin --tags
           <tab header="CLI" class="algolia-no-index">
             <div>
               <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
-              <pre><code>git branch feature1
-git checkout feature1
-</code></pre>
+              <pre><code><span>git branch feature1</span><span>git checkout feature1</span></code></pre>
               <p>One-step shortcut to create a branch and switch to it at the same time:</p>
-              <pre><code>git checkout –b feature1
-</code></pre>
+              <pre><code><span>git checkout –b feature1</span></code></pre>
             </div>
           </tab>
         </tabs>
@@ -12009,8 +11967,7 @@ git checkout feature1
           </tab>
           <tab header="CLI" class="algolia-no-index">
             <div>
-              <pre><code>git checkout master
-</code></pre>
+              <pre><code><span>git checkout master</span></code></pre>
             </div>
           </tab>
         </tabs>
@@ -12029,8 +11986,7 @@ git checkout feature1
           </tab>
           <tab header="CLI" class="algolia-no-index">
             <div>
-              <pre><code>git merge master
-</code></pre>
+              <pre><code><span>git merge master</span></code></pre>
             </div>
           </tab>
         </tabs>
@@ -12045,8 +12001,7 @@ git checkout feature1
             <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
           </tab>
           <tab header="CLI" class="algolia-no-index">
-            <pre><code>git merge feature1
-</code></pre>
+            <pre><code><span>git merge feature1</span></code></pre>
           </tab>
         </tabs>
         <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
@@ -12073,8 +12028,7 @@ git checkout feature1
           <tab header="CLI" class="algolia-no-index">
             <div>
               <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
-              <pre><code>git merge --no-ff add-countries
-</code></pre>
+              <pre><code><span>git merge --no-ff add-countries</span></code></pre>
             </div>
           </tab>
         </tabs>
@@ -12092,41 +12046,14 @@ git checkout feature1
         <img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
         <p></p>
         <p><strong>3. Try to merge the <code>fix1</code> branch onto the <code>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-        <pre><code class="line-numbers hljs txt">COLORS
-------
-blue
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-black
-=======
-green
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
-red
-white
-</code></pre>
+        <pre><code class="line-numbers hljs txt"><span>COLORS</span><span>------</span><span>blue</span><span><<<<<<< HEAD</span><span>black</span><span>=======</span><span>green</span><span>>>>>>>> fix1</span><span>red</span><span>white</span></code></pre>
         <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code>=======</code>.</p>
         <p>This is the conflicting part that is coming from the <code>master</code> branch:</p>
-        <pre><code class="line-numbers hljs txt">
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-black
-=======
-
-</code></pre>
+        <pre><code class="line-numbers hljs txt"><span></span><span><<<<<<< HEAD</span><span>black</span><span>=======</span><span></span></code></pre>
         <p>This is the conflicting part that is coming from the <code>fix1</code> branch:</p>
-        <pre><code class="line-numbers hljs txt">
-=======
-green
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
-
-</code></pre>
+        <pre><code class="line-numbers hljs txt"><span></span><span>=======</span><span>green</span><span>>>>>>>> fix1</span><span></span></code></pre>
         <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
-        <pre><code class="line-numbers hljs txt">COLORS
-------
-blue
-black
-green
-red
-white
-</code></pre>
+        <pre><code class="line-numbers hljs txt"><span>COLORS</span><span>------</span><span>blue</span><span>black</span><span>green</span><span>red</span><span>white</span></code></pre>
         <p><strong>6. Stage the changes, and commit.</strong></p>
       </div>
     </div>
@@ -12147,8 +12074,7 @@ white
             <p></p>
           </tab>
           <tab header="CLI" class="algolia-no-index">
-            <pre><code>git push origin add-intro
-</code></pre>
+            <pre><code><span>git push origin add-intro</span></code></pre>
           </tab>
         </tabs>
         <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>),
@@ -12214,8 +12140,7 @@ white
                   <p></p>
                 </tab>
                 <tab header="CLI" class="algolia-no-index">
-                  <pre><code>git push origin add-intro
-</code></pre>
+                  <pre><code><span>git push origin add-intro</span></code></pre>
                 </tab>
               </tabs>
               <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>),
@@ -12280,9 +12205,7 @@ white
         <p></p>
         <p><strong>4. Sync the local repo with the remote repo.</strong> Because of the merge you did on the GitHub, the <code>master</code> branch of your fork is now ahead of your local repo by one commit. To sync the local repo with the remote repo, pull
           the <code>master</code> branch to the local repo.</p>
-        <pre><code>git checkout master
-git pull origin master
-</code></pre>
+        <pre><code><span>git checkout master</span><span>git pull origin master</span></code></pre>
         <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
         <p><strong>5. De-conflict the <code>add-summary</code> PR</strong>
           <trigger trigger="click" for="modal:managePrs-createPrs">that you created earlier</trigger>. Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>.
@@ -13136,7 +13059,7 @@ git pull origin master
   </div>
   <footer>
     <div class="text-center">
-      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
   </footer>
   </div>
 </body>

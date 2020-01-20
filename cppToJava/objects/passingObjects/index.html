@@ -63,8 +63,7 @@
                       <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPoint</span><span class="hljs-params">(Point p)</span> </span>{</span><span>    System.out.println(<span class="hljs-string">"("</span> + p.x + <span class="hljs-string">", "</span> + p.y + <span class="hljs-string">")"</span>);</span><span>}</span><span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>    Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span>    printPoint(spot);</span><span>}</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>3, 4
-</code></pre>
+                      <pre><code><span>3, 4</span></code></pre>
                     </box>
                     <p><strong>You can return an object from a method too.</strong></p>
                     <box>
@@ -93,8 +92,7 @@
                         <pre><code class="line-numbers hljs java"><span>Point result = createCopy(<span class="hljs-keyword">null</span>);</span><span>System.out.println(result);</span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                         </p>
-                        <pre><code>null
-</code></pre>
+                        <pre><code><span>null</span></code></pre>
                       </box>
                     </div>
                     <p><strong>It is possible to have multiple variables that refer to the same object.</strong></p>
@@ -105,11 +103,7 @@
                       <pre><code class="line-numbers hljs java"><span>Point p1 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);</span><span>Point p2 = p1;</span><span>System.out.println(<span class="hljs-string">"p1: "</span> + p1.x + <span class="hljs-string">", "</span> + p1.y);</span><span>System.out.println(<span class="hljs-string">"p2: "</span> + p2.x + <span class="hljs-string">", "</span> + p2.y);</span><span>p1.x = <span class="hljs-number">1</span>;</span><span>p2.y = <span class="hljs-number">2</span>;</span><span>System.out.println(<span class="hljs-string">"p1: "</span> + p1.x + <span class="hljs-string">", "</span> + p1.y);</span><span>System.out.println(<span class="hljs-string">"p2: "</span> + p2.x + <span class="hljs-string">", "</span> + p2.y);</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                       </p>
-                      <pre><code>p1: 0, 0
-p2: 0, 0
-p1: 1, 2
-p2: 1, 2
-</code></pre>
+                      <pre><code><span>p1: 0, 0</span><span>p2: 0, 0</span><span>p1: 1, 2</span><span>p2: 1, 2</span></code></pre>
                     </box>
                     <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span>
                       </span>
@@ -117,9 +111,7 @@ p2: 1, 2
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how <code>p3</code> retains changes done to it by the method <code>swapCoordinates</code> even after the method has completed executing.</p>
                       <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swapCoordinates</span><span class="hljs-params">(Point p)</span></span>{</span><span>    <span class="hljs-keyword">int</span> temp = p.x;</span><span>    p.x = p.y;</span><span>    p.y = temp;</span><span>}</span><span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>    Point p3 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>);</span><span>    System.out.println(<span class="hljs-string">"p3: "</span> + p3.x + <span class="hljs-string">", "</span> + p3.y);</span><span>    swapCoordinates(p3);</span><span>    System.out.println(<span class="hljs-string">"p3: "</span> + p3.x + <span class="hljs-string">", "</span> + p3.y);</span><span>}</span></code></pre>
-                      <pre><code>p3: 2, 3
-p3: 3, 2
-</code></pre>
+                      <pre><code><span>p3: 2, 3</span><span>p3: 3, 2</span></code></pre>
                     </box>
                   </div>
                   <div>
@@ -139,12 +131,7 @@ p3: 3, 2
                                 <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.awt.Point;</span><span><span class="hljs-keyword">import</span> java.awt.Rectangle;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">//TODO add your method here</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Point p1 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);</span><span>        Rectangle r1 = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>);</span><span>        System.out.println(<span class="hljs-string">"arguments: "</span> + p1 + <span class="hljs-string">", "</span> + r1);</span><span></span><span>        Point p2 = move(p1, r1);</span><span>        System.out.println(<span class="hljs-string">"argument point after method call: "</span> + p1);</span><span>        System.out.println(<span class="hljs-string">"argument rectangle after method call: "</span> + r1);</span><span>        System.out.println(<span class="hljs-string">"returned point: "</span> + p2);</span><span></span><span>        System.out.println(move(<span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>));</span><span>    }</span><span>}</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                                 </p>
-                                <pre><code>arguments: java.awt.Point[x=0,y=0], java.awt.Rectangle[x=2,y=3,width=5,height=6]
-argument point after method call: java.awt.Point[x=0,y=0]
-argument rectangle after method call: java.awt.Rectangle[x=0,y=0,width=5,height=6]
-returned point: java.awt.Point[x=2,y=3]
-null
-</code></pre>
+                                <pre><code><span>arguments: java.awt.Point[x=0,y=0], java.awt.Rectangle[x=2,y=3,width=5,height=6]</span><span>argument point after method call: java.awt.Point[x=0,y=0]</span><span>argument rectangle after method call: java.awt.Rectangle[x=0,y=0,width=5,height=6]</span><span>returned point: java.awt.Point[x=2,y=3]</span><span>null</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p>Partial solution:</p>
                                   <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">move</span><span class="hljs-params">(Point p, Rectangle r)</span></span>{</span><span>    <span class="hljs-keyword">if</span> (p == <span class="hljs-keyword">null</span> || r == <span class="hljs-keyword">null</span>){</span><span>        <span class="hljs-comment">// ...</span></span><span>    }</span><span>    Point newPoint = <span class="hljs-keyword">new</span> Point(r.x, r.y);</span><span>    r.x = p.x;</span><span>    <span class="hljs-comment">// ...</span></span><span>    <span class="hljs-keyword">return</span> newPoint;</span><span>}</span></code></pre>
@@ -165,7 +152,7 @@ null
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
     </footer>
   </div>
 </body>

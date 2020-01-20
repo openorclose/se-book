@@ -81,11 +81,7 @@
                                 <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span></span><span>    <span class="hljs-comment">// Add your method here</span></span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);</span><span>        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);</span><span>        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);</span><span>        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);</span><span>    }</span><span>}</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                                 </p>
-                                <pre><code>Red indicates high priority
-Orange indicates medium priority
-Blue indicates medium priority
-Green indicates low priority
-</code></pre>
+                                <pre><code><span>Red indicates high priority</span><span>Orange indicates medium priority</span><span>Blue indicates medium priority</span><span>Green indicates low priority</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p>Use a <code>switch</code> statement to select between possible values for <code>Priority</code>.</p>
                                   <pre><code class="line-numbers hljs java"><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{</span><span>        <span class="hljs-keyword">switch</span> (p) {</span><span>            <span class="hljs-keyword">case</span> LOW:</span><span>                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);</span><span>                <span class="hljs-keyword">break</span>;</span><span>            <span class="hljs-comment">// ...</span></span><span>        }</span><span>    }</span></code></pre>
@@ -363,10 +359,7 @@ Green indicates low priority
               <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">double</span> d = <span class="hljs-number">5.3</span>;</span><span>System.out.println(<span class="hljs-string">"Before casting to an int: "</span> + d);</span><span><span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>)d; <span class="hljs-comment">// cast d to an int</span></span><span>System.out.println(<span class="hljs-string">"After casting to an int: "</span> + i);</span><span>d = (<span class="hljs-keyword">double</span>)i; <span class="hljs-comment">// cast i back to a double</span></span><span>System.out.println(<span class="hljs-string">"After casting back a double: "</span> + d);</span></code></pre>
               <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
               </p>
-              <pre><code>Before casting to an int: 5.3
-After casting to an int: 5
-After casting back a double: 5.0
-</code></pre>
+              <pre><code><span>Before casting to an int: 5.3</span><span>After casting to an int: 5</span><span>After casting back a double: 5.0</span></code></pre>
             </box>
             <p><strong><mark><em>Downcasting</em></mark> is when you cast an object reference from a superclass to a subclass.</strong></p>
             <box>
@@ -387,10 +380,7 @@ After casting back a double: 5.0
               <pre><code class="line-numbers hljs java"><span>Animal a = <span class="hljs-keyword">new</span> DomesticCat(); <span class="hljs-comment">//implicit upcast</span></span><span>a.speak();</span><span>Cat c = (Cat)a; <span class="hljs-comment">//downcast</span></span><span>c.speak();</span><span>DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">//downcast</span></span><span>dc.speak();</span></code></pre>
               <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
               </p>
-              <pre><code>I'm a DomesticCat
-I'm a DomesticCat
-I'm a DomesticCat
-</code></pre>
+              <pre><code><span>I'm a DomesticCat</span><span>I'm a DomesticCat</span><span>I'm a DomesticCat</span></code></pre>
             </box>
             <p><strong>Casting to an incompatible type can result in a <code>ClassCastException</code> at runtime.</strong></p>
             <box>
@@ -398,9 +388,7 @@ I'm a DomesticCat
               <pre><code class="line-numbers hljs java"><span>Object o = <span class="hljs-keyword">new</span> Animal();</span><span>Integer x = (Integer)o;</span></code></pre>
               <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
               </p>
-              <pre><code>Exception in thread &quot;main&quot; java.lang.ClassCastException: misc.casting.Animal cannot be cast to java.lang.Integer
-	at misc.casting.CastingExamples.main(CastingExamples.java:14)
-</code></pre>
+              <pre><code><span>Exception in thread "main" java.lang.ClassCastException: misc.casting.Animal cannot be cast to java.lang.Integer</span><span>	at misc.casting.CastingExamples.main(CastingExamples.java:14)</span></code></pre>
             </box>
             <p>You can use the <code>instanceof</code> operator to check if a cast is safe to perform.</p>
             <box>
@@ -433,10 +421,7 @@ I'm a DomesticCat
             <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.io.File;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileClassDemo</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        File f = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"data/fruits.txt"</span>);</span><span>        System.out.println(<span class="hljs-string">"full path: "</span> + f.getAbsolutePath());</span><span>        System.out.println(<span class="hljs-string">"file exists?: "</span> + f.exists());</span><span>        System.out.println(<span class="hljs-string">"is Directory?: "</span> + f.isDirectory());</span><span>    }</span><span></span><span>}</span></code></pre>
             <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
             </p>
-            <pre><code>full path: C:\sample-code\data\fruits.txt
-file exists?: true
-is Directory?: false
-</code></pre>
+            <pre><code><span>full path: C:\sample-code\data\fruits.txt</span><span>file exists?: true</span><span>is Directory?: false</span></code></pre>
           </box>
           <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If you use backslash to specify the file path in a Windows computer, you need to use an additional backslash as an escape character because the backslash by itself has
             a special meaning. e.g., use <span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
@@ -448,19 +433,14 @@ is Directory?: false
             <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code uses a <code>Scanner</code> object to read (and print) contents of a text file line-by-line:</p>
             <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.io.File;</span><span><span class="hljs-keyword">import</span> java.io.FileNotFoundException;</span><span><span class="hljs-keyword">import</span> java.util.Scanner;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReadingDemo</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printFileContents</span><span class="hljs-params">(String filePath)</span> <span class="hljs-keyword">throws</span> FileNotFoundException </span>{</span><span>        File f = <span class="hljs-keyword">new</span> File(filePath); <span class="hljs-comment">// create a File for the given file path</span></span><span>        Scanner s = <span class="hljs-keyword">new</span> Scanner(f); <span class="hljs-comment">// create a Scanner using the File as the source</span></span><span>        <span class="hljs-keyword">while</span> (s.hasNext()) {</span><span>            System.out.println(s.nextLine());</span><span>        }</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        <span class="hljs-keyword">try</span> {</span><span>            printFileContents(<span class="hljs-string">"data/fruits.txt"</span>);</span><span>        } <span class="hljs-keyword">catch</span> (FileNotFoundException e) {</span><span>            System.out.println(<span class="hljs-string">"File not found"</span>);</span><span>        }</span><span>    }</span><span></span><span>}</span></code></pre>
             <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> i.e., contents of the <code>data/fruits.txt</code></p>
-            <pre><code>5 Apples
-3 Bananas
-6 Cherries
-</code></pre>
+            <pre><code><span>5 Apples</span><span>3 Bananas</span><span>6 Cherries</span></code></pre>
           </box>
           <p><strong>You can use a <a href="https://docs.oracle.com/javase/9/docs/api/java/io/FileWriter.html"><code>java.io.FileWriter</code></a> object to write to a file.</strong></p>
           <box>
             <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>writeToFile</code> method below uses a <code>FileWrite</code> object to write to a file. The method is being used to write two lines to the file <code>temp/lines.txt</code>.</p>
             <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">import</span> java.io.FileWriter;</span><span><span class="hljs-keyword">import</span> java.io.IOException;</span><span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileWritingDemo</span> </span>{</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeToFile</span><span class="hljs-params">(String filePath, String textToAdd)</span> <span class="hljs-keyword">throws</span> IOException </span>{</span><span>        FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(filePath);</span><span>        fw.write(textToAdd);</span><span>        fw.close();</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        String file2 = <span class="hljs-string">"temp/lines.txt"</span>;</span><span>        <span class="hljs-keyword">try</span> {</span><span>            writeToFile(file2, <span class="hljs-string">"first line"</span> + System.lineSeparator() + <span class="hljs-string">"second line"</span>);</span><span>        } <span class="hljs-keyword">catch</span> (IOException e) {</span><span>            System.out.println(<span class="hljs-string">"Something went wrong: "</span> + e.getMessage());</span><span>        }</span><span>    }</span><span></span><span>}</span></code></pre>
             <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> Contents of the <code>temp/lines.txt</code>:</p>
-            <pre><code>first line
-second line
-</code></pre>
+            <pre><code><span>first line</span><span>second line</span></code></pre>
           </box>
           <p>Note that you <mark>need to call the <code>close()</code> method</mark> of the <code>FileWriter</code> object for the writing operation to be completed.</p>
           <p><strong>You can create a <code>FileWriter</code> object that appends to the file</strong> (instead of overwriting the current content) by specifying an additional boolean parameter to the constructor.</p>
@@ -642,7 +622,7 @@ second line
   </div>
   <footer>
     <div class="text-center">
-      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 14:41:13 GMT.</small></div>
+      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
   </footer>
   </div>
 </body>
