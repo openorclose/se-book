@@ -1,25 +1,25 @@
 <div>
-  <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designFundamentals\cohesion\how\text.md">
+  <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designFundamentals/cohesion/how/text.md">
     <p>
-      <panel src="/se-book/designFundamentals/cohesion/what/unit-inElsewhere-asFlat._include_.html" header="%%<md>:glyphicon-education:</md> Design → Design Fundamentals → Cohesion →
-What%%"></panel>
+      <panel src="/se-book/designFundamentals/cohesion/what/unit-inElsewhere-asFlat._include_.html"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Design → Design Fundamentals → Cohesion →
+What</span></p></template></panel>
     </p>
   </div>
 </div>
 <p></p>
-<p><span class="dimmed"><strong><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designFundamentals\cohesion\path.md">Design → Design Fundamentals → Cohesion →
+<p><span class="dimmed"><strong><span><span data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designFundamentals/cohesion/path.md">Design → Design Fundamentals → Cohesion →
 </span></span>
   </strong>
   </span>
 </p>
 <div id="title-and-body">
   <div>
-    <h4 id="how"><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designFundamentals\cohesion\how\text.md">How</span></span>
+    <h4 id="how"><span><span data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designFundamentals/cohesion/how/text.md">How</span></span>
     </h4>
   </div>
   <div id="main">
     <div>
-      <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designFundamentals\cohesion\how\text.md">
+      <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designFundamentals/cohesion/how/text.md">
         <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
         <ul>
           <li>Code related to a single concept is kept together, e.g. the <code>Student</code> component handles everything related to students.</li>
@@ -33,16 +33,16 @@ What%%"></panel>
       </div>
     </div>
     <div>
-      <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designFundamentals\cohesion\how\text.md">
+      <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designFundamentals/cohesion/how/text.md">
         <div>
-          <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designFundamentals\cohesion\how\exercises.md">
-            <panel header="<md>:fas-dumbbell:</md> Exercises" expandable="">
+          <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designFundamentals/cohesion/how/exercises.md">
+            <panel expandable=""><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
               <div>
-                <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designFundamentals\cohesion\how\q-essay-emailMessage.md">
-                  <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Which class is more cohesive?">
+                <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designFundamentals/cohesion/how/q-essay-emailMessage.md">
+                  <panel><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which class is more cohesive?</p></template>
                     <question has-input="true">
                       <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
-                      <pre><code class="line-numbers hljs java"><span><span class="hljs-comment">// version-1</span></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{</span><span>    <span class="hljs-keyword">private</span> String sendTo;</span><span> 	  <span class="hljs-keyword">private</span> String subject;</span><span>    <span class="hljs-keyword">private</span> String message;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;</span><span>        <span class="hljs-keyword">this</span>.subject = subject;</span><span>        <span class="hljs-keyword">this</span>.message = message;</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span></span><span>    }</span><span>}</span><span></span><span><span class="hljs-comment">// version-2</span></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{</span><span>    <span class="hljs-keyword">private</span> String sendTo;</span><span>    <span class="hljs-keyword">private</span> String subject;</span><span>    <span class="hljs-keyword">private</span> String message;</span><span>    <span class="hljs-keyword">private</span> String username;</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;</span><span>        <span class="hljs-keyword">this</span>.subject = subject;</span><span>        <span class="hljs-keyword">this</span>.message = message;</span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span></span><span>    }</span><span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">login</span><span class="hljs-params">(String username, String password)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.username = username;</span><span>        <span class="hljs-comment">// code to login</span></span><span>    }</span><span>}</span></code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-comment">// version-1</span></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{</span><span>    <span class="hljs-keyword">private</span> String sendTo;</span><span> 	  <span class="hljs-keyword">private</span> String subject;</span><span>    <span class="hljs-keyword">private</span> String message;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;</span><span>        <span class="hljs-keyword">this</span>.subject = subject;</span><span>        <span class="hljs-keyword">this</span>.message = message;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span></span><span>    }</span><span>}</span><span>&#x200B;</span><span><span class="hljs-comment">// version-2</span></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{</span><span>    <span class="hljs-keyword">private</span> String sendTo;</span><span>    <span class="hljs-keyword">private</span> String subject;</span><span>    <span class="hljs-keyword">private</span> String message;</span><span>    <span class="hljs-keyword">private</span> String username;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;</span><span>        <span class="hljs-keyword">this</span>.subject = subject;</span><span>        <span class="hljs-keyword">this</span>.message = message;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span></span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">login</span><span class="hljs-params">(String username, String password)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.username = username;</span><span>        <span class="hljs-comment">// code to login</span></span><span>    }</span><span>}</span></code></pre>
                       <div slot="answer">
                         <p>Version 2 is less cohesive.</p>
                         <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both

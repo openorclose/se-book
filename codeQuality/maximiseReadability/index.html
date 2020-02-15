@@ -5,20 +5,18 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.9.0">
+  <meta name="generator" content="MarkBind 2.10.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Code Quality: [Guideline] Maximise Readability</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -47,7 +45,7 @@
             <div id="main">
               <div>
                 <div>
-                  <panel type="seamless" expanded="">
+                  <panel type="seamless" expanded="" id="introduction">
                     <span slot="header" class="card-title"><div><h4 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction"></a></h4>
                 </div>
                 </span>
@@ -78,7 +76,7 @@
                                     </span>
                                   </font>
                                 </p>
-                                <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (!age) {</span><span>        <span class="hljs-keyword">if</span> (!sub) {</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {</span><span>                subsidy = <span class="hljs-number">500</span>;</span><span>            } <span class="hljs-keyword">else</span> {</span><span>                subsidy = <span class="hljs-number">250</span>;</span><span>            }</span><span>        } <span class="hljs-keyword">else</span> {</span><span>            subsidy = <span class="hljs-number">250</span>;</span><span>        }</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = -<span class="hljs-number">1</span>;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
+                                <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (!age) {</span><span>        <span class="hljs-keyword">if</span> (!sub) {</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {</span><span>                subsidy = <span class="hljs-number">500</span>;</span><span>            } <span class="hljs-keyword">else</span> {</span><span>                subsidy = <span class="hljs-number">250</span>;</span><span>            }</span><span>        } <span class="hljs-keyword">else</span> {</span><span>            subsidy = <span class="hljs-number">250</span>;</span><span>        }</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = -<span class="hljs-number">1</span>;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
                               </td>
                               <td>&nbsp;&nbsp;<br><br></td>
                               <td valign="top">
@@ -87,7 +85,7 @@
                                     </span>
                                   </font>
                                 </p>
-                                <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (isSenior) {</span><span>        subsidy = REJECT_SENIOR;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {</span><span>        subsidy = SUBSIDISED_SUBSIDY;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = FULLTIME_SUBSIDY;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
+                                <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (isSenior) {</span><span>        subsidy = REJECT_SENIOR;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {</span><span>        subsidy = SUBSIDISED_SUBSIDY;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = FULLTIME_SUBSIDY;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
                               </td>
                             </tr>
                           </table>
@@ -103,7 +101,7 @@
                                     </span>
                                   </font>
                                 </p>
-                                <pre><code class="line-numbers hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:</span><span>                subsidy = <span class="hljs-number">500</span></span><span>            <span class="hljs-keyword">else</span>:</span><span>                subsidy = <span class="hljs-number">250</span></span><span>        <span class="hljs-keyword">else</span>:</span><span>            subsidy = <span class="hljs-number">250</span></span><span>    <span class="hljs-keyword">else</span>:</span><span>        subsidy = <span class="hljs-number">-1</span></span><span>    <span class="hljs-keyword">return</span> subsidy</span></code></pre>
+                                <pre><code class="hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:</span><span>                subsidy = <span class="hljs-number">500</span></span><span>            <span class="hljs-keyword">else</span>:</span><span>                subsidy = <span class="hljs-number">250</span></span><span>        <span class="hljs-keyword">else</span>:</span><span>            subsidy = <span class="hljs-number">250</span></span><span>    <span class="hljs-keyword">else</span>:</span><span>        subsidy = <span class="hljs-number">-1</span></span><span>    <span class="hljs-keyword">return</span> subsidy</span></code></pre>
                               </td>
                               <td>&nbsp;&nbsp;<br><br></td>
                               <td valign="top">
@@ -112,7 +110,7 @@
                                     </span>
                                   </font>
                                 </p>
-                                <pre><code class="line-numbers hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> is_senior:</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY</span><span>    <span class="hljs-keyword">elif</span> is_parttime:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO</span><span>    <span class="hljs-keyword">else</span>:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY</span></code></pre>
+                                <pre><code class="hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> is_senior:</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY</span><span>    <span class="hljs-keyword">elif</span> is_parttime:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO</span><span>    <span class="hljs-keyword">else</span>:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY</span></code></pre>
                               </td>
                             </tr>
                           </table>
@@ -125,13 +123,13 @@
                 </panel>
               </div>
               <div>
-                <panel type="seamless" expanded="">
+                <panel type="seamless" expanded="" id="basic">
                   <span slot="header" class="card-title"><div><h2 id="basic"><span>Basic</span><a class="fa fa-anchor" href="#basic"></a></h2>
               </div>
               </span>
               <div>
                 <div>
-                  <panel type="seamless" expanded="">
+                  <panel type="seamless" expanded="" id="avoid-long-methods">
                     <span slot="header" class="card-title"><div><h4 id="avoid-long-methods"><span>Avoid Long Methods</span><a class="fa fa-anchor" href="#avoid-long-methods"></a></h4>
                 </div>
                 </span>
@@ -152,7 +150,7 @@
                 </panel>
               </div>
               <div>
-                <panel type="seamless" expanded="">
+                <panel type="seamless" expanded="" id="avoid-deep-nesting">
                   <span slot="header" class="card-title"><div><h4 id="avoid-deep-nesting"><span>Avoid Deep Nesting</span><a class="fa fa-anchor" href="#avoid-deep-nesting"></a></h4>
               </div>
               </span>
@@ -184,7 +182,7 @@
                                   </span>
                                 </font>
                               </p>
-                              <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (!age) {</span><span>        <span class="hljs-keyword">if</span> (!sub) {</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {</span><span>                subsidy = <span class="hljs-number">500</span>;</span><span>            } <span class="hljs-keyword">else</span> {</span><span>                subsidy = <span class="hljs-number">250</span>;</span><span>            }</span><span>        } <span class="hljs-keyword">else</span> {</span><span>            subsidy = <span class="hljs-number">250</span>;</span><span>        }</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = -<span class="hljs-number">1</span>;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
+                              <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (!age) {</span><span>        <span class="hljs-keyword">if</span> (!sub) {</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {</span><span>                subsidy = <span class="hljs-number">500</span>;</span><span>            } <span class="hljs-keyword">else</span> {</span><span>                subsidy = <span class="hljs-number">250</span>;</span><span>            }</span><span>        } <span class="hljs-keyword">else</span> {</span><span>            subsidy = <span class="hljs-number">250</span>;</span><span>        }</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = -<span class="hljs-number">1</span>;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
                             </td>
                             <td>&nbsp;&nbsp;<br><br></td>
                             <td valign="top">
@@ -193,7 +191,7 @@
                                   </span>
                                 </font>
                               </p>
-                              <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (isSenior) {</span><span>        subsidy = REJECT_SENIOR;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {</span><span>        subsidy = SUBSIDISED_SUBSIDY;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = FULLTIME_SUBSIDY;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
+                              <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (isSenior) {</span><span>        subsidy = REJECT_SENIOR;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {</span><span>        subsidy = SUBSIDISED_SUBSIDY;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = FULLTIME_SUBSIDY;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
                             </td>
                           </tr>
                         </table>
@@ -209,7 +207,7 @@
                                   </span>
                                 </font>
                               </p>
-                              <pre><code class="line-numbers hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:</span><span>                subsidy = <span class="hljs-number">500</span></span><span>            <span class="hljs-keyword">else</span>:</span><span>                subsidy = <span class="hljs-number">250</span></span><span>        <span class="hljs-keyword">else</span>:</span><span>            subsidy = <span class="hljs-number">250</span></span><span>    <span class="hljs-keyword">else</span>:</span><span>        subsidy = <span class="hljs-number">-1</span></span><span>    <span class="hljs-keyword">return</span> subsidy</span></code></pre>
+                              <pre><code class="hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:</span><span>                subsidy = <span class="hljs-number">500</span></span><span>            <span class="hljs-keyword">else</span>:</span><span>                subsidy = <span class="hljs-number">250</span></span><span>        <span class="hljs-keyword">else</span>:</span><span>            subsidy = <span class="hljs-number">250</span></span><span>    <span class="hljs-keyword">else</span>:</span><span>        subsidy = <span class="hljs-number">-1</span></span><span>    <span class="hljs-keyword">return</span> subsidy</span></code></pre>
                             </td>
                             <td>&nbsp;&nbsp;<br><br></td>
                             <td valign="top">
@@ -218,7 +216,7 @@
                                   </span>
                                 </font>
                               </p>
-                              <pre><code class="line-numbers hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> is_senior:</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY</span><span>    <span class="hljs-keyword">elif</span> is_parttime:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO</span><span>    <span class="hljs-keyword">else</span>:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY</span></code></pre>
+                              <pre><code class="hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> is_senior:</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY</span><span>    <span class="hljs-keyword">elif</span> is_parttime:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO</span><span>    <span class="hljs-keyword">else</span>:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY</span></code></pre>
                             </td>
                           </tr>
                         </table>
@@ -231,7 +229,7 @@
               </panel>
             </div>
             <div>
-              <panel type="seamless" expanded="">
+              <panel type="seamless" expanded="" id="avoid-complicated-expressions">
                 <span slot="header" class="card-title"><div><h4 id="avoid-complicated-expressions"><span>Avoid Complicated Expressions</span><a class="fa fa-anchor" href="#avoid-complicated-expressions"></a></h4>
             </div>
             </span>
@@ -257,13 +255,13 @@
                           </span>
                         </font>
                       </p>
-                      <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);</span></code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);</span></code></pre>
                       <p>
                         <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong>
                           </span>
                         </font>
                       </p>
-                      <pre><code class="line-numbers hljs java"><span></span><span><span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;</span><span><span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;</span><span><span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;</span><span></span><span><span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;</span><span></span><span><span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;</span></code></pre>
+                      <pre><code class="hljs java"><span>&#x200B;</span><span><span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;</span><span><span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;</span><span><span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;</span><span>&#x200B;</span><span><span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;</span><span>&#x200B;</span><span><span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;</span></code></pre>
                     </box>
                   </div>
                 </div>
@@ -276,13 +274,13 @@
                           </span>
                         </font>
                       </p>
-                      <pre><code class="line-numbers hljs python"><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)</span></code></pre>
+                      <pre><code class="hljs python"><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)</span></code></pre>
                       <p>
                         <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong>
                           </span>
                         </font>
                       </p>
-                      <pre><code class="line-numbers hljs python"><span>is_within_size_limit = length &lt; MAX_LENGTH</span><span>is_same_size = previous_size != length</span><span>is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size</span><span></span><span>is_urgent = type_code == URGENT</span><span></span><span><span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent</span></code></pre>
+                      <pre><code class="hljs python"><span>is_within_size_limit = length &lt; MAX_LENGTH</span><span>is_same_size = previous_size != length</span><span>is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size</span><span>&#x200B;</span><span>is_urgent = type_code == URGENT</span><span>&#x200B;</span><span><span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent</span></code></pre>
                     </box>
                   </div>
                 </div>
@@ -295,7 +293,7 @@
             </panel>
           </div>
           <div>
-            <panel type="seamless" expanded="">
+            <panel type="seamless" expanded="" id="avoid-magic-numbers">
               <span slot="header" class="card-title"><div><h4 id="avoid-magic-numbers"><span>Avoid Magic Numbers</span><a class="fa fa-anchor" href="#avoid-magic-numbers"></a></h4>
           </div>
           </span>
@@ -310,7 +308,7 @@
             <p></p>
             <div>
               <p>When the code has a number that does not explain the meaning of the number, we call that a &quot;magic number&quot; (as in &quot;the number appears as if by magic&quot;). Using a
-                <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
+                <tooltip><template slot="_content">e.g., <code>PI</code></template><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
               <box>
                 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
                 <div class="alt-java">
@@ -323,7 +321,7 @@
                               </span>
                             </font>
                           </p>
-                          <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;</span><span>...</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;</span></code></pre>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;</span><span>...</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;</span></code></pre>
                         </td>
                         <td>&nbsp;&nbsp;<br><br></td>
                         <td valign="top">
@@ -332,7 +330,7 @@
                               </span>
                             </font>
                           </p>
-                          <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;</span><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;</span><span>...</span><span><span class="hljs-keyword">return</span> PI;</span><span>...</span><span><span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;</span></code></pre>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;</span><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;</span><span>...</span><span><span class="hljs-keyword">return</span> PI;</span><span>...</span><span><span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;</span></code></pre>
                         </td>
                       </tr>
                     </table>
@@ -349,7 +347,7 @@
                               </span>
                             </font>
                           </p>
-                          <pre><code class="line-numbers hljs python"><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span></span><span>...</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span></span></code></pre>
+                          <pre><code class="hljs python"><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span></span><span>...</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span></span></code></pre>
                         </td>
                         <td>&nbsp;&nbsp;<br><br></td>
                         <td valign="top">
@@ -358,7 +356,7 @@
                               </span>
                             </font>
                           </p>
-                          <pre><code class="line-numbers hljs python"><span>PI = <span class="hljs-number">3.14236</span></span><span>MAX_SIZE = <span class="hljs-number">10</span></span><span>...</span><span><span class="hljs-keyword">return</span> PI</span><span>...</span><span><span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span></span></code></pre>
+                          <pre><code class="hljs python"><span>PI = <span class="hljs-number">3.14236</span></span><span>MAX_SIZE = <span class="hljs-number">10</span></span><span>...</span><span><span class="hljs-keyword">return</span> PI</span><span>...</span><span><span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span></span></code></pre>
                         </td>
                       </tr>
                     </table>
@@ -372,7 +370,7 @@
                     </span>
                   </font>
                 </p>
-                <pre><code class="line-numbers hljs java"><span><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span></span></code></pre>
+                <pre><code class="hljs java"><span><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span></span></code></pre>
               </box>
               <p>In general, try to avoid any magic literals.</p>
             </div>
@@ -381,7 +379,7 @@
           </panel>
         </div>
         <div>
-          <panel type="seamless" expanded="">
+          <panel type="seamless" expanded="" id="make-the-code-obvious">
             <span slot="header" class="card-title"><div><h4 id="make-the-code-obvious"><span>Make the Code Obvious</span><a class="fa fa-anchor" href="#make-the-code-obvious"></a></h4>
         </div>
         </span>
@@ -403,7 +401,7 @@
                 <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled'
                 respectively, declare 'state' as type <code>SystemState</code> and define an enumeration <code>SystemState</code> that has values <code>'STARTING'</code>, <code>'ENABLED'</code>, and <code>'DISABLED'</code>.</li>
             </ul>
-            <modal title="More about enumerations" id="modal:obviousCode-enums" class="algolia-no-index">
+            <modal id="modal:obviousCode-enums" class="algolia-no-index"><template slot="_header">More about enumerations</template>
               <ul>
                 <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">More about Java enumerations</a></li>
                 <li><a href="https://docs.python.org/3/library/enum.html">More about Python enumerations</a></li>
@@ -418,13 +416,13 @@
     </panel>
   </div>
   <div>
-    <panel type="seamless" expanded="">
+    <panel type="seamless" expanded="" id="intermediate">
       <span slot="header" class="card-title"><div><h2 id="intermediate"><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate"></a></h2>
   </div>
   </span>
   <div>
     <div>
-      <panel type="seamless" expanded="">
+      <panel type="seamless" expanded="" id="structure-code-logically">
         <span slot="header" class="card-title"><div><h4 id="structure-code-logically"><span>Structure Code Logically</span><a class="fa fa-anchor" href="#structure-code-logically"></a></h4>
     </div>
     </span>
@@ -447,7 +445,7 @@
     </panel>
   </div>
   <div>
-    <panel type="seamless" expanded="">
+    <panel type="seamless" expanded="" id="do-not-trip-up-reader">
       <span slot="header" class="card-title"><div><h4 id="do-not-trip-up-reader"><span>Do Not 'Trip Up' Reader</span><a class="fa fa-anchor" href="#do-not-trip-up-reader"></a></h4>
   </div>
   </span>
@@ -475,7 +473,7 @@
   </panel>
   </div>
   <div>
-    <panel type="seamless" expanded="">
+    <panel type="seamless" expanded="" id="practice-kissing">
       <span slot="header" class="card-title"><div><h4 id="practice-kissing"><span>Practice KISSing</span><a class="fa fa-anchor" href="#practice-kissing"></a></h4>
   </div>
   </span>
@@ -503,7 +501,7 @@
   </panel>
   </div>
   <div>
-    <panel type="seamless" expanded="">
+    <panel type="seamless" expanded="" id="avoid-premature-optimizations">
       <span slot="header" class="card-title"><div><h4 id="avoid-premature-optimizations"><span>Avoid Premature Optimizations</span><a class="fa fa-anchor" href="#avoid-premature-optimizations"></a></h4>
   </div>
   </span>
@@ -538,7 +536,7 @@
   </panel>
   </div>
   <div>
-    <panel type="seamless" expanded="">
+    <panel type="seamless" expanded="" id="slap-hard">
       <span slot="header" class="card-title"><div><h4 id="slap-hard"><span>SLAP Hard</span><a class="fa fa-anchor" href="#slap-hard"></a></h4>
   </div>
   </span>
@@ -560,14 +558,14 @@
           <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong>
             </span>
           </font> (<code>readData();</code> and <code>salary = basic*rise+1000;</code> are at different levels of abstraction)</p>
-        <pre><code class="line-numbers hljs java"><span>readData();</span><span>salary = basic*rise+<span class="hljs-number">1000</span>;</span><span>tax = (taxable?salary*<span class="hljs-number">0.07</span>:<span class="hljs-number">0</span>);</span><span>displayResult();</span></code></pre>
+        <pre><code class="hljs java"><span>readData();</span><span>salary = basic*rise+<span class="hljs-number">1000</span>;</span><span>tax = (taxable?salary*<span class="hljs-number">0.07</span>:<span class="hljs-number">0</span>);</span><span>displayResult();</span></code></pre>
         <p>
           <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong>
             </span>
           </font> (all statements are at the same level of abstraction)</p>
-        <pre><code class="line-numbers hljs java"><span>readData();</span><span>processData();</span><span>displayResult();</span></code></pre>
+        <pre><code class="hljs java"><span>readData();</span><span>processData();</span><span>displayResult();</span></code></pre>
       </box>
-      <modal title="" id="modal:slap-abstraction" class="algolia-no-index">
+      <modal id="modal:slap-abstraction" class="algolia-no-index"><template slot="_header"></template>
         <div>
           <div></div>
           <p></p>
@@ -628,13 +626,13 @@
   </panel>
   </div>
   <div>
-    <panel type="seamless" expanded="">
+    <panel type="seamless" expanded="" id="advanced">
       <span slot="header" class="card-title"><div><h2 id="advanced"><span>Advanced</span><a class="fa fa-anchor" href="#advanced"></a></h2>
   </div>
   </span>
   <div>
     <div>
-      <panel type="seamless" expanded="">
+      <panel type="seamless" expanded="" id="make-the-happy-path-prominent">
         <span slot="header" class="card-title"><div><h4 id="make-the-happy-path-prominent"><span>Make the Happy Path Prominent</span><a class="fa fa-anchor" href="#make-the-happy-path-prominent"></a></h4>
     </div>
     </span>
@@ -657,7 +655,7 @@
               </span>
             </font>
           </p>
-          <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span></span><span>    <span class="hljs-keyword">if</span> (!isErrorCase) {</span><span>        start();    <span class="hljs-comment">//main path</span></span><span>        process();</span><span>        cleanup();</span><span>        exit();</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        handleError();</span><span>    }</span><span>} <span class="hljs-keyword">else</span> {</span><span>    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span></span><span>}</span></code></pre>
+          <pre><code class="hljs java"><span><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span></span><span>    <span class="hljs-keyword">if</span> (!isErrorCase) {</span><span>        start();    <span class="hljs-comment">//main path</span></span><span>        process();</span><span>        cleanup();</span><span>        exit();</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        handleError();</span><span>    }</span><span>} <span class="hljs-keyword">else</span> {</span><span>    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span></span><span>}</span></code></pre>
           <p>In the code above,</p>
           <ul>
             <li>Unusual condition detection is separated from their handling.</li>
@@ -668,7 +666,7 @@
               </span>
             </font>
           </p>
-          <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span></span><span>    handleUnusualCase();</span><span>    <span class="hljs-keyword">return</span>;</span><span>}</span><span></span><span><span class="hljs-keyword">if</span> (isErrorCase) { <span class="hljs-comment">//Guard Clause</span></span><span>    handleError();</span><span>    <span class="hljs-keyword">return</span>;</span><span>}</span><span></span><span>start();</span><span>process();</span><span>cleanup();</span><span>exit();</span></code></pre>
+          <pre><code class="hljs java"><span><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span></span><span>    handleUnusualCase();</span><span>    <span class="hljs-keyword">return</span>;</span><span>}</span><span>&#x200B;</span><span><span class="hljs-keyword">if</span> (isErrorCase) { <span class="hljs-comment">//Guard Clause</span></span><span>    handleError();</span><span>    <span class="hljs-keyword">return</span>;</span><span>}</span><span>&#x200B;</span><span>start();</span><span>process();</span><span>cleanup();</span><span>exit();</span></code></pre>
           <p>In contrast, the above code</p>
           <ul>
             <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
@@ -691,7 +689,7 @@
   </div>
   <footer>
     <div class="text-center">
-      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
+      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.10.0</a> at Sat, 15 Feb 2020 03:13:40 GMT.</small></div>
   </footer>
   </div>
 </body>

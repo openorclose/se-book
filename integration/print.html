@@ -5,20 +5,18 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.9.0">
+  <meta name="generator" content="MarkBind 2.10.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Integration [Printable]</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -64,7 +62,7 @@
                 </box>
                 <p><strong><em>Early and frequent</em>: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.</strong></p>
                 <box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <em><tooltip content="it has all the main components in their minimal form, compiles, and runs but does not produce any useful output">walking skeleton</tooltip></em>                    can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <em><tooltip><template slot="_content">it has all the main components in their minimal form, compiles, and runs but does not produce any useful output</template>walking skeleton</tooltip></em>                    can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply
                     integrate the new code to the main system.</p>
                 </box>
                 <div v-closeable="" alt="slideshow: comparison" class="non-printable">
@@ -106,7 +104,7 @@
                 <p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage
                   is that this requires the use of
                   <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
-                <popover id="pop:topdown-stub" title="<md>:glyphicon-eye-open:</md>" placement="top">
+                <popover id="pop:topdown-stub" placement="top"><template slot="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
                   <div slot="content" class="algolia-no-index">
                     <div>
                       <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set
@@ -115,7 +113,8 @@
                   </div>
                 </popover>
                 <p><strong><em>Bottom-up</em> integration: the reverse of top-down integration.</strong> Note that when integrating lower level components,
-                  <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components <span class="dimmed">because the UI may not be integrated yet</span>, just like top-down integration needs stubs.</p>
+                  <tooltip><template slot="_content">additional code written to provide inputs to a component via an API</template>drivers</tooltip> may be needed to test the integrated components <span class="dimmed">because the UI may not be integrated yet</span>,
+                  just like top-down integration needs stubs.</p>
                 <p><strong><em>Sandwich</em> integration: a mix of the top-down and the bottom-up approaches.</strong> The idea is to do both top-down and bottom-up so as to 'meet' in the middle.</p>
                 <div v-closeable="" alt="slideshow: comparison">
                   <p>Here is an animation that compares the three approaches:</p>
@@ -128,7 +127,7 @@
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-2"><span>What</span><a class="fa fa-anchor" href="#what-2"></a></h4>
                 </div>
               </p>
               <div>
@@ -180,7 +179,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.10.0</a> at Sat, 15 Feb 2020 03:13:40 GMT.</small></div>
     </footer>
   </div>
 </body>

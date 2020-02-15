@@ -5,20 +5,18 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.9.0">
+  <meta name="generator" content="MarkBind 2.10.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Documentation [Printable]</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -141,7 +139,7 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-2"><span>What</span><a class="fa fa-anchor" href="#what-2"></a></h4>
                 </div>
               </p>
               <div>
@@ -198,7 +196,7 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-3"><span>What</span><a class="fa fa-anchor" href="#what-3"></a></h4>
                 </div>
               </p>
               <div>
@@ -208,7 +206,7 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
             <div>
               <p>
                 <div>
-                  <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
+                  <h4 id="how-2"><span>How</span><a class="fa fa-anchor" href="#how-2"></a></h4>
                 </div>
               </p>
               <div>
@@ -228,7 +226,7 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-4"><span>What</span><a class="fa fa-anchor" href="#what-4"></a></h4>
                 </div>
               </p>
               <div>
@@ -242,7 +240,7 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
             <div>
               <p>
                 <div>
-                  <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
+                  <h4 id="how-3"><span>How</span><a class="fa fa-anchor" href="#how-3"></a></h4>
                 </div>
               </p>
               <div>
@@ -255,14 +253,14 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-5"><span>What</span><a class="fa fa-anchor" href="#what-5"></a></h4>
                 </div>
               </p>
               <div>
                 <p><strong>Javadoc is a tool for generating API documentation in HTML format from doc comments in source.</strong> In addition, modern IDEs use JavaDoc comments to generate explanatory tool tips.</p>
                 <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example method header comment in JavaDoc format (adapted from <a href="http://www.oracle.com/technetwork/articles/java/index-137868.html">Oracle's Java documentation</a>)</p>
-                  <pre><code class="line-numbers hljs java"><span><span class="hljs-comment">/**</span><span> * Returns an Image object that can then be painted on the screen.</span><span> * The url argument must specify an absolute {<span class="hljs-doctag">@link</span> URL}. The name</span><span> * argument is a specifier that is relative to the url argument.</span><span> * &lt;p&gt;</span><span> * This method always returns immediately, whether or not the</span><span> * image exists. When this applet attempts to draw the image on</span><span> * the screen, the data will be loaded. The graphics primitives</span><span> * that draw the image will incrementally paint on the screen.</span><span> *</span><span> * <span class="hljs-doctag">@param</span> url an absolute URL giving the base location of the image</span><span> * <span class="hljs-doctag">@param</span> name the location of the image, relative to the url argument</span><span> * <span class="hljs-doctag">@return</span> the image at the specified URL</span><span> * <span class="hljs-doctag">@see</span> Image</span><span> */</span></span><span> <span class="hljs-function"><span class="hljs-keyword">public</span> Image <span class="hljs-title">getImage</span><span class="hljs-params">(URL url, String name)</span> </span>{</span><span>        <span class="hljs-keyword">try</span> {</span><span>            <span class="hljs-keyword">return</span> getImage(<span class="hljs-keyword">new</span> URL(url, name));</span><span>        } <span class="hljs-keyword">catch</span> (MalformedURLException e) {</span><span>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;</span><span>        }</span><span> }</span></code></pre>
+                  <pre><code class="hljs java"><span><span class="hljs-comment">/**</span></span><span><span class="hljs-comment"> * Returns an Image object that can then be painted on the screen.</span></span><span><span class="hljs-comment"> * The url argument must specify an absolute {<span class="hljs-doctag">@link</span> URL}. The name</span></span><span><span class="hljs-comment"> * argument is a specifier that is relative to the url argument.</span></span><span><span class="hljs-comment"> * &lt;p&gt;</span></span><span><span class="hljs-comment"> * This method always returns immediately, whether or not the</span></span><span><span class="hljs-comment"> * image exists. When this applet attempts to draw the image on</span></span><span><span class="hljs-comment"> * the screen, the data will be loaded. The graphics primitives</span></span><span><span class="hljs-comment"> * that draw the image will incrementally paint on the screen.</span></span><span><span class="hljs-comment"> *</span></span><span><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> url an absolute URL giving the base location of the image</span></span><span><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> name the location of the image, relative to the url argument</span></span><span><span class="hljs-comment"> * <span class="hljs-doctag">@return</span> the image at the specified URL</span></span><span><span class="hljs-comment"> * <span class="hljs-doctag">@see</span> Image</span></span><span><span class="hljs-comment"> */</span></span><span> <span class="hljs-function"><span class="hljs-keyword">public</span> Image <span class="hljs-title">getImage</span><span class="hljs-params">(URL url, String name)</span> </span>{</span><span>        <span class="hljs-keyword">try</span> {</span><span>            <span class="hljs-keyword">return</span> getImage(<span class="hljs-keyword">new</span> URL(url, name));</span><span>        } <span class="hljs-keyword">catch</span> (MalformedURLException e) {</span><span>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;</span><span>        }</span><span> }</span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Generated HTML documentation:</p>
                   <p><a href="/se-book/documentation/tools/javaDoc/what/images/generatedHtml.png" target="_self"><img src="/se-book/documentation/tools/javaDoc/what/images/generatedHtml.png" alt="" class="img-fluid"></a></p>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Tooltip generated by Intellij IDE:</p>
@@ -277,7 +275,7 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-6"><span>What</span><a class="fa fa-anchor" href="#what-6"></a></h4>
                 </div>
               </p>
               <div>
@@ -289,7 +287,7 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-7"><span>What</span><a class="fa fa-anchor" href="#what-7"></a></h4>
                 </div>
               </p>
               <div>
@@ -305,7 +303,7 @@ They are: tutorials, how-to guides, explanation and technical reference.</strong
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.10.0</a> at Sat, 15 Feb 2020 03:13:40 GMT.</small></div>
     </footer>
   </div>
 </body>

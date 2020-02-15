@@ -5,20 +5,18 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.9.0">
+  <meta name="generator" content="MarkBind 2.10.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Coding Best Practices: [Practice] Avoid Magic Numbers</title>
   <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -58,7 +56,7 @@
                 <div id="main">
                   <div>
                     <p>When the code has a number that does not explain the meaning of the number, we call that a &quot;magic number&quot; (as in &quot;the number appears as if by magic&quot;). Using a
-                      <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
+                      <tooltip><template slot="_content">e.g., <code>PI</code></template><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
                       <div class="alt-java">
@@ -71,7 +69,7 @@
                                     </span>
                                   </font>
                                 </p>
-                                <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;</span><span>...</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;</span></code></pre>
+                                <pre><code class="hljs java"><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;</span><span>...</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;</span></code></pre>
                               </td>
                               <td>&nbsp;&nbsp;<br><br></td>
                               <td valign="top">
@@ -80,7 +78,7 @@
                                     </span>
                                   </font>
                                 </p>
-                                <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;</span><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;</span><span>...</span><span><span class="hljs-keyword">return</span> PI;</span><span>...</span><span><span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;</span></code></pre>
+                                <pre><code class="hljs java"><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;</span><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;</span><span>...</span><span><span class="hljs-keyword">return</span> PI;</span><span>...</span><span><span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;</span></code></pre>
                               </td>
                             </tr>
                           </table>
@@ -97,7 +95,7 @@
                                     </span>
                                   </font>
                                 </p>
-                                <pre><code class="line-numbers hljs python"><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span></span><span>...</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span></span></code></pre>
+                                <pre><code class="hljs python"><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span></span><span>...</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span></span></code></pre>
                               </td>
                               <td>&nbsp;&nbsp;<br><br></td>
                               <td valign="top">
@@ -106,7 +104,7 @@
                                     </span>
                                   </font>
                                 </p>
-                                <pre><code class="line-numbers hljs python"><span>PI = <span class="hljs-number">3.14236</span></span><span>MAX_SIZE = <span class="hljs-number">10</span></span><span>...</span><span><span class="hljs-keyword">return</span> PI</span><span>...</span><span><span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span></span></code></pre>
+                                <pre><code class="hljs python"><span>PI = <span class="hljs-number">3.14236</span></span><span>MAX_SIZE = <span class="hljs-number">10</span></span><span>...</span><span><span class="hljs-keyword">return</span> PI</span><span>...</span><span><span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span></span></code></pre>
                               </td>
                             </tr>
                           </table>
@@ -120,7 +118,7 @@
                           </span>
                         </font>
                       </p>
-                      <pre><code class="line-numbers hljs java"><span><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span></span></code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span></span></code></pre>
                     </box>
                     <p>In general, try to avoid any magic literals.</p>
                   </div>
@@ -134,7 +132,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.10.0</a> at Sat, 15 Feb 2020 03:13:40 GMT.</small></div>
     </footer>
   </div>
 </body>

@@ -5,20 +5,18 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.9.0">
+  <meta name="generator" content="MarkBind 2.10.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Refactoring: What</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -72,7 +70,7 @@
                     </box>
                     <p>Given below are two common refactorings (
                       <trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).</p>
-                    <modal title="**Refactoring Catalogs**" id="modal:refactoring-catalog-what" class="algolia-no-index">
+                    <modal id="modal:refactoring-catalog-what" class="algolia-no-index"><template slot="_header"><strong>Refactoring Catalogs</strong></template>
                       <div>
                         <ul>
                           <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’
@@ -91,11 +89,11 @@
                           <table>
                             <tr>
                               <td valign="top">
-                                <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {</span><span>    total = price * <span class="hljs-number">0.95</span>;</span><span>    send();</span><span>} <span class="hljs-keyword">else</span> {</span><span>    total = price * <span class="hljs-number">0.98</span>;</span><span>    send();</span><span>}</span></code></pre>
+                                <pre><code class="hljs java"><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {</span><span>    total = price * <span class="hljs-number">0.95</span>;</span><span>    send();</span><span>} <span class="hljs-keyword">else</span> {</span><span>    total = price * <span class="hljs-number">0.98</span>;</span><span>    send();</span><span>}</span></code></pre>
                               </td>
                               <td valign="center">&nbsp;→&nbsp;</td>
                               <td valign="top">
-                                <pre><code class="line-numbers hljs java"><span><span class="hljs-keyword">if</span> (isSpecialDeal()){</span><span>    total = price * <span class="hljs-number">0.95</span>;</span><span>} <span class="hljs-keyword">else</span> {</span><span>    total = price * <span class="hljs-number">0.98</span>;</span><span>}</span><span>send();</span><span></span></code></pre>
+                                <pre><code class="hljs java"><span><span class="hljs-keyword">if</span> (isSpecialDeal()){</span><span>    total = price * <span class="hljs-number">0.95</span>;</span><span>} <span class="hljs-keyword">else</span> {</span><span>    total = price * <span class="hljs-number">0.98</span>;</span><span>}</span><span>send();</span><span>&#x200B;</span></code></pre>
                               </td>
                             </tr>
                           </table>
@@ -106,11 +104,11 @@
                           <table>
                             <tr>
                               <td valign="top">
-                                <pre><code class="line-numbers hljs python"><span><span class="hljs-keyword">if</span> is_special_deal:</span><span>    total = price * <span class="hljs-number">0.95</span></span><span>    send()</span><span><span class="hljs-keyword">else</span>:</span><span>    total = price * <span class="hljs-number">0.98</span></span><span>    send()</span></code></pre>
+                                <pre><code class="hljs python"><span><span class="hljs-keyword">if</span> is_special_deal:</span><span>    total = price * <span class="hljs-number">0.95</span></span><span>    send()</span><span><span class="hljs-keyword">else</span>:</span><span>    total = price * <span class="hljs-number">0.98</span></span><span>    send()</span></code></pre>
                               </td>
                               <td valign="center">&nbsp;→&nbsp;</td>
                               <td valign="top">
-                                <pre><code class="line-numbers hljs python"><span><span class="hljs-keyword">if</span> is_special_deal:</span><span>    total = price * <span class="hljs-number">0.95</span></span><span><span class="hljs-keyword">else</span>:</span><span>    total = price * <span class="hljs-number">0.98</span></span><span>    </span><span>send()</span></code></pre>
+                                <pre><code class="hljs python"><span><span class="hljs-keyword">if</span> is_special_deal:</span><span>    total = price * <span class="hljs-number">0.95</span></span><span><span class="hljs-keyword">else</span>:</span><span>    total = price * <span class="hljs-number">0.98</span></span><span>    </span><span>send()</span></code></pre>
                               </td>
                             </tr>
                           </table>
@@ -124,18 +122,18 @@
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
                       <div class="alt-java">
                         <div>
-                          <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{</span><span>    printBanner();</span><span></span><span>    <span class="hljs-comment">//print details</span></span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);</span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());</span><span>}</span></code></pre>
+                          <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{</span><span>    printBanner();</span><span>&#x200B;</span><span>    <span class="hljs-comment">//print details</span></span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);</span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());</span><span>}</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                           </p>
-                          <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{</span><span>    printBanner();</span><span>    printDetails(getOutstanding());</span><span>}</span><span></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printDetails</span> <span class="hljs-params">(<span class="hljs-keyword">double</span> outstanding)</span> </span>{</span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);</span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);</span><span>}</span></code></pre>
+                          <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{</span><span>    printBanner();</span><span>    printDetails(getOutstanding());</span><span>}</span><span>&#x200B;</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printDetails</span> <span class="hljs-params">(<span class="hljs-keyword">double</span> outstanding)</span> </span>{</span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);</span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);</span><span>}</span></code></pre>
                         </div>
                       </div>
                       <div class="alt-python">
                         <div>
-                          <pre><code class="line-numbers hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span></span><span>    print_banner()</span><span></span><span>    //<span class="hljs-keyword">print</span> details</span><span>    print(<span class="hljs-string">"name:	"</span> + name)</span><span>    print(<span class="hljs-string">"amount	"</span> + get_outstanding())</span></code></pre>
+                          <pre><code class="hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span></span><span>    print_banner()</span><span>&#x200B;</span><span>    //<span class="hljs-keyword">print</span> details</span><span>    print(<span class="hljs-string">"name:	"</span> + name)</span><span>    print(<span class="hljs-string">"amount	"</span> + get_outstanding())</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                           </p>
-                          <pre><code class="line-numbers hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span></span><span>    print_banner()</span><span>    print_details(get_outstanding())</span><span></span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span><span class="hljs-params">(amount)</span>:</span></span><span>    print(<span class="hljs-string">"name:	"</span> + name)</span><span>    print(<span class="hljs-string">"amount	"</span> + amount)</span></code></pre>
+                          <pre><code class="hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span></span><span>    print_banner()</span><span>    print_details(get_outstanding())</span><span>&#x200B;</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span><span class="hljs-params">(amount)</span>:</span></span><span>    print(<span class="hljs-string">"name:	"</span> + name)</span><span>    print(<span class="hljs-string">"amount	"</span> + amount)</span></code></pre>
                         </div>
                       </div>
                     </box>
@@ -147,9 +145,9 @@
                   </div>
                   <div>
                     <div>
-                      <panel header="<md>:fas-dumbbell:</md> Exercises" expandable="" class="algolia-no-index">
+                      <panel expandable="" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                         <div>
-                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Results of Refactoring" class="algolia-no-index">
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Results of Refactoring</p></template>
                             <question>
                               <p>Choose the correct statements</p>
                               <ul class="task-list">
@@ -170,7 +168,7 @@
                           </panel>
                         </div>
                         <div>
-                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Do you agree with the following statement? Refactoring and regression testing" class="algolia-no-index">
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Do you agree with the following statement? Refactoring and regression testing</p></template>
                             <question has-input="true">
                               <p>Do you agree with the following statement? Justify your answer.</p>
                               <p>Statement: <code>Whenever we refactor code to fix bugs, we need not do regression testing if the bug fix was minor.</code></p>
@@ -188,7 +186,7 @@
                           </panel>
                         </div>
                         <div>
-                          <panel header="<md>:glyphicon-question-sign:</md> Explain Refactoring" class="algolia-no-index">
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Refactoring</p></template>
                             <question has-input="">
                               <p>Explain what is refactoring and why it is not the same as rewriting, bug fixing, or adding features.</p>
                             </question>
@@ -206,7 +204,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.9.0</a> at Mon, 20 Jan 2020 15:00:21 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.10.0</a> at Sat, 15 Feb 2020 03:13:40 GMT.</small></div>
     </footer>
   </div>
 </body>

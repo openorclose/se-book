@@ -1,20 +1,20 @@
 <div>
-  <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\codeQuality\maximiseReadability\introduction\text.md"></div>
+  <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/codeQuality/maximiseReadability/introduction/text.md"></div>
 </div>
 <p></p>
-<p><span class="dimmed"><strong><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\codeQuality\maximiseReadability\path.md">Implementation → Code Quality → Readability →
+<p><span class="dimmed"><strong><span><span data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/codeQuality/maximiseReadability/path.md">Implementation → Code Quality → Readability →
 </span></span>
   </strong>
   </span>
 </p>
 <div id="title-and-body">
   <div>
-    <h4 id="introduction"><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\codeQuality\maximiseReadability\introduction\text.md">Introduction</span></span>
+    <h4 id="introduction"><span><span data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/codeQuality/maximiseReadability/introduction/text.md">Introduction</span></span>
     </h4>
   </div>
   <div id="main">
     <div>
-      <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\codeQuality\maximiseReadability\introduction\text.md">
+      <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/codeQuality/maximiseReadability/introduction/text.md">
         <blockquote>
           <p>Programs should be written and polished until they acquire publication quality. <sub>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></sub></p>
         </blockquote>
@@ -24,7 +24,7 @@
           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The two code samples given below achieve the same functionality, but one is easier to read.</p>
           <div class="alt-java">
             <div>
-              <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\codeQuality\maximiseReadability\introduction\example-java.md">
+              <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/codeQuality/maximiseReadability/introduction/example-java.md">
                 <table>
                   <tr>
                     <td>
@@ -33,7 +33,7 @@
                           </span>
                         </font>
                       </p>
-                      <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (!age) {</span><span>        <span class="hljs-keyword">if</span> (!sub) {</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {</span><span>                subsidy = <span class="hljs-number">500</span>;</span><span>            } <span class="hljs-keyword">else</span> {</span><span>                subsidy = <span class="hljs-number">250</span>;</span><span>            }</span><span>        } <span class="hljs-keyword">else</span> {</span><span>            subsidy = <span class="hljs-number">250</span>;</span><span>        }</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = -<span class="hljs-number">1</span>;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (!age) {</span><span>        <span class="hljs-keyword">if</span> (!sub) {</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {</span><span>                subsidy = <span class="hljs-number">500</span>;</span><span>            } <span class="hljs-keyword">else</span> {</span><span>                subsidy = <span class="hljs-number">250</span>;</span><span>            }</span><span>        } <span class="hljs-keyword">else</span> {</span><span>            subsidy = <span class="hljs-number">250</span>;</span><span>        }</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = -<span class="hljs-number">1</span>;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
                     </td>
                     <td>&nbsp;&nbsp;<br><br></td>
                     <td valign="top">
@@ -42,7 +42,7 @@
                           </span>
                         </font>
                       </p>
-                      <pre><code class="line-numbers hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (isSenior) {</span><span>        subsidy = REJECT_SENIOR;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {</span><span>        subsidy = SUBSIDISED_SUBSIDY;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = FULLTIME_SUBSIDY;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (isSenior) {</span><span>        subsidy = REJECT_SENIOR;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {</span><span>        subsidy = SUBSIDISED_SUBSIDY;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = FULLTIME_SUBSIDY;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
                     </td>
                   </tr>
                 </table>
@@ -51,7 +51,7 @@
           </div>
           <div class="alt-python">
             <div>
-              <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\codeQuality\maximiseReadability\introduction\example-python.md">
+              <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/codeQuality/maximiseReadability/introduction/example-python.md">
                 <table>
                   <tr>
                     <td>
@@ -60,7 +60,7 @@
                           </span>
                         </font>
                       </p>
-                      <pre><code class="line-numbers hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:</span><span>                subsidy = <span class="hljs-number">500</span></span><span>            <span class="hljs-keyword">else</span>:</span><span>                subsidy = <span class="hljs-number">250</span></span><span>        <span class="hljs-keyword">else</span>:</span><span>            subsidy = <span class="hljs-number">250</span></span><span>    <span class="hljs-keyword">else</span>:</span><span>        subsidy = <span class="hljs-number">-1</span></span><span>    <span class="hljs-keyword">return</span> subsidy</span></code></pre>
+                      <pre><code class="hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:</span><span>                subsidy = <span class="hljs-number">500</span></span><span>            <span class="hljs-keyword">else</span>:</span><span>                subsidy = <span class="hljs-number">250</span></span><span>        <span class="hljs-keyword">else</span>:</span><span>            subsidy = <span class="hljs-number">250</span></span><span>    <span class="hljs-keyword">else</span>:</span><span>        subsidy = <span class="hljs-number">-1</span></span><span>    <span class="hljs-keyword">return</span> subsidy</span></code></pre>
                     </td>
                     <td>&nbsp;&nbsp;<br><br></td>
                     <td valign="top">
@@ -69,7 +69,7 @@
                           </span>
                         </font>
                       </p>
-                      <pre><code class="line-numbers hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> is_senior:</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY</span><span>    <span class="hljs-keyword">elif</span> is_parttime:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO</span><span>    <span class="hljs-keyword">else</span>:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY</span></code></pre>
+                      <pre><code class="hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> is_senior:</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY</span><span>    <span class="hljs-keyword">elif</span> is_parttime:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO</span><span>    <span class="hljs-keyword">else</span>:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY</span></code></pre>
                     </td>
                   </tr>
                 </table>
@@ -80,7 +80,7 @@
       </div>
     </div>
     <div>
-      <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\codeQuality\maximiseReadability\introduction\text.md"></div>
+      <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/codeQuality/maximiseReadability/introduction/text.md"></div>
     </div>
   </div>
 </div>

@@ -1,20 +1,20 @@
 <div>
-  <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designPatterns\observer\what\text.md"></div>
+  <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designPatterns/observer/what/text.md"></div>
 </div>
 <p></p>
-<p><span class="dimmed"><strong><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designPatterns\observer\path.md">Design → Design Patterns → Observer Pattern →
+<p><span class="dimmed"><strong><span><span data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designPatterns/observer/path.md">Design → Design Patterns → Observer Pattern →
 </span></span>
   </strong>
   </span>
 </p>
 <div id="title-and-body">
   <div>
-    <h4 id="what"><span><span data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designPatterns\observer\what\text.md">What</span></span>
+    <h4 id="what"><span><span data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designPatterns/observer/what/text.md">What</span></span>
     </h4>
   </div>
   <div id="main">
     <div>
-      <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designPatterns\observer\what\text.md">
+      <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designPatterns/observer/what/text.md">
         <p><strong>Context</strong></p>
         <p>An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.</p>
         <box>
@@ -44,26 +44,26 @@
           <ol>
             <li>
               <p>First, create the relevant objects.</p>
-              <pre><code class="line-numbers hljs java"><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();</span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();</span><span>StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();</span></code></pre>
+              <pre><code class="hljs java"><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();</span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();</span><span>StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();</span></code></pre>
             </li>
             <li>
               <p>Next, the two UIs indicate to the <code>StudentList</code> that they are interested in being updated whenever <code>StudentList</code> changes. This is also known as ‘subscribing for updates’.</p>
-              <pre><code class="line-numbers hljs java"><span>studentList.addUi(listUi);</span><span>studentList.addUi(statusUi);</span></code></pre>
+              <pre><code class="hljs java"><span>studentList.addUi(listUi);</span><span>studentList.addUi(statusUi);</span></code></pre>
             </li>
             <li>
               <p>Within the <code>addUi</code> operation of <code>StudentList</code>, all Observer objects subscribers are added to an internal data structure called <code>observerList</code>.</p>
-              <pre><code class="line-numbers hljs java"><span><span class="hljs-comment">//StudentList class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{</span><span>    observerList.add(o);</span><span>}</span></code></pre>
+              <pre><code class="hljs java"><span><span class="hljs-comment">//StudentList class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{</span><span>    observerList.add(o);</span><span>}</span></code></pre>
             </li>
           </ol>
           <p><strong>Now, whenever the data in <code>StudentList</code> changes</strong> (e.g. when a new student is added to the <code>StudentList</code>),</p>
           <ol>
             <li>
               <p>All interested observers are updated by calling the <code>notifyUIs</code> operation.</p>
-              <pre><code class="line-numbers hljs java"><span><span class="hljs-comment">//StudentList class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-comment">//for each observer in the list</span></span><span>    <span class="hljs-keyword">for</span>(Observer o: observerList){</span><span>        o.update();</span><span>    }</span><span>}</span></code></pre>
+              <pre><code class="hljs java"><span><span class="hljs-comment">//StudentList class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-comment">//for each observer in the list</span></span><span>    <span class="hljs-keyword">for</span>(Observer o: observerList){</span><span>        o.update();</span><span>    }</span><span>}</span></code></pre>
             </li>
             <li>
               <p>UIs can then pull data from the <code>StudentList</code> whenever the <code>update</code> operation is called.</p>
-              <pre><code class="line-numbers hljs java"><span><span class="hljs-comment">//StudentListUI class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span></span><span>}</span></code></pre>
+              <pre><code class="hljs java"><span><span class="hljs-comment">//StudentListUI class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span></span><span>}</span></code></pre>
               <p>Note that <code>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
             </li>
           </ol>
@@ -83,13 +83,13 @@
       </div>
     </div>
     <div>
-      <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designPatterns\observer\what\text.md">
+      <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designPatterns/observer/what/text.md">
         <div>
-          <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designPatterns\observer\what\exercises.md">
-            <panel header="<md>:fas-dumbbell:</md> Exercises" expandable="">
+          <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designPatterns/observer/what/exercises.md">
+            <panel expandable=""><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
               <div>
-                <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designPatterns\observer\what\q-essay-polymorphismInObserver.md">
-                  <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: polymorphism and Observer pattern.">
+                <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designPatterns/observer/what/q-essay-polymorphismInObserver.md">
+                  <panel><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> polymorphism and Observer pattern.</p></template>
                     <question has-input="true">
                       <p>Explain how polymorphism is used in the Observer pattern.</p>
                       <div slot="answer">
@@ -107,8 +107,8 @@
                 </div>
               </div>
               <div>
-                <div data-included-from="D:\torrents\Doctor.Who.2005.S12E04.720p.HDTV.x265-MiNX[TGx]\se-book\designPatterns\observer\what\q-tick-trueFalse.md">
-                  <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Observer patter usage">
+                <div data-included-from="/media/openorclose/1696de76-a455-4ec9-8837-2157d8788c54/openorclose/proj/se-book/designPatterns/observer/what/q-tick-trueFalse.md">
+                  <panel><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Observer patter usage</p></template>
                     <question>
                       <p>The Observer pattern can be used when we want one object to initiate an activity in another object without having a direct dependency from the first object to the second object.</p>
                       <ul radio-group="caf40" class="radio-list">
